@@ -4,9 +4,9 @@
   <subtitle>飞雪连天射白鹿，笑书神侠倚碧鸳</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://bifenghui.github.io/"/>
   <updated>2017-03-16T15:37:58.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://bifenghui.github.io/</id>
   
   <author>
     <name>风二中</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>我的新blog的第一篇文章</title>
-    <link href="http://yoursite.com/2017/03/16/%E6%88%91%E7%9A%84%E6%96%B0blog%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
-    <id>http://yoursite.com/2017/03/16/我的新blog的第一篇文章/</id>
+    <link href="https://bifenghui.github.io/2017/03/16/%E6%88%91%E7%9A%84%E6%96%B0blog%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
+    <id>https://bifenghui.github.io/2017/03/16/我的新blog的第一篇文章/</id>
     <published>2017-03-16T12:48:08.000Z</published>
     <updated>2017-03-16T15:37:58.000Z</updated>
     
@@ -32,10 +32,10 @@
     
     </summary>
     
-      <category term="想法" scheme="http://yoursite.com/categories/%E6%83%B3%E6%B3%95/"/>
+      <category term="想法" scheme="https://bifenghui.github.io/categories/%E6%83%B3%E6%B3%95/"/>
     
     
-      <category term="生活" scheme="http://yoursite.com/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="https://bifenghui.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
