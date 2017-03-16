@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>笑傲江湖</title>
-  <subtitle>飞雪连天射白鹿，笑书神侠倚碧鸳</subtitle>
+  <title>wind</title>
+  <subtitle>今天比昨天好，这就是希望</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bifenghui.github.io/"/>
-  <updated>2017-03-16T15:37:58.000Z</updated>
+  <updated>2017-03-16T20:23:27.000Z</updated>
   <id>https://bifenghui.github.io/</id>
   
   <author>
@@ -16,19 +16,56 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>我的新blog的第一篇文章</title>
-    <link href="https://bifenghui.github.io/2017/03/16/%E6%88%91%E7%9A%84%E6%96%B0blog%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
-    <id>https://bifenghui.github.io/2017/03/16/我的新blog的第一篇文章/</id>
-    <published>2017-03-16T12:48:08.000Z</published>
-    <updated>2017-03-16T15:37:58.000Z</updated>
+    <title>多线程</title>
+    <link href="https://bifenghui.github.io/2017/03/17/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    <id>https://bifenghui.github.io/2017/03/17/多线程/</id>
+    <published>2017-03-16T20:22:31.000Z</published>
+    <updated>2017-03-16T20:23:27.000Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="http://p1.bpimg.com/4851/014d462b560dcec9.jpg"></p>
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="java" scheme="https://bifenghui.github.io/categories/java/"/>
+    
+    
+      <category term="多线程" scheme="https://bifenghui.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>回忆与思考</title>
+    <link href="https://bifenghui.github.io/2017/03/16/%E5%9B%9E%E5%BF%86%E4%B8%8E%E6%80%9D%E8%80%83/"/>
+    <id>https://bifenghui.github.io/2017/03/16/回忆与思考/</id>
+    <published>2017-03-16T12:48:08.000Z</published>
+    <updated>2017-03-16T20:22:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="历程"><a href="#历程" class="headerlink" title="历程"></a>历程</h1><h2 id="大学"><a href="#大学" class="headerlink" title="大学"></a>大学</h2><!--
+09年的秋进入大学，计算机应用技术专业。如很多人的回忆一样，出了专业课之外，游戏占据了我太多的时光。
+那时正是刀塔1风行的时光，某次偶尔的看到了海涛的视频，从此就把近卫、天灾的攻塔防摧毁冰封王座变成了
+挥洒精力的主要战场。直到近一年回忆起那段时光，有了没有把它们用到学习上的惋惜。那时候也偶尔想过以后，
+但却从来没有想过会真为荒废的一段时光感到遗憾。
+-->
+<h2 id="毕业前后"><a href="#毕业前后" class="headerlink" title="毕业前后"></a>毕业前后</h2><!--
+一节课很长，一场考试很短。我感叹着每次专业课考试时间为什么那么短不够自己填写试卷的时候，却常常忘了
+总想着为什么要把一节课设置到45分钟或90分钟这么长。大学就在某个间隙间流逝，迎来毕业！实习、毕业设计
+、求职 ，就在似乎还未准备好的我面前到来。身边有选择继续 提高学历、有决定回家发展、也有早就默默找好
+出路的，此时才发现大学要结束了。
+-->
+<h2 id="第一次选择"><a href="#第一次选择" class="headerlink" title="第一次选择"></a>第一次选择</h2><!--
+不同的人选择了不同的前方。最后的半年大学时光，却忙忙碌碌的处理家里的事。等回校时，发现好哥们已经天
+天背着电脑早出晚归开启了上班的时代。而此时你再想静下心来学习已经变成了奢望，夏天的热给整个毕业的气
+氛加了完美的buf。而我最后在迷茫中选择了某软件开发培训班。被打着先学习后还款的压力鞭策着学习了4个月
+，这期间又经历了毕业答辩、典礼、聚餐(重复的坏味道，删了2个'毕业'，coding已经开始渗入生活。。。)、
+找房子、离校（4个人搬着七八个人的东西到了某老小区没有电梯的顶楼。。。）。随后的日子就是每天的软件开
+发学习。
+-->
+<h2 id="求职"><a href="#求职" class="headerlink" title="求职"></a>求职</h2><h2 id="第一家公司"><a href="#第一家公司" class="headerlink" title="第一家公司"></a>第一家公司</h2><h2 id="第二次选择"><a href="#第二次选择" class="headerlink" title="第二次选择"></a>第二次选择</h2><h2 id="北漂"><a href="#北漂" class="headerlink" title="北漂"></a>北漂</h2><h2 id="第三次选择"><a href="#第三次选择" class="headerlink" title="第三次选择"></a>第三次选择</h2><h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><h2 id="职业规划"><a href="#职业规划" class="headerlink" title="职业规划"></a>职业规划</h2><p><img src="http://p1.bpimg.com/4851/014d462b560dcec9.jpg"></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://p1.bpimg.com/4851/014d462b560dcec9.jpg&quot;&gt;&lt;/p&gt;
-
+      我想认真的思考下自己
     
     </summary>
     
