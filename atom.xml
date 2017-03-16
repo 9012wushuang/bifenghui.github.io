@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bifenghui.github.io/"/>
-  <updated>2017-03-16T20:23:27.000Z</updated>
+  <updated>2017-03-16T21:42:23.000Z</updated>
   <id>https://bifenghui.github.io/</id>
   
   <author>
@@ -16,29 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>多线程</title>
-    <link href="https://bifenghui.github.io/2017/03/17/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    <id>https://bifenghui.github.io/2017/03/17/多线程/</id>
-    <published>2017-03-16T20:22:31.000Z</published>
-    <updated>2017-03-16T20:23:27.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="java" scheme="https://bifenghui.github.io/categories/java/"/>
-    
-    
-      <category term="多线程" scheme="https://bifenghui.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
     <title>回忆与思考</title>
-    <link href="https://bifenghui.github.io/2017/03/16/%E5%9B%9E%E5%BF%86%E4%B8%8E%E6%80%9D%E8%80%83/"/>
-    <id>https://bifenghui.github.io/2017/03/16/回忆与思考/</id>
-    <published>2017-03-16T12:48:08.000Z</published>
-    <updated>2017-03-16T20:22:11.000Z</updated>
+    <link href="https://bifenghui.github.io/2017/03/17/%E5%9B%9E%E5%BF%86%E4%B8%8E%E6%80%9D%E8%80%83/"/>
+    <id>https://bifenghui.github.io/2017/03/17/回忆与思考/</id>
+    <published>2017-03-17T12:48:08.000Z</published>
+    <updated>2017-03-16T21:42:23.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="历程"><a href="#历程" class="headerlink" title="历程"></a>历程</h1><h2 id="大学"><a href="#大学" class="headerlink" title="大学"></a>大学</h2><!--
 09年的秋进入大学，计算机应用技术专业。如很多人的回忆一样，出了专业课之外，游戏占据了我太多的时光。
