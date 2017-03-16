@@ -5,14 +5,19 @@
     
   <url>
     <loc>http://yoursite.com/2017/03/16/%E6%88%91%E7%9A%84%E6%96%B0blog%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</loc>
-    <lastmod>2017-03-16T12:48:08.000Z</lastmod>
+    <lastmod>2017-03-16T13:09:18.000Z</lastmod>
     <data>
         <display>
         <title>我的新blog的第一篇文章</title>
         <pubTime>2017-03-16T12:48:08.000Z</pubTime>
         
+        <tag>生活</tag>
+         
          
            
+             
+              <breadCrumb title="想法" url="http://yoursite.com/categories/%E6%83%B3%E6%B3%95/"/>
+          
         </display>
     </data>
     </url>
