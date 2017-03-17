@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://bifenghui.github.io/2017/03/17/dubbo-admin-war/</loc>
+    <loc>https://bifenghui.github.io/2017/03/17/nginx/</loc>
     
-    <lastmod>2017-03-17T06:22:31.000Z</lastmod>
+    <lastmod>2017-03-17T16:05:13.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://bifenghui.github.io/2017/03/17/maven%E9%85%8D%E7%BD%AE/</loc>
+    <loc>https://bifenghui.github.io/2017/03/17/maven/</loc>
     
-    <lastmod>2017-03-17T05:56:08.000Z</lastmod>
+    <lastmod>2017-03-17T14:19:13.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://bifenghui.github.io/2017/03/17/dubbo-admin-war/</loc>
+    
+    <lastmod>2017-03-17T06:22:31.000Z</lastmod>
     
   </url>
   

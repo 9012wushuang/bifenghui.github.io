@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bifenghui.github.io/"/>
-  <updated>2017-03-16T21:42:23.000Z</updated>
+  <updated>2017-03-17T16:05:13.000Z</updated>
   <id>https://bifenghui.github.io/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>nginx</title>
+    <link href="https://bifenghui.github.io/2017/03/17/nginx/"/>
+    <id>https://bifenghui.github.io/2017/03/17/nginx/</id>
+    <published>2017-03-17T14:16:47.000Z</published>
+    <updated>2017-03-17T16:05:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="nginx简介"><a href="#nginx简介" class="headerlink" title="nginx简介"></a>nginx简介</h1><p>Nginx是俄罗斯人编写的十分轻量级的HTTP服务器，是一个高性能的HTTP和反向代理服务器，同时也是一个IMAP/POP3/SMTP 代理服务器</p>
+<h1 id="nginx用途"><a href="#nginx用途" class="headerlink" title="nginx用途"></a>nginx用途</h1><h2 id="正向代理、反向代理"><a href="#正向代理、反向代理" class="headerlink" title="正向代理、反向代理"></a>正向代理、反向代理</h2><h3 id="正向代理"><a href="#正向代理" class="headerlink" title="正向代理"></a>正向代理</h3><p>客户端甲需要访问服务器A，甲提交指向A的请求到 代理服务器B，代理服务器B请求A后返回数据给甲。例如 vpn、ss 等<br>甲需要提供 代理服务器的ip、port等</p>
+<h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><p>客户端甲直接提交请求到服务器A，A据甲的请求判断  发送请求到 具体服务器，请求成功后组织数据返回给甲<br>甲认为 服务器A就是数据提供者,是原始服务器<br><a href="http://baike.baidu.com/item/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86" title="百度百科反向代理" target="_blank" rel="external">百度百科反向代理</a><br>反向代理（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，此时代理服务器对外就表现为一个反向代理服务器。</p>
+<h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><p>多台原始服务器，nginx服务器据分发规则将来自客户端的请求转发的内部不同服务器。</p>
+<h3 id="分发规则"><a href="#分发规则" class="headerlink" title="分发规则"></a>分发规则</h3><p>####RR<br>默认按照服务器配置顺序依次将来自客户的请求分发给内部服务器，nginx服务器会自动判断内部服务器是否可以请求(之前查看nginx日志会发现很多由nginx产生的get请求)</p>
+<h4 id="权重"><a href="#权重" class="headerlink" title="权重"></a>权重</h4><p>指定每台服务器的weight，weight和访问比率成正比</p>
+<h4 id="ip-hash"><a href="#ip-hash" class="headerlink" title="ip_hash"></a>ip_hash</h4><p>指定ip_bash访问策略，解决状态访问问题，例如session等。据用户的ip的hash分配服务器，使用户固定访问一个服务器。<br>注：解决session问题其他策略，可将session单独提取出来放入缓存或者nosql等数据库，如redis，web服务提供拦截器拦截需要请求绑定session</p>
+<p>####fair（第三方）<br>根据内部服务器请求效率、响应时间优先分配请求</p>
+<h4 id="url-hash（第三方）"><a href="#url-hash（第三方）" class="headerlink" title="url_hash（第三方）"></a>url_hash（第三方）</h4><p>据url的hash指定分发请求的内部服务器，可指定具体的hash算法。同时不允许再写入权重参数</p>
+<p>##http服务器<br>可以作为一个http资源服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">        listen       80;</div><div class="line">        server_name  localhost;</div><div class="line">        client_max_body_size 1024M;</div><div class="line"></div><div class="line">        location / &#123;</div><div class="line">        root /data/www;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        location /images/ &#123;</div><div class="line">          root /data;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<h3 id="动静分离"><a href="#动静分离" class="headerlink" title="动静分离"></a>动静分离</h3><p>据不同的请求表达式配置实现动静分离</p>
+<h1 id="nginx安装"><a href="#nginx安装" class="headerlink" title="nginx安装"></a>nginx安装</h1><h1 id="nginx配置"><a href="#nginx配置" class="headerlink" title="nginx配置"></a>nginx配置</h1>]]></content>
+    
+    <summary type="html">
+    
+      nginx
+    
+    </summary>
+    
+      <category term="nginx" scheme="https://bifenghui.github.io/categories/nginx/"/>
+    
+    
+      <category term="nginx" scheme="https://bifenghui.github.io/tags/nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>回忆与思考</title>
@@ -83,11 +116,11 @@
   </entry>
   
   <entry>
-    <title>maven配置</title>
-    <link href="https://bifenghui.github.io/2017/03/17/maven%E9%85%8D%E7%BD%AE/"/>
-    <id>https://bifenghui.github.io/2017/03/17/maven配置/</id>
+    <title>maven</title>
+    <link href="https://bifenghui.github.io/2017/03/17/maven/"/>
+    <id>https://bifenghui.github.io/2017/03/17/maven/</id>
     <published>2017-03-17T03:05:45.000Z</published>
-    <updated>2017-03-17T05:56:08.000Z</updated>
+    <updated>2017-03-17T14:19:13.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="maven"><a href="#maven" class="headerlink" title="maven"></a>maven</h1><h2 id="maven安装-mac"><a href="#maven安装-mac" class="headerlink" title="maven安装(mac)"></a>maven安装(mac)</h2><h3 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h3><p><a href="http://maven.apache.org/download.cgi" target="_blank" rel="external">http://maven.apache.org/download.cgi</a></p>
 <h3 id="解压目录"><a href="#解压目录" class="headerlink" title="解压目录"></a>解压目录</h3><p>/usr/local/</p>
@@ -199,7 +232,7 @@
     
     </summary>
     
-      <category term="项目管理" scheme="https://bifenghui.github.io/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+      <category term="maven" scheme="https://bifenghui.github.io/categories/maven/"/>
     
     
       <category term="maven" scheme="https://bifenghui.github.io/tags/maven/"/>
