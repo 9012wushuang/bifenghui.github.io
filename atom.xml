@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bifenghui.github.io/"/>
-  <updated>2017-03-18T09:02:31.000Z</updated>
+  <updated>2017-03-18T09:48:29.000Z</updated>
   <id>https://bifenghui.github.io/</id>
   
   <author>
@@ -16,16 +16,22 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>多线程 wait、notify、notifyAll</title>
-    <link href="https://bifenghui.github.io/2017/03/18/%E5%A4%9A%E7%BA%BF%E7%A8%8B-wait%E3%80%81notify%E3%80%81notifyAll/"/>
-    <id>https://bifenghui.github.io/2017/03/18/多线程-wait、notify、notifyAll/</id>
+    <title>Object对象-wait、notify、notifyAll.md</title>
+    <link href="https://bifenghui.github.io/2017/03/18/Object%E5%AF%B9%E8%B1%A1-wait%E3%80%81notify%E3%80%81notifyAll/"/>
+    <id>https://bifenghui.github.io/2017/03/18/Object对象-wait、notify、notifyAll/</id>
     <published>2017-03-18T09:02:31.000Z</published>
-    <updated>2017-03-18T09:02:31.000Z</updated>
+    <updated>2017-03-18T09:48:29.000Z</updated>
     
     <summary type="html">
     
+      多线程
+    
     </summary>
     
+      <category term="多线程" scheme="https://bifenghui.github.io/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+    
+      <category term="多线程" scheme="https://bifenghui.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
   </entry>
   
