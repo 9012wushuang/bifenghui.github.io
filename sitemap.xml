@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bifenghui.github.io/2017/03/17/%E5%9B%9E%E5%BF%86%E4%B8%8E%E6%80%9D%E8%80%83/</loc>
+    
+    <lastmod>2017-03-18T05:41:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://bifenghui.github.io/2017/03/17/nginx/</loc>
     
     <lastmod>2017-03-18T03:30:48.000Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://bifenghui.github.io/2017/03/17/dubbo-admin-war/</loc>
     
     <lastmod>2017-03-17T06:22:31.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://bifenghui.github.io/2017/03/17/%E5%9B%9E%E5%BF%86%E4%B8%8E%E6%80%9D%E8%80%83/</loc>
-    
-    <lastmod>2017-03-16T21:42:23.000Z</lastmod>
     
   </url>
   
