@@ -117,7 +117,7 @@
 <meta property="og:url" content="https://bifenghui.github.io/2017/03/17/nginx/index.html">
 <meta property="og:site_name" content="wind">
 <meta property="og:description" content="nginx">
-<meta property="og:updated_time" content="2017-03-17T16:05:13.000Z">
+<meta property="og:updated_time" content="2017-03-18T03:27:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nginx">
 <meta name="twitter:description" content="nginx">
@@ -433,14 +433,182 @@
 <h1 id="nginx用途"><a href="#nginx用途" class="headerlink" title="nginx用途"></a>nginx用途</h1><h2 id="正向代理、反向代理"><a href="#正向代理、反向代理" class="headerlink" title="正向代理、反向代理"></a>正向代理、反向代理</h2><h3 id="正向代理"><a href="#正向代理" class="headerlink" title="正向代理"></a>正向代理</h3><p>客户端甲需要访问服务器A，甲提交指向A的请求到 代理服务器B，代理服务器B请求A后返回数据给甲。例如 vpn、ss 等<br>甲需要提供 代理服务器的ip、port等</p>
 <h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><p>客户端甲直接提交请求到服务器A，A据甲的请求判断  发送请求到 具体服务器，请求成功后组织数据返回给甲<br>甲认为 服务器A就是数据提供者,是原始服务器<br><a href="http://baike.baidu.com/item/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86" title="百度百科反向代理" target="_blank" rel="external">百度百科反向代理</a><br>反向代理（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，此时代理服务器对外就表现为一个反向代理服务器。</p>
 <h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><p>多台原始服务器，nginx服务器据分发规则将来自客户端的请求转发的内部不同服务器。</p>
-<h3 id="分发规则"><a href="#分发规则" class="headerlink" title="分发规则"></a>分发规则</h3><p>####RR<br>默认按照服务器配置顺序依次将来自客户的请求分发给内部服务器，nginx服务器会自动判断内部服务器是否可以请求(之前查看nginx日志会发现很多由nginx产生的get请求)</p>
+<h3 id="分发规则"><a href="#分发规则" class="headerlink" title="分发规则"></a>分发规则</h3><h4 id="RR"><a href="#RR" class="headerlink" title="RR"></a>RR</h4><p>默认按照服务器配置顺序依次将来自客户的请求分发给内部服务器，nginx服务器会自动判断内部服务器是否可以请求(之前查看nginx日志会发现很多由nginx产生的get请求)</p>
 <h4 id="权重"><a href="#权重" class="headerlink" title="权重"></a>权重</h4><p>指定每台服务器的weight，weight和访问比率成正比</p>
 <h4 id="ip-hash"><a href="#ip-hash" class="headerlink" title="ip_hash"></a>ip_hash</h4><p>指定ip_bash访问策略，解决状态访问问题，例如session等。据用户的ip的hash分配服务器，使用户固定访问一个服务器。<br>注：解决session问题其他策略，可将session单独提取出来放入缓存或者nosql等数据库，如redis，web服务提供拦截器拦截需要请求绑定session</p>
-<p>####fair（第三方）<br>根据内部服务器请求效率、响应时间优先分配请求</p>
+<h4 id="fair（第三方）"><a href="#fair（第三方）" class="headerlink" title="fair（第三方）"></a>fair（第三方）</h4><p>根据内部服务器请求效率、响应时间优先分配请求</p>
 <h4 id="url-hash（第三方）"><a href="#url-hash（第三方）" class="headerlink" title="url_hash（第三方）"></a>url_hash（第三方）</h4><p>据url的hash指定分发请求的内部服务器，可指定具体的hash算法。同时不允许再写入权重参数</p>
-<p>##http服务器<br>可以作为一个http资源服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">        listen       80;</div><div class="line">        server_name  localhost;</div><div class="line">        client_max_body_size 1024M;</div><div class="line"></div><div class="line">        location / &#123;</div><div class="line">        root /data/www;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        location /images/ &#123;</div><div class="line">          root /data;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<h2 id="http服务器"><a href="#http服务器" class="headerlink" title="http服务器"></a>http服务器</h2><p>可以作为一个http资源服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">        listen       80;</div><div class="line">        server_name  localhost;</div><div class="line">        client_max_body_size 1024M;</div><div class="line"></div><div class="line">        location / &#123;</div><div class="line">        root /data/www;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        location /images/ &#123;</div><div class="line">          root /data;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
 <h3 id="动静分离"><a href="#动静分离" class="headerlink" title="动静分离"></a>动静分离</h3><p>据不同的请求表达式配置实现动静分离</p>
-<h1 id="nginx安装"><a href="#nginx安装" class="headerlink" title="nginx安装"></a>nginx安装</h1><h1 id="nginx配置"><a href="#nginx配置" class="headerlink" title="nginx配置"></a>nginx配置</h1>
+<h1 id="nginx安装"><a href="#nginx安装" class="headerlink" title="nginx安装"></a>nginx安装</h1><h2 id="mac"><a href="#mac" class="headerlink" title="mac"></a>mac</h2><p>已经安装的homebrew包管理工具的情况下<br>brew search nginx<br>brew install nginx<br>等待安装完成</p>
+<h3 id="nginx-v"><a href="#nginx-v" class="headerlink" title="nginx -v"></a>nginx -v</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nginx version: nginx/1.10.3</div></pre></td></tr></table></figure>
+<h3 id="nginx-t"><a href="#nginx-t" class="headerlink" title="nginx -t"></a>nginx -t</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">nginx: the configuration file /usr/local/etc/nginx/nginx.conf syntax is ok</div><div class="line">nginx: configuration file /usr/local/etc/nginx/nginx.conf test is successful</div></pre></td></tr></table></figure>
+<h3 id="启动nginx"><a href="#启动nginx" class="headerlink" title="启动nginx"></a>启动nginx</h3><p>nginx 或者<br>nginx -c /usr/local/etc/nginx/nginx.conf</p>
+<h3 id="查看进程"><a href="#查看进程" class="headerlink" title="查看进程"></a>查看进程</h3><p>ps -ef|grep nginx</p>
+<h3 id="访问页面"><a href="#访问页面" class="headerlink" title="访问页面"></a>访问页面</h3><p><a href="http://localhost:8080/" title="nginx本地启动访问" target="_blank" rel="external">nginx本地启动访问</a><br>访问后可以看到 Welcome to nginx 的页面</p>
+<h3 id="停止nginx"><a href="#停止nginx" class="headerlink" title="停止nginx"></a>停止nginx</h3><h4 id="强制停止"><a href="#强制停止" class="headerlink" title="强制停止"></a>强制停止</h4><p>pkill -9 nginx<br>kill -QUIT 进程号</p>
+<h4 id="快速停止"><a href="#快速停止" class="headerlink" title="快速停止"></a>快速停止</h4><p>kill -TERM 进程号  或者   kill -INT 进程号</p>
+<h3 id="nginx重启"><a href="#nginx重启" class="headerlink" title="nginx重启"></a>nginx重启</h3><p>nginx -s reload</p>
+<h1 id="nginx配置"><a href="#nginx配置" class="headerlink" title="nginx配置"></a>nginx配置</h1><h2 id="nginx运行的用户和用户组"><a href="#nginx运行的用户和用户组" class="headerlink" title="nginx运行的用户和用户组"></a>nginx运行的用户和用户组</h2><p>user www www;<br>默认 #user  nobody;</p>
+<h2 id="nginx进程数，可让等于CPU总核心数"><a href="#nginx进程数，可让等于CPU总核心数" class="headerlink" title="nginx进程数，可让等于CPU总核心数"></a>nginx进程数，可让等于CPU总核心数</h2><p>worker_processes  1;</p>
+<h2 id="全局错误log位置、级别"><a href="#全局错误log位置、级别" class="headerlink" title="全局错误log位置、级别"></a>全局错误log位置、级别</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#error_log  logs/error.log;</div><div class="line">#error_log  logs/error.log  notice;</div><div class="line">#error_log  logs/error.log  info;</div></pre></td></tr></table></figure>
+<h2 id="进程文件"><a href="#进程文件" class="headerlink" title="进程文件"></a>进程文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#pid        logs/nginx.pid;</div></pre></td></tr></table></figure>
+<h2 id="工作模式与连接数"><a href="#工作模式与连接数" class="headerlink" title="工作模式与连接数"></a>工作模式与连接数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">events &#123;</div><div class="line">#参考事件模型，use [ kqueue | rtsig | epoll | /dev/poll | select | poll ]; epoll模型是Linux 2.6以上版本内核中的高性能网络I/O模型，如果跑在FreeBSD上面，就用kqueue模型。</div><div class="line">use epoll;</div><div class="line">	#单个进程最大连接数（最大连接数=连接数*进程数）</div><div class="line">    worker_connections  1024;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="http"><a href="#http" class="headerlink" title="http"></a>http</h2><pre><code>http {
+    #文件扩展名与文件类型映射表
+    include       mime.types;
+    #默认文件类型
+    default_type  application/octet-stream;
+    #charset utf-8; #默认编码
+    server_names_hash_bucket_size 128; #服务器名字的hash表大小
+    client_header_buffer_size 32k; #上传文件大小限制
+    large_client_header_buffers 4 64k; #设定请求缓存
+    client_max_body_size 8m; #设定请求缓存
+
+#日志格式
+    #log_format  main  &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;
+    #                  &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;
+    #                  &apos;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&apos;;
+
+#默认日志输出路径
+    #access_log  logs/access.log  main;
+#文件传输模式。如果用于下载等磁盘io高的应用则应该设置off。平衡网络io和磁盘io，降低系统的负载
+    sendfile        on;
+    #on开启，防止网络阻塞
+    #tcp_nopush     on;
+    tcp_nodelay on; #防止网络阻塞
+
+#长连接超时时间，单位是秒
+    #keepalive_timeout  0;
+    keepalive_timeout  65;
+#FastCGI相关参数是为了改善网站的性能：减少资源占用，提高访问速度。
+    fastcgi_connect_timeout 300;
+    fastcgi_send_timeout 300;
+    fastcgi_read_timeout 300;
+    fastcgi_buffer_size 64k;
+    fastcgi_buffers 4 64k;
+    fastcgi_busy_buffers_size 128k;
+    fastcgi_temp_file_write_size 128k;
+
+#开启gzip压缩输出
+    #gzip  on;
+    gzip_min_length 1k; #最小压缩文件大小
+    gzip_buffers 4 16k; #压缩缓冲区
+    gzip_http_version 1.0; #压缩版本（默认1.1，前端如果是squid2.5请使用1.0）
+    gzip_comp_level 2; #压缩等级
+    #压缩类型，默认就已经包含text/html
+    gzip_types text/plain application/x-javascript text/css application/xml;
+    gzip_vary on;
+    #limit_zone crawler $binary_remote_addr 10m; #开启限制IP连接数的时候需要使用
+    #此处负载均衡配置可参考 上述
+upstream  {
+#upstream的负载均衡，weight是权重，可以根据机器配置定义权重。weigth参数表示权值，权值越高被分配到的几率越大。
+    server 192.168.1.101:80 weight=3;
+    server 192.168.1.102:80 weight=2;
+    server 192.168.1.103:80 weight=3;
+}
+</code></pre><p>#server设置<br>        server {</p>
+<pre><code>#监听端口 8080
+    listen       8080;
+    #监听域名 可写多个，用逗号隔开
+    server_name  localhost;
+    index index.html index.htm
+    root /User/bifenghui/
+    #charset koi8-r;
+
+    #访问日志
+    #access_log  logs/host.access.log  main;
+
+    location / {
+        root   html;
+        index  index.html index.htm;
+    }
+    #图片缓存时间设置
+    location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$
+    {
+    expires 10d;
+    }
+    #JS和CSS缓存时间设置
+    location ~ .*\.(js|css)?$
+    {
+    expires 1h;
+    }
+    #对 &quot;/&quot; 启用反向代理
+    location / {
+        proxy_pass http://127.0.0.1:88;
+        proxy_redirect off;
+        proxy_set_header X-Real-IP $remote_addr;
+        #后端的Web服务器可以通过X-Forwarded-For获取用户真实IP
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        #以下是一些反向代理的配置，可选。
+        proxy_set_header Host $host;
+        client_max_body_size 10m; #允许客户端请求的最大单文件字节数
+        client_body_buffer_size 128k; #缓冲区代理缓冲用户端请求的最大字节数，
+        proxy_connect_timeout 90; #nginx跟后端服务器连接超时时间(代理连接超时)
+        proxy_send_timeout 90; #后端服务器数据回传时间(代理发送超时)
+        proxy_read_timeout 90; #连接成功后，后端服务器响应时间(代理接收超时)
+        proxy_buffer_size 4k; #设置代理服务器（nginx）保存用户头信息的缓冲区大小
+        proxy_buffers 4 32k; #proxy_buffers缓冲区，网页平均在32k以下的设置
+        proxy_busy_buffers_size 64k; #高负荷下缓冲大小（proxy_buffers*2）
+        proxy_temp_file_write_size 64k;
+        #设定缓存文件夹大小，大于这个值，将从upstream服务器传
+    }
+    #设定查看Nginx状态的地址
+    location /NginxStatus {
+        stub_status on;
+        access_log on;
+        auth_basic &quot;NginxStatus&quot;;
+        auth_basic_user_file conf/htpasswd;
+        #htpasswd文件的内容可以用apache提供的htpasswd工具来产生。
+    }
+    #本地动静分离反向代理配置
+    #所有jsp的页面均交由tomcat或resin处理
+        location ~ .(jsp|jspx|do)?$ {
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_pass http://127.0.0.1:8080;
+    }
+    #所有静态文件由nginx直接读取不经过tomcat或resin
+        location ~ .*.(htm|html|gif|jpg|jpeg|png|bmp|swf|ioc|rar|zip|txt|flv|mid|doc|ppt|pdf|xls|mp3|wma)$
+        { expires 15d; }
+        location ~ .*.(js|css)?$
+        { expires 1h; }
+        }
+    }
+    #error_page  404              /404.html;
+
+    # redirect server error pages to the static page /50x.html
+    #
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   html;
+    }
+
+    # proxy the PHP scripts to Apache listening on 127.0.0.1:80
+    #
+    #location ~ \.php$ {
+    #    proxy_pass   http://127.0.0.1;
+    #}
+
+    # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+    #
+    #location ~ \.php$ {
+    #    root           html;
+    #    fastcgi_pass   127.0.0.1:9000;
+    #    fastcgi_index  index.php;
+    #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+    #    include        fastcgi_params;
+    #}
+
+    # deny access to .htaccess files, if Apache&apos;s document root
+    # concurs with nginx&apos;s one
+    #
+    #location ~ /\.ht {
+    #    deny  all;
+    #}
+}
+</code></pre>
       
     </div>
 
@@ -671,7 +839,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#nginx简介"><span class="nav-number">1.</span> <span class="nav-text">nginx简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nginx用途"><span class="nav-number">2.</span> <span class="nav-text">nginx用途</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#正向代理、反向代理"><span class="nav-number">2.1.</span> <span class="nav-text">正向代理、反向代理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#正向代理"><span class="nav-number">2.1.1.</span> <span class="nav-text">正向代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反向代理"><span class="nav-number">2.1.2.</span> <span class="nav-text">反向代理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#负载均衡"><span class="nav-number">2.2.</span> <span class="nav-text">负载均衡</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分发规则"><span class="nav-number">2.2.1.</span> <span class="nav-text">分发规则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#权重"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">权重</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ip-hash"><span class="nav-number">2.2.1.2.</span> <span class="nav-text">ip_hash</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#url-hash（第三方）"><span class="nav-number">2.2.1.3.</span> <span class="nav-text">url_hash（第三方）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动静分离"><span class="nav-number">2.2.2.</span> <span class="nav-text">动静分离</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nginx安装"><span class="nav-number">3.</span> <span class="nav-text">nginx安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nginx配置"><span class="nav-number">4.</span> <span class="nav-text">nginx配置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#nginx简介"><span class="nav-number">1.</span> <span class="nav-text">nginx简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nginx用途"><span class="nav-number">2.</span> <span class="nav-text">nginx用途</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#正向代理、反向代理"><span class="nav-number">2.1.</span> <span class="nav-text">正向代理、反向代理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#正向代理"><span class="nav-number">2.1.1.</span> <span class="nav-text">正向代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反向代理"><span class="nav-number">2.1.2.</span> <span class="nav-text">反向代理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#负载均衡"><span class="nav-number">2.2.</span> <span class="nav-text">负载均衡</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分发规则"><span class="nav-number">2.2.1.</span> <span class="nav-text">分发规则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#RR"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">RR</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#权重"><span class="nav-number">2.2.1.2.</span> <span class="nav-text">权重</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ip-hash"><span class="nav-number">2.2.1.3.</span> <span class="nav-text">ip_hash</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fair（第三方）"><span class="nav-number">2.2.1.4.</span> <span class="nav-text">fair（第三方）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#url-hash（第三方）"><span class="nav-number">2.2.1.5.</span> <span class="nav-text">url_hash（第三方）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http服务器"><span class="nav-number">2.3.</span> <span class="nav-text">http服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#动静分离"><span class="nav-number">2.3.1.</span> <span class="nav-text">动静分离</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nginx安装"><span class="nav-number">3.</span> <span class="nav-text">nginx安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mac"><span class="nav-number">3.1.</span> <span class="nav-text">mac</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#nginx-v"><span class="nav-number">3.1.1.</span> <span class="nav-text">nginx -v</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nginx-t"><span class="nav-number">3.1.2.</span> <span class="nav-text">nginx -t</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动nginx"><span class="nav-number">3.1.3.</span> <span class="nav-text">启动nginx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看进程"><span class="nav-number">3.1.4.</span> <span class="nav-text">查看进程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#访问页面"><span class="nav-number">3.1.5.</span> <span class="nav-text">访问页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#停止nginx"><span class="nav-number">3.1.6.</span> <span class="nav-text">停止nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#强制停止"><span class="nav-number">3.1.6.1.</span> <span class="nav-text">强制停止</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#快速停止"><span class="nav-number">3.1.6.2.</span> <span class="nav-text">快速停止</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nginx重启"><span class="nav-number">3.1.7.</span> <span class="nav-text">nginx重启</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nginx配置"><span class="nav-number">4.</span> <span class="nav-text">nginx配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#nginx运行的用户和用户组"><span class="nav-number">4.1.</span> <span class="nav-text">nginx运行的用户和用户组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nginx进程数，可让等于CPU总核心数"><span class="nav-number">4.2.</span> <span class="nav-text">nginx进程数，可让等于CPU总核心数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全局错误log位置、级别"><span class="nav-number">4.3.</span> <span class="nav-text">全局错误log位置、级别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程文件"><span class="nav-number">4.4.</span> <span class="nav-text">进程文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作模式与连接数"><span class="nav-number">4.5.</span> <span class="nav-text">工作模式与连接数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http"><span class="nav-number">4.6.</span> <span class="nav-text">http</span></a></li></ol></li></ol></div>
             
 
           </div>
