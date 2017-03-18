@@ -93,7 +93,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="dubbo-admin," />
+  <meta name="keywords" content="多线程," />
 
 
 
@@ -111,16 +111,16 @@
 
 
 
-<meta name="description" content="dubbo控制台war包">
+<meta name="description" content="多线程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="dubbo-admin war包">
-<meta property="og:url" content="https://bifenghui.github.io/2017/03/17/dubbo-admin-war/index.html">
+<meta property="og:title" content="多线程常用api">
+<meta property="og:url" content="https://bifenghui.github.io/2017/03/18/多线程常用api/index.html">
 <meta property="og:site_name" content="wind">
-<meta property="og:description" content="dubbo控制台war包">
-<meta property="og:updated_time" content="2017-03-17T06:22:31.000Z">
+<meta property="og:description" content="多线程">
+<meta property="og:updated_time" content="2017-03-18T09:42:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="dubbo-admin war包">
-<meta name="twitter:description" content="dubbo控制台war包">
+<meta name="twitter:title" content="多线程常用api">
+<meta name="twitter:description" content="多线程">
 
 
 
@@ -148,13 +148,13 @@
 
 
 
-  <link rel="canonical" href="https://bifenghui.github.io/2017/03/17/dubbo-admin-war/"/>
+  <link rel="canonical" href="https://bifenghui.github.io/2017/03/18/多线程常用api/"/>
 
 
 
 
 
-  <title> dubbo-admin war包 | wind </title>
+  <title> 多线程常用api | wind </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -315,7 +315,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://bifenghui.github.io/2017/03/17/dubbo-admin-war/">
+    <link itemprop="mainEntityOfPage" href="https://bifenghui.github.io/2017/03/18/多线程常用api/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="风二中">
@@ -336,7 +336,7 @@
             
             
               
-                dubbo-admin war包
+                多线程常用api
               
             
           </h1>
@@ -351,8 +351,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T13:53:29+08:00">
-                2017-03-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-18T16:11:18+08:00">
+                2017-03-18
               </time>
             
 
@@ -374,8 +374,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/dubbo/" itemprop="url" rel="index">
-                    <span itemprop="name">dubbo</span>
+                  <a href="/categories/多线程/" itemprop="url" rel="index">
+                    <span itemprop="name">多线程</span>
                   </a>
                 </span>
 
@@ -392,8 +392,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/17/dubbo-admin-war/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/17/dubbo-admin-war/" itemprop="commentCount"></span>
+                <a href="/2017/03/18/多线程常用api/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/18/多线程常用api/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -408,7 +408,7 @@
 
           
               <div class="post-description">
-                  dubbo控制台war包
+                  多线程
               </div>
           
 
@@ -429,8 +429,17 @@
       
 
       
-        <h2 id="dubbo控制台war包"><a href="#dubbo控制台war包" class="headerlink" title="dubbo控制台war包"></a>dubbo控制台war包</h2><p><a href="https://pan.baidu.com/s/1dFaJPst" title="dubbo-admin-2.5.4-SNAPSHOT.war" target="_blank" rel="external">dubbo-admin-2.5.4-SNAPSHOT.war</a></p>
-<h2 id="dubbo阿里源码"><a href="#dubbo阿里源码" class="headerlink" title="dubbo阿里源码"></a>dubbo阿里源码</h2><p><a href="https://github.com/alibaba/dubbo" title="dubbo-github" target="_blank" rel="external">dubbo-github</a></p>
+        <h1 id="start"><a href="#start" class="headerlink" title="start"></a>start</h1><p>调用start方法表示线程可以执行了，等待获得cpu资源执行run方法</p>
+<h1 id="run"><a href="#run" class="headerlink" title="run"></a>run</h1><p>单独调用线程run方法没有效果，必须先调用start方法修改线程状态</p>
+<h1 id="isAlive"><a href="#isAlive" class="headerlink" title="isAlive"></a>isAlive</h1><p>判断线程是否处于活动状态，线程不结束，返true</p>
+<h1 id="getId"><a href="#getId" class="headerlink" title="getId"></a>getId</h1><p>获得当前线程的id，全局long threadSeqNumber通过自增赋值给线程id， 由Thread完成。</p>
+<h1 id="getName"><a href="#getName" class="headerlink" title="getName"></a>getName</h1><p>获取当前线程的名称，默认为Thread-threadInitNum  此threadInitNum 由jvm按照全局int变量进行和自增。可以指定线程的名称 setName()</p>
+<h1 id="getPriority"><a href="#getPriority" class="headerlink" title="getPriority"></a>getPriority</h1><p>获取线程优先级<br>默认优先级为5</p>
+<h1 id="setPriority"><a href="#setPriority" class="headerlink" title="setPriority"></a>setPriority</h1><p>设置线程的优先级，优先级高的线程获取cpu资源的概率更高。<br>优先级有集成传递性</p>
+<h1 id="isDaemon、setDaemon-boolean-on"><a href="#isDaemon、setDaemon-boolean-on" class="headerlink" title="isDaemon、setDaemon(boolean on)"></a>isDaemon、setDaemon(boolean on)</h1><p>守护线程，指定在守护的线程执行的完成后才结束的线程。如gc线程线程一直为守护线程<br>isDaemon 是否守护线程 ，<br>setDaemon(boolean),true设置线程为守护线程 false 线程不是守护线程<br>代码：执行以下代码，发现线程依然可以从while(true)中跳出<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Created with IntelliJ IDEA.</div><div class="line"> * ClassName: priv.bifh.Daemon.TestDaemon</div><div class="line"> * User: bifenghui@</div><div class="line"> * Date: 2017/3/18</div><div class="line"> * Time: 下午3:32</div><div class="line"> * To change this template use File | Settings | File Templates.</div><div class="line"> * Description:</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestDaemon</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line"><span class="comment">//        super.run();</span></div><div class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</div><div class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</div><div class="line">            i++;</div><div class="line">            System.out.println(<span class="string">"******11111***"</span> + i);</div><div class="line">            <span class="keyword">try</span> &#123;</div><div class="line">                Thread.sleep(<span class="number">1000</span>);</div><div class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</div><div class="line">                e.printStackTrace();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created with IntelliJ IDEA.</div><div class="line"> * ClassName: priv.bifh.Daemon.DaemonTest</div><div class="line"> * User: bifenghui</div><div class="line"> * Date: 2017/3/18</div><div class="line"> * Time: 下午3:34</div><div class="line"> * To change this template use File | Settings | File Templates.</div><div class="line"> * Description:</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DaemonTest</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</div><div class="line"></div><div class="line">        TestDaemon daemonTest = <span class="keyword">new</span> TestDaemon();</div><div class="line">        daemonTest.setDaemon(<span class="keyword">true</span>);</div><div class="line"></div><div class="line">        daemonTest.start();</div><div class="line">        Thread.sleep(<span class="number">5000</span>);</div><div class="line"></div><div class="line">        System.out.println(<span class="string">"**********"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="interrupt-、-isInterrupted"><a href="#interrupt-、-isInterrupted" class="headerlink" title="interrupt  、 isInterrupted()"></a>interrupt  、 isInterrupted()</h1><p>interrupt 打断线程，此时会抛出线程打断异常<br>只有处于阻塞的线程才会被打断，非阻塞的线程不存在打断<br>isInterrupted 线程是否被打断</p>
+<h1 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h1><p>方法是调用join方法的线程所在线程无限阻塞。<br>代码：利用守护线程的例子，修改DaemonTest 增加        daemonTest.join(); ，发现代码变成了死循环<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created with IntelliJ IDEA.</div><div class="line"> * ClassName: priv.bifh.Daemon.DaemonTest</div><div class="line"> * User: bifenghui</div><div class="line"> * Date: 2017/3/18</div><div class="line"> * Time: 下午3:34</div><div class="line"> * To change this template use File | Settings | File Templates.</div><div class="line"> * Description:</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DaemonTest</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</div><div class="line"></div><div class="line">        TestDaemon daemonTest = <span class="keyword">new</span> TestDaemon();</div><div class="line">        daemonTest.setDaemon(<span class="keyword">true</span>);</div><div class="line"></div><div class="line">        daemonTest.start();</div><div class="line">		daemonTest.join(); <span class="comment">//死锁</span></div><div class="line">        Thread.sleep(<span class="number">5000</span>);</div><div class="line"></div><div class="line">        System.out.println(<span class="string">"**********"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -481,7 +490,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/dubbo-admin/" rel="tag"># dubbo-admin</a>
+            <a href="/tags/多线程/" rel="tag"># 多线程</a>
           
         </div>
       
@@ -494,8 +503,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/17/maven/" rel="next" title="maven">
-                <i class="fa fa-chevron-left"></i> maven
+              <a href="/2017/03/18/多线程介绍与实现/" rel="next" title="多线程介绍与实现">
+                <i class="fa fa-chevron-left"></i> 多线程介绍与实现
               </a>
             
           </div>
@@ -504,8 +513,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/17/nginx/" rel="prev" title="nginx">
-                nginx <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/18/多线程-wait、notify、notifyAll/" rel="prev" title="多线程 wait、notify、notifyAll">
+                多线程 wait、notify、notifyAll <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -532,8 +541,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/17/dubbo-admin-war/"
-           data-title="dubbo-admin war包" data-url="https://bifenghui.github.io/2017/03/17/dubbo-admin-war/">
+      <div class="ds-thread" data-thread-key="2017/03/18/多线程常用api/"
+           data-title="多线程常用api" data-url="https://bifenghui.github.io/2017/03/18/多线程常用api/">
       </div>
     
   </div>
@@ -666,7 +675,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#dubbo控制台war包"><span class="nav-number">1.</span> <span class="nav-text">dubbo控制台war包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dubbo阿里源码"><span class="nav-number">2.</span> <span class="nav-text">dubbo阿里源码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#start"><span class="nav-number">1.</span> <span class="nav-text">start</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#run"><span class="nav-number">2.</span> <span class="nav-text">run</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#isAlive"><span class="nav-number">3.</span> <span class="nav-text">isAlive</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#getId"><span class="nav-number">4.</span> <span class="nav-text">getId</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#getName"><span class="nav-number">5.</span> <span class="nav-text">getName</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#getPriority"><span class="nav-number">6.</span> <span class="nav-text">getPriority</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#setPriority"><span class="nav-number">7.</span> <span class="nav-text">setPriority</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#isDaemon、setDaemon-boolean-on"><span class="nav-number">8.</span> <span class="nav-text">isDaemon、setDaemon(boolean on)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#interrupt-、-isInterrupted"><span class="nav-number">9.</span> <span class="nav-text">interrupt  、 isInterrupted()</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#join"><span class="nav-number">10.</span> <span class="nav-text">join()</span></a></li></ol></div>
             
 
           </div>
