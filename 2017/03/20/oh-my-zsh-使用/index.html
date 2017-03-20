@@ -93,7 +93,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="生活," />
+  <meta name="keywords" content="shell,linux," />
 
 
 
@@ -111,18 +111,16 @@
 
 
 
-<meta name="description" content="我想认真的思考下自己">
+<meta name="description" content="zsh">
 <meta property="og:type" content="article">
-<meta property="og:title" content="回忆与思考">
-<meta property="og:url" content="https://bifenghui.github.io/2017/03/17/回忆与思考/index.html">
+<meta property="og:title" content="oh my zsh 使用">
+<meta property="og:url" content="https://bifenghui.github.io/2017/03/20/oh-my-zsh-使用/index.html">
 <meta property="og:site_name" content="wind">
-<meta property="og:description" content="我想认真的思考下自己">
-<meta property="og:image" content="http://p1.bpimg.com/4851/014d462b560dcec9.jpg">
-<meta property="og:updated_time" content="2017-03-18T08:12:29.000Z">
+<meta property="og:description" content="zsh">
+<meta property="og:updated_time" content="2017-03-20T10:03:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="回忆与思考">
-<meta name="twitter:description" content="我想认真的思考下自己">
-<meta name="twitter:image" content="http://p1.bpimg.com/4851/014d462b560dcec9.jpg">
+<meta name="twitter:title" content="oh my zsh 使用">
+<meta name="twitter:description" content="zsh">
 
 
 
@@ -150,13 +148,13 @@
 
 
 
-  <link rel="canonical" href="https://bifenghui.github.io/2017/03/17/回忆与思考/"/>
+  <link rel="canonical" href="https://bifenghui.github.io/2017/03/20/oh-my-zsh-使用/"/>
 
 
 
 
 
-  <title> 回忆与思考 | wind </title>
+  <title> oh my zsh 使用 | wind </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -316,8 +314,8 @@
   
   
 
-  <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://bifenghui.github.io/2017/03/17/回忆与思考/">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://bifenghui.github.io/2017/03/20/oh-my-zsh-使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="风二中">
@@ -338,7 +336,7 @@
             
             
               
-                回忆与思考
+                oh my zsh 使用
               
             
           </h1>
@@ -353,8 +351,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T00:48:08+08:00">
-                2017-03-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-20T17:51:12+08:00">
+                2017-03-20
               </time>
             
 
@@ -376,8 +374,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/想法/" itemprop="url" rel="index">
-                    <span itemprop="name">想法</span>
+                  <a href="/categories/zsh/" itemprop="url" rel="index">
+                    <span itemprop="name">zsh</span>
                   </a>
                 </span>
 
@@ -394,8 +392,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/17/回忆与思考/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/17/回忆与思考/" itemprop="commentCount"></span>
+                <a href="/2017/03/20/oh-my-zsh-使用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/20/oh-my-zsh-使用/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -410,7 +408,7 @@
 
           
               <div class="post-description">
-                  我想认真的思考下自己
+                  zsh
               </div>
           
 
@@ -431,7 +429,13 @@
       
 
       
-        <p><img src="http://p1.bpimg.com/4851/014d462b560dcec9.jpg"></p>
+        <h1 id="查看系统安装的shell"><a href="#查看系统安装的shell" class="headerlink" title="查看系统安装的shell"></a>查看系统安装的shell</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">cat /etc/shells</div><div class="line"></div><div class="line"># /etc/shells: valid login shells</div><div class="line">/bin/sh</div><div class="line">/bin/dash</div><div class="line">/bin/bash</div><div class="line">/bin/rbash</div><div class="line">/bin/zsh</div><div class="line">/usr/bin/zsh</div></pre></td></tr></table></figure>
+<h1 id="查看当前系统使用的shell"><a href="#查看当前系统使用的shell" class="headerlink" title="查看当前系统使用的shell"></a>查看当前系统使用的shell</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">echo $SHELL</div><div class="line"></div><div class="line">/bin/zsh</div></pre></td></tr></table></figure>
+<h1 id="下载zsh"><a href="#下载zsh" class="headerlink" title="下载zsh"></a>下载zsh</h1><p>以ubuntu 为例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apt-get install zsh git wget</div></pre></td></tr></table></figure></p>
+<h2 id="oh-my-zsh"><a href="#oh-my-zsh" class="headerlink" title="oh my zsh"></a>oh my zsh</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh</div><div class="line"></div><div class="line">或者</div><div class="line"></div><div class="line">curl -L http://install.ohmyz.sh | sh</div></pre></td></tr></table></figure>
+<h1 id="切换zsh"><a href="#切换zsh" class="headerlink" title="切换zsh"></a>切换zsh</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chsh -s $(which zsh)</div></pre></td></tr></table></figure>
+<h1 id="编辑～-zshrc"><a href="#编辑～-zshrc" class="headerlink" title="编辑～/.zshrc"></a>编辑～/.zshrc</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim ~/.zshrc</div></pre></td></tr></table></figure>
+<p>末尾可添加（除以下命令之外，还可以添加更多简化命令，如git 等）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">alias cls=&apos;clear&apos;</div><div class="line">alias ll=&apos;ls -l&apos;</div><div class="line">alias la=&apos;ls -a&apos;</div><div class="line">alias grep=&quot;grep --color=auto&quot;</div><div class="line">alias -s html=&apos;vim&apos;   # 在命令行直接输入后缀为 html 的文件名，会在 Vim 中打开</div><div class="line">alias -s rb=&apos;vim&apos;     # 在命令行直接输入 ruby 文件，会在 Vim 中打开</div><div class="line">alias -s py=&apos;vim&apos;      # 在命令行直接输入 python 文件，会用 vim 中打开，以下类似</div><div class="line">alias -s js=&apos;vim&apos;</div><div class="line">alias -s c=&apos;vim&apos;</div><div class="line">alias -s java=&apos;vim&apos;</div><div class="line">alias -s txt=&apos;vim&apos;</div><div class="line">alias -s gz=&apos;tar -xzvf&apos; # 在命令行直接输入后缀为 gz 的文件名，会自动解压打开</div><div class="line">alias -s tgz=&apos;tar -xzvf&apos;</div><div class="line">alias -s zip=&apos;unzip&apos;</div><div class="line">alias -s bz2=&apos;tar -xjvf&apos;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -482,7 +486,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/生活/" rel="tag"># 生活</a>
+            <a href="/tags/shell/" rel="tag"># shell</a>
+          
+            <a href="/tags/linux/" rel="tag"># linux</a>
           
         </div>
       
@@ -495,15 +501,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/03/20/Object对象-wait、notify、notifyAll/" rel="next" title="Object对象-wait、notify、notifyAll.md">
+                <i class="fa fa-chevron-left"></i> Object对象-wait、notify、notifyAll.md
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/17/maven/" rel="prev" title="maven">
-                maven <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -529,8 +535,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/17/回忆与思考/"
-           data-title="回忆与思考" data-url="https://bifenghui.github.io/2017/03/17/回忆与思考/">
+      <div class="ds-thread" data-thread-key="2017/03/20/oh-my-zsh-使用/"
+           data-title="oh my zsh 使用" data-url="https://bifenghui.github.io/2017/03/20/oh-my-zsh-使用/">
       </div>
     
   </div>
@@ -554,8 +560,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -644,6 +659,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#查看系统安装的shell"><span class="nav-number">1.</span> <span class="nav-text">查看系统安装的shell</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看当前系统使用的shell"><span class="nav-number">2.</span> <span class="nav-text">查看当前系统使用的shell</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#下载zsh"><span class="nav-number">3.</span> <span class="nav-text">下载zsh</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#oh-my-zsh"><span class="nav-number">3.1.</span> <span class="nav-text">oh my zsh</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#切换zsh"><span class="nav-number">4.</span> <span class="nav-text">切换zsh</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编辑～-zshrc"><span class="nav-number">5.</span> <span class="nav-text">编辑～/.zshrc</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
