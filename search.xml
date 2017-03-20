@@ -3,6 +3,300 @@
   
     
     <entry>
+      <title><![CDATA[spring 系列之Spring自定义注解]]></title>
+      <url>%2F2017%2F03%2F21%2Fspring-%E7%B3%BB%E5%88%97%E4%B9%8BSpring%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[搬瓦工服务器购买+ss搭建]]></title>
+      <url>%2F2017%2F03%2F21%2F%E6%90%AC%E7%93%A6%E5%B7%A5%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B4%AD%E4%B9%B0-ss%E6%90%AD%E5%BB%BA%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[nexus 私服搭建]]></title>
+      <url>%2F2017%2F03%2F21%2Fnexus-%E7%A7%81%E6%9C%8D%E6%90%AD%E5%BB%BA%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[spring 系列之Spring Boot]]></title>
+      <url>%2F2017%2F03%2F21%2Fspring-%E7%B3%BB%E5%88%97%E4%B9%8BSpring-Boot%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[gerrit 代码审核服务器搭建]]></title>
+      <url>%2F2017%2F03%2F21%2Fgerrit-%E4%BB%A3%E7%A0%81%E5%AE%A1%E6%A0%B8%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[分布式系统设计理念]]></title>
+      <url>%2F2017%2F03%2F21%2F%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E7%90%86%E5%BF%B5%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[spring 系列之Spring Security]]></title>
+      <url>%2F2017%2F03%2F21%2Fspring-%E7%B3%BB%E5%88%97%E4%B9%8BSpring-Security%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Apache Shiro]]></title>
+      <url>%2F2017%2F03%2F21%2FApache-Shiro%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[java日志框架-logback]]></title>
+      <url>%2F2017%2F03%2F21%2Fjava%E6%97%A5%E5%BF%97%E6%A1%86%E6%9E%B6-logback%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[csrf攻击]]></title>
+      <url>%2F2017%2F03%2F21%2Fcsrf%E6%94%BB%E5%87%BB%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[微信公众号申请流程和开发接入]]></title>
+      <url>%2F2017%2F03%2F21%2F%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E7%94%B3%E8%AF%B7%E6%B5%81%E7%A8%8B%E5%92%8C%E5%BC%80%E5%8F%91%E6%8E%A5%E5%85%A5%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[maven系列一]]></title>
+      <url>%2F2017%2F03%2F21%2Fmaven%E7%B3%BB%E5%88%97%E4%B8%80%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[重构代码系列一]]></title>
+      <url>%2F2017%2F03%2F21%2F%E9%87%8D%E6%9E%84%E4%BB%A3%E7%A0%81%E7%B3%BB%E5%88%97%E4%B8%80%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[数据库系列-mysql]]></title>
+      <url>%2F2017%2F03%2F21%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E5%88%97-mysql%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[腾讯云ssl证书]]></title>
+      <url>%2F2017%2F03%2F21%2F%E8%85%BE%E8%AE%AF%E4%BA%91ssl%E8%AF%81%E4%B9%A6%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[阿里云域名备案]]></title>
+      <url>%2F2017%2F03%2F21%2F%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D%E5%A4%87%E6%A1%88%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[spring 系列一]]></title>
+      <url>%2F2017%2F03%2F21%2Fspring-%E7%B3%BB%E5%88%97%E4%B8%80%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[python3]]></title>
+      <url>%2F2017%2F03%2F21%2Fpython3%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[poi]]></title>
+      <url>%2F2017%2F03%2F21%2Fpoi%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[支付接口开发]]></title>
+      <url>%2F2017%2F03%2F21%2F%E6%94%AF%E4%BB%98%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[微信网页授权]]></title>
+      <url>%2F2017%2F03%2F21%2F%E5%BE%AE%E4%BF%A1%E7%BD%91%E9%A1%B5%E6%8E%88%E6%9D%83%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[reactjs]]></title>
+      <url>%2F2017%2F03%2F21%2Freactjs%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[nodejs]]></title>
+      <url>%2F2017%2F03%2F21%2Fnodejs%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[mysql binlog]]></title>
+      <url>%2F2017%2F03%2F21%2Fmysql-binlog%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[memcached]]></title>
+      <url>%2F2017%2F03%2F21%2Fmemcached%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[redis]]></title>
+      <url>%2F2017%2F03%2F21%2Fredis%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[elasticSearch 与mongo数据同步]]></title>
+      <url>%2F2017%2F03%2F21%2FelasticSearch-%E4%B8%8Emongo%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[elasticSearch 基本语法]]></title>
+      <url>%2F2017%2F03%2F21%2FelasticSearch-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[elasticSearch head插件]]></title>
+      <url>%2F2017%2F03%2F21%2FelasticSearch-head%E6%8F%92%E4%BB%B6%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[elasticSearch 安装]]></title>
+      <url>%2F2017%2F03%2F21%2FelasticSearch-%E5%AE%89%E8%A3%85%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[elasticSearch]]></title>
+      <url>%2F2017%2F03%2F21%2FelasticSearch%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[设计模式-观察者模式]]></title>
+      <url>%2F2017%2F03%2F21%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[设计模式]]></title>
+      <url>%2F2017%2F03%2F21%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[mongo java api引入]]></title>
+      <url>%2F2017%2F03%2F21%2Fmongo-java-api%E5%BC%95%E5%85%A5%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[mongo 备份与回滚]]></title>
+      <url>%2F2017%2F03%2F21%2Fmongo-%E5%A4%87%E4%BB%BD%E4%B8%8E%E5%9B%9E%E6%BB%9A%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[mongo 基本命令]]></title>
+      <url>%2F2017%2F03%2F21%2Fmongo-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[mongo 安装]]></title>
+      <url>%2F2017%2F03%2F21%2Fmongo-%E5%AE%89%E8%A3%85%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[springMvc（一）]]></title>
+      <url>%2F2017%2F03%2F21%2FspringMvc%EF%BC%88%E4%B8%80%EF%BC%89%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[spring aop]]></title>
+      <url>%2F2017%2F03%2F21%2Fspring-aop%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[linux 定时任务]]></title>
+      <url>%2F2017%2F03%2F21%2Flinux-%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[git checkout、reset、revert]]></title>
+      <url>%2F2017%2F03%2F21%2Fgit-checkout%E3%80%81reset%E3%80%81revert%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[git 基本命令]]></title>
+      <url>%2F2017%2F03%2F21%2Fgit-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%2F</url>
+      <content type="text"><![CDATA[参考链接：git命令大全 git 命令大全git init # 初始化本地git仓库（创建新仓库）git config –global user.name “xxx” # 配置用户名git config –global user.email “xxx@xxx.com” # 配置邮件git config –global color.ui true # git status等命令自动着色git config –global color.status autogit config –global color.diff autogit config –global color.branch autogit config –global color.interactive autogit config –global –unset http.proxy # remove proxy configuration on gitgit clone git+ssh://git@192.168.53.168/VT.git # clone远程仓库git status # 查看当前版本状态（是否修改）git add xyz # 添加xyz文件至indexgit add . # 增加当前子目录下所有更改过的文件至indexgit commit -m ‘xxx’ # 提交git commit –amend -m ‘xxx’ # 合并上一次提交（用于反复修改）git commit -am ‘xxx’ # 将add和commit合为一步git rm xxx # 删除index中的文件git rm -r * # 递归删除git log # 显示提交日志git log -1 # 显示1行日志 -n为n行git log -5git log –stat # 显示提交日志及相关变动文件git log -p -mgit show dfb02e6e4f2f7b573337763e5c0013802e392818 # 显示某个提交的详细内容git show dfb02 # 可只用commitid的前几位git show HEAD # 显示HEAD提交日志git show HEAD^ # 显示HEAD的父（上一个版本）的提交日志 ^^为上两个版本 ^5为上5个版本git tag # 显示已存在的taggit tag -a v2.0 -m ‘xxx’ # 增加v2.0的taggit show v2.0 # 显示v2.0的日志及详细内容git log v2.0 # 显示v2.0的日志git diff # 显示所有未添加至index的变更git diff –cached # 显示所有已添加index但还未commit的变更git diff HEAD^ # 比较与上一个版本的差异git diff HEAD – ./lib # 比较与HEAD版本lib目录的差异git diff origin/master..master # 比较远程分支master上有本地分支master上没有的git diff origin/master..master –stat # 只显示差异的文件，不显示具体内容git remote add origin git+ssh://git@192.168.53.168/VT.git # 增加远程定义（用于push/pull/fetch）git branch # 显示本地分支git branch –contains 50089 # 显示包含提交50089的分支git branch -a # 显示所有分支git branch -r # 显示所有原创分支git branch –merged # 显示所有已合并到当前分支的分支git branch –no-merged # 显示所有未合并到当前分支的分支git branch -m master master_copy # 本地分支改名git checkout -b master_copy # 从当前分支创建新分支master_copy并检出git checkout -b master master_copy # 上面的完整版git checkout features/performance # 检出已存在的features/performance分支git checkout –track hotfixes/BJVEP933 # 检出远程分支hotfixes/BJVEP933并创建本地跟踪分支git checkout v2.0 # 检出版本v2.0git checkout -b devel origin/develop # 从远程分支develop创建新本地分支devel并检出git checkout – README # 检出head版本的README文件（可用于修改错误回退）git merge origin/master # 合并远程master分支至当前分支git cherry-pick ff44785404a8e # 合并提交ff44785404a8e的修改git push origin master # 将当前分支push到远程master分支git push origin :hotfixes/BJVEP933 # 删除远程仓库的hotfixes/BJVEP933分支git push –tags # 把所有tag推送到远程仓库git fetch # 获取所有远程分支（不更新本地分支，另需merge）git fetch –prune # 获取所有原创分支并清除服务器上已删掉的分支git pull origin master # 获取远程分支master并merge到当前分支git mv README README2 # 重命名文件README为README2git reset –hard HEAD # 将当前版本重置为HEAD（通常用于merge失败回退）git rebasegit branch -d hotfixes/BJVEP933 # 删除分支hotfixes/BJVEP933（本分支修改已合并到其他分支）git branch -D hotfixes/BJVEP933 # 强制删除分支hotfixes/BJVEP933git ls-files # 列出git index包含的文件git show-branch # 图示当前分支历史git show-branch –all # 图示所有分支历史git whatchanged # 显示提交历史对应的文件修改git revert dfb02e6e4f2f7b573337763e5c0013802e392818 # 撤销提交dfb02e6e4f2f7b573337763e5c0013802e392818git ls-tree HEAD # 内部命令：显示某个git对象git rev-parse v2.0 # 内部命令：显示某个ref对于的SHA1 HASHgit reflog # 显示所有提交，包括孤立节点git show HEAD@{5}git show master@{yesterday} # 显示master分支昨天的状态git log –pretty=format:’%h %s’ –graph # 图示提交日志git show HEAD~3git show -s –pretty=raw 2be7fcb476git stash # 暂存当前修改，将所有至为HEAD状态git stash list # 查看所有暂存git stash show -p stash@{0} # 参考第一次暂存git stash apply stash@{0} # 应用第一次暂存git grep “delete from” # 文件中搜索文本“delete from”git grep -e ‘#define’ –and -e SORT_DIRENTgit gcgit fsck]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[oh my zsh 使用]]></title>
       <url>%2F2017%2F03%2F20%2Foh-my-zsh-%E4%BD%BF%E7%94%A8%2F</url>
       <content type="text"><![CDATA[查看系统安装的shell123456789cat /etc/shells# /etc/shells: valid login shells/bin/sh/bin/dash/bin/bash/bin/rbash/bin/zsh/usr/bin/zsh 查看当前系统使用的shell123echo $SHELL/bin/zsh 下载zsh以ubuntu 为例1apt-get install zsh git wget oh my zsh12345wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh或者curl -L http://install.ohmyz.sh | sh 切换zsh1chsh -s $(which zsh) 编辑～/.zshrc1vim ~/.zshrc 末尾可添加（除以下命令之外，还可以添加更多简化命令，如git 等）123456789101112131415alias cls=&apos;clear&apos;alias ll=&apos;ls -l&apos;alias la=&apos;ls -a&apos;alias grep=&quot;grep --color=auto&quot;alias -s html=&apos;vim&apos; # 在命令行直接输入后缀为 html 的文件名，会在 Vim 中打开alias -s rb=&apos;vim&apos; # 在命令行直接输入 ruby 文件，会在 Vim 中打开alias -s py=&apos;vim&apos; # 在命令行直接输入 python 文件，会用 vim 中打开，以下类似alias -s js=&apos;vim&apos;alias -s c=&apos;vim&apos;alias -s java=&apos;vim&apos;alias -s txt=&apos;vim&apos;alias -s gz=&apos;tar -xzvf&apos; # 在命令行直接输入后缀为 gz 的文件名，会自动解压打开alias -s tgz=&apos;tar -xzvf&apos;alias -s zip=&apos;unzip&apos;alias -s bz2=&apos;tar -xjvf&apos;]]></content>
