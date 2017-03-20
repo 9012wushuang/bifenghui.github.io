@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bifenghui.github.io/"/>
-  <updated>2017-03-20T10:03:06.000Z</updated>
+  <updated>2017-03-20T14:12:55.000Z</updated>
   <id>https://bifenghui.github.io/</id>
   
   <author>
@@ -20,10 +20,11 @@
     <link href="https://bifenghui.github.io/2017/03/20/oh-my-zsh-%E4%BD%BF%E7%94%A8/"/>
     <id>https://bifenghui.github.io/2017/03/20/oh-my-zsh-使用/</id>
     <published>2017-03-20T09:51:12.000Z</published>
-    <updated>2017-03-20T10:03:06.000Z</updated>
+    <updated>2017-03-20T14:12:55.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="查看系统安装的shell"><a href="#查看系统安装的shell" class="headerlink" title="查看系统安装的shell"></a>查看系统安装的shell</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">cat /etc/shells</div><div class="line"></div><div class="line"># /etc/shells: valid login shells</div><div class="line">/bin/sh</div><div class="line">/bin/dash</div><div class="line">/bin/bash</div><div class="line">/bin/rbash</div><div class="line">/bin/zsh</div><div class="line">/usr/bin/zsh</div></pre></td></tr></table></figure>
 <h1 id="查看当前系统使用的shell"><a href="#查看当前系统使用的shell" class="headerlink" title="查看当前系统使用的shell"></a>查看当前系统使用的shell</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">echo $SHELL</div><div class="line"></div><div class="line">/bin/zsh</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h1 id="下载zsh"><a href="#下载zsh" class="headerlink" title="下载zsh"></a>下载zsh</h1><p>以ubuntu 为例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apt-get install zsh git wget</div></pre></td></tr></table></figure></p>
 <h2 id="oh-my-zsh"><a href="#oh-my-zsh" class="headerlink" title="oh my zsh"></a>oh my zsh</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh</div><div class="line"></div><div class="line">或者</div><div class="line"></div><div class="line">curl -L http://install.ohmyz.sh | sh</div></pre></td></tr></table></figure>
 <h1 id="切换zsh"><a href="#切换zsh" class="headerlink" title="切换zsh"></a>切换zsh</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chsh -s $(which zsh)</div></pre></td></tr></table></figure>
