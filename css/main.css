@@ -1800,7 +1800,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffd74b;
+  background: #602dff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2585,7 +2585,6 @@ pre .javascript .function {
 .header {
   position: relative;
   margin: 0 auto;
-  width: 100%;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .header {
@@ -2732,11 +2731,14 @@ pre .javascript .function {
   padding-left: 0;
   padding-right: 260px;
 }
+header {
+  width: 100%;
+}
 .container .main-inner {
   width: 100%;
 }
 .content-wrap {
-  width: calc(100% - 260px);
+  width: 80%;
 }
 .site-brand-wrapper {
   position: relative;
