@@ -2,21 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://bifenghui.github.io/2017/03/17/nginx/</loc>
-    
-    <lastmod>2017-03-20T14:34:58.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://bifenghui.github.io/2017/03/17/maven/</loc>
-    
-    <lastmod>2017-03-20T14:34:58.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://bifenghui.github.io/2017/03/18/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%B8%B8%E7%94%A8api/</loc>
+    
+    <lastmod>2017-03-20T14:34:58.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://bifenghui.github.io/2017/03/17/nginx/</loc>
     
     <lastmod>2017-03-20T14:34:58.000Z</lastmod>
     
@@ -31,6 +24,13 @@
   
   <url>
     <loc>https://bifenghui.github.io/2017/03/17/%E5%9B%9E%E5%BF%86%E4%B8%8E%E6%80%9D%E8%80%83/</loc>
+    
+    <lastmod>2017-03-20T14:34:58.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://bifenghui.github.io/2017/03/17/maven/</loc>
     
     <lastmod>2017-03-20T14:34:58.000Z</lastmod>
     
