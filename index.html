@@ -440,10 +440,11 @@
 
       
         
-          zsh
+          <h1 id="查看系统安装的shell"><a href="#查看系统安装的shell" class="headerlink" title="查看系统安装的shell"></a>查看系统安装的shell</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">cat /etc/shells</div><div class="line"></div><div class="line"># /etc/shells: valid login shells</div><div class="line">/bin/sh</div><div class="line">/bin/dash</div><div class="line">/bin/bash</div><div class="line">/bin/rbash</div><div class="line">/bin/zsh</div><div class="line">/usr/bin/zsh</div></pre></td></tr></table></figure>
+<h1 id="查看当前系统使用的shell"><a href="#查看当前系统使用的shell" class="headerlink" title="查看当前系统使用的shell"></a>查看当前系统使用的shell</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">echo $SHELL</div><div class="line"></div><div class="line">/bin/zsh</div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/20/oh-my-zsh-使用/">
+            <a class="btn" href="/2017/03/20/oh-my-zsh-使用/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -599,10 +600,12 @@
 
       
         
-          多线程
+          <h1 id="wait"><a href="#wait" class="headerlink" title="wait"></a>wait</h1><p>通知当前执行代码的线程进入等待，将当前线程放入预备执行的队列中。<br>wait对象释放锁，所以wait对象必须在同步块或者方法中进行的执行</p>
+<h1 id="notify"><a href="#notify" class="headerlink" title="notify"></a>notify</h1><p>通知等待执行 wait线程 中某一线程， 让它尝试获取该对象的对象锁（notify释放锁后由wait线程获得），进入可执行状态。notify 必须在同步块或同步方法中</p>
+<h1 id="notifyAll"><a href="#notifyAll" class="headerlink" title="notifyAll"></a>notifyAll</h1><p>通知所有处于等待状态的线程 尝试去获得对象锁，进入可执行状态。<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/20/Object对象-wait、notify、notifyAll/">
+            <a class="btn" href="/2017/03/20/Object对象-wait、notify、notifyAll/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -758,10 +761,14 @@
 
       
         
-          多线程
+          <h1 id="start"><a href="#start" class="headerlink" title="start"></a>start</h1><p>调用start方法表示线程可以执行了，等待获得cpu资源执行run方法</p>
+<h1 id="run"><a href="#run" class="headerlink" title="run"></a>run</h1><p>单独调用线程run方法没有效果，必须先调用start方法修改线程状态</p>
+<h1 id="isAlive"><a href="#isAlive" class="headerlink" title="isAlive"></a>isAlive</h1><p>判断线程是否处于活动状态，线程不结束，返true</p>
+<h1 id="getId"><a href="#getId" class="headerlink" title="getId"></a>getId</h1><p>获得当前线程的id，全局long threadSeqNumber通过自增赋值给线程id， 由Thread完成。</p>
+<h1 id="getName"><a href="#getName" class="headerlink" title="getName"></a>getName</h1><p>获取当前线程的名称，默认为Thread-threadInitNum  此threadInitNum 由jvm按照全局int变量进行和自增。可以指定线程的名称 setName()<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/18/多线程常用api/">
+            <a class="btn" href="/2017/03/18/多线程常用api/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -917,10 +924,13 @@
 
       
         
-          多线程
+          <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>进程是操作系统运行的基本单元，每个进程中又多个子任务运行，任务及线程，即多线程</p>
+<h1 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h1><p>提升程序的性能<br>提升多核cpu利用效率<br>提升单核cpu吞吐量<br>有效防止线程阻塞</p>
+<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><h2 id="继承Thread类"><a href="#继承Thread类" class="headerlink" title="继承Thread类"></a>继承Thread类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</div><div class="line"> * Created with IntelliJ IDEA.</div><div class="line"> * ClassName: priv.bifh.thread.TestRunnable</div><div class="line"> * User: bifenghui@edianzu.cn</div><div class="line"> * Date: 2017/3/18</div><div class="line"> * Time: 下午2:05</div><div class="line"> * To change this template use File | Settings | File Templates.</div><div class="line"> * Description:</div><div class="line"> */</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestRunnable</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</div><div class="line">            System.out.println(Thread.currentThread().getName()+i);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="实现Runnable-接口"><a href="#实现Runnable-接口" class="headerlink" title="实现Runnable 接口"></a>实现Runnable 接口</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</div><div class="line"> * Created with IntelliJ IDEA.</div><div class="line"> * ClassName: priv.bifh.thread.TestThread</div><div class="line"> * User: bifenghui@edianzu.cn</div><div class="line"> * Date: 2017/3/18</div><div class="line"> * Time: 下午2:03</div><div class="line"> * To change this template use File | Settings | File Templates.</div><div class="line"> * Description:</div><div class="line"> */</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestThread</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line"><span class="comment">//        super.run();</span></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span> ; i++) &#123;</div><div class="line">            System.out.println(<span class="keyword">this</span>.currentThread().getName()+i);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/18/多线程介绍与实现/">
+            <a class="btn" href="/2017/03/18/多线程介绍与实现/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1076,10 +1086,13 @@
 
       
         
-          nginx
+          <h1 id="nginx简介"><a href="#nginx简介" class="headerlink" title="nginx简介"></a>nginx简介</h1><p>Nginx是俄罗斯人编写的十分轻量级的HTTP服务器，是一个高性能的HTTP和反向代理服务器，同时也是一个IMAP/POP3/SMTP 代理服务器</p>
+<h1 id="nginx用途"><a href="#nginx用途" class="headerlink" title="nginx用途"></a>nginx用途</h1><h2 id="正向代理、反向代理"><a href="#正向代理、反向代理" class="headerlink" title="正向代理、反向代理"></a>正向代理、反向代理</h2><h3 id="正向代理"><a href="#正向代理" class="headerlink" title="正向代理"></a>正向代理</h3><p>客户端甲需要访问服务器A，甲提交指向A的请求到 代理服务器B，代理服务器B请求A后返回数据给甲。例如 vpn、ss 等<br>甲需要提供 代理服务器的ip、port等</p>
+<h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><p>客户端甲直接提交请求到服务器A，A据甲的请求判断  发送请求到 具体服务器，请求成功后组织数据返回给甲<br>甲认为 服务器A就是数据提供者,是原始服务器<br><a href="http://baike.baidu.com/item/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86" title="百度百科反向代理">百度百科反向代理</a><br>反向代理（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，此时代理服务器对外就表现为一个反向代理服务器。</p>
+<h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><p>多台原始服务器，nginx服务器据分发规则将来自客户端的请求转发的内部不同服务器。<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/17/nginx/">
+            <a class="btn" href="/2017/03/17/nginx/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>

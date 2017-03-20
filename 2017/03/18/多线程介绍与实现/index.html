@@ -111,16 +111,22 @@
 
 
 
-<meta name="description" content="多线程">
+<meta name="description" content="定义进程是操作系统运行的基本单元，每个进程中又多个子任务运行，任务及线程，即多线程
+用途提升程序的性能提升多核cpu利用效率提升单核cpu吞吐量有效防止线程阻塞
+实现继承Thread类1234567891011121314151617/** * Created with IntelliJ IDEA. * ClassName: priv.bifh.thread.TestRunnable * User">
 <meta property="og:type" content="article">
 <meta property="og:title" content="多线程介绍与实现">
 <meta property="og:url" content="https://bifenghui.github.io/2017/03/18/多线程介绍与实现/index.html">
 <meta property="og:site_name" content="wind">
-<meta property="og:description" content="多线程">
-<meta property="og:updated_time" content="2017-03-18T06:44:41.000Z">
+<meta property="og:description" content="定义进程是操作系统运行的基本单元，每个进程中又多个子任务运行，任务及线程，即多线程
+用途提升程序的性能提升多核cpu利用效率提升单核cpu吞吐量有效防止线程阻塞
+实现继承Thread类1234567891011121314151617/** * Created with IntelliJ IDEA. * ClassName: priv.bifh.thread.TestRunnable * User">
+<meta property="og:updated_time" content="2017-03-20T14:34:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多线程介绍与实现">
-<meta name="twitter:description" content="多线程">
+<meta name="twitter:description" content="定义进程是操作系统运行的基本单元，每个进程中又多个子任务运行，任务及线程，即多线程
+用途提升程序的性能提升多核cpu利用效率提升单核cpu吞吐量有效防止线程阻塞
+实现继承Thread类1234567891011121314151617/** * Created with IntelliJ IDEA. * ClassName: priv.bifh.thread.TestRunnable * User">
 
 
 
@@ -421,10 +427,6 @@
           
 
           
-              <div class="post-description">
-                  多线程
-              </div>
-          
 
           
           <span>&nbsp; | &nbsp;
@@ -447,6 +449,7 @@
 <h1 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h1><p>提升程序的性能<br>提升多核cpu利用效率<br>提升单核cpu吞吐量<br>有效防止线程阻塞</p>
 <h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><h2 id="继承Thread类"><a href="#继承Thread类" class="headerlink" title="继承Thread类"></a>继承Thread类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Created with IntelliJ IDEA.</div><div class="line"> * ClassName: priv.bifh.thread.TestRunnable</div><div class="line"> * User: bifenghui@edianzu.cn</div><div class="line"> * Date: 2017/3/18</div><div class="line"> * Time: 下午2:05</div><div class="line"> * To change this template use File | Settings | File Templates.</div><div class="line"> * Description:</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestRunnable</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</div><div class="line">            System.out.println(Thread.currentThread().getName()+i);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="实现Runnable-接口"><a href="#实现Runnable-接口" class="headerlink" title="实现Runnable 接口"></a>实现Runnable 接口</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Created with IntelliJ IDEA.</div><div class="line"> * ClassName: priv.bifh.thread.TestThread</div><div class="line"> * User: bifenghui@edianzu.cn</div><div class="line"> * Date: 2017/3/18</div><div class="line"> * Time: 下午2:03</div><div class="line"> * To change this template use File | Settings | File Templates.</div><div class="line"> * Description:</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestThread</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line"><span class="comment">//        super.run();</span></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span> ; i++) &#123;</div><div class="line">            System.out.println(<span class="keyword">this</span>.currentThread().getName()+i);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>##测试<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Created with IntelliJ IDEA.</div><div class="line"> * ClassName: priv.bifh.test.ThreadTest</div><div class="line"> * User: bifenghui@edianzu.cn</div><div class="line"> * Date: 2017/3/18</div><div class="line"> * Time: 下午2:12</div><div class="line"> * To change this template use File | Settings | File Templates.</div><div class="line"> * Description:</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadTest</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</div><div class="line">        TestThread testThread = <span class="keyword">new</span> TestThread();</div><div class="line"></div><div class="line"></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;<span class="number">10</span> ; i++) &#123;</div><div class="line"><span class="comment">//            Thread.sleep(1000);</span></div><div class="line">            System.out.println(Thread.currentThread().getName()+i);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        TestRunnable testRunnable = <span class="keyword">new</span> TestRunnable();</div><div class="line">        Thread thread = <span class="keyword">new</span> Thread(testRunnable);</div><div class="line"></div><div class="line">        testThread.start();</div><div class="line">        thread.start();</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h1 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h1><h2 id="new"><a href="#new" class="headerlink" title="new"></a>new</h2><p>new Thread(),但没有调用start方法</p>
 <h2 id="可运行状态RUNNABLE"><a href="#可运行状态RUNNABLE" class="headerlink" title="可运行状态RUNNABLE"></a>可运行状态RUNNABLE</h2><p> thread.start()，线程处于可运行状态，此时可能已经在jvm中运行，也可能在等待cpu资源</p>

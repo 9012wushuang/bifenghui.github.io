@@ -111,17 +111,23 @@
 
 
 
-<meta name="description" content="多线程">
+<meta name="description" content="wait通知当前执行代码的线程进入等待，将当前线程放入预备执行的队列中。wait对象释放锁，所以wait对象必须在同步块或者方法中进行的执行
+notify通知等待执行 wait线程 中某一线程， 让它尝试获取该对象的对象锁（notify释放锁后由wait线程获得），进入可执行状态。notify 必须在同步块或同步方法中
+notifyAll通知所有处于等待状态的线程 尝试去获得对象锁，进入可执行状态">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Object对象-wait、notify、notifyAll.md">
 <meta property="og:url" content="https://bifenghui.github.io/2017/03/20/Object对象-wait、notify、notifyAll/index.html">
 <meta property="og:site_name" content="wind">
-<meta property="og:description" content="多线程">
+<meta property="og:description" content="wait通知当前执行代码的线程进入等待，将当前线程放入预备执行的队列中。wait对象释放锁，所以wait对象必须在同步块或者方法中进行的执行
+notify通知等待执行 wait线程 中某一线程， 让它尝试获取该对象的对象锁（notify释放锁后由wait线程获得），进入可执行状态。notify 必须在同步块或同步方法中
+notifyAll通知所有处于等待状态的线程 尝试去获得对象锁，进入可执行状态">
 <meta property="og:image" content="http://i1.piimg.com/567571/b3ec4cc69d38919e.png">
-<meta property="og:updated_time" content="2017-03-20T04:20:13.000Z">
+<meta property="og:updated_time" content="2017-03-20T14:34:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Object对象-wait、notify、notifyAll.md">
-<meta name="twitter:description" content="多线程">
+<meta name="twitter:description" content="wait通知当前执行代码的线程进入等待，将当前线程放入预备执行的队列中。wait对象释放锁，所以wait对象必须在同步块或者方法中进行的执行
+notify通知等待执行 wait线程 中某一线程， 让它尝试获取该对象的对象锁（notify释放锁后由wait线程获得），进入可执行状态。notify 必须在同步块或同步方法中
+notifyAll通知所有处于等待状态的线程 尝试去获得对象锁，进入可执行状态">
 <meta name="twitter:image" content="http://i1.piimg.com/567571/b3ec4cc69d38919e.png">
 
 
@@ -423,10 +429,6 @@
           
 
           
-              <div class="post-description">
-                  多线程
-              </div>
-          
 
           
           <span>&nbsp; | &nbsp;
@@ -447,7 +449,7 @@
       
         <h1 id="wait"><a href="#wait" class="headerlink" title="wait"></a>wait</h1><p>通知当前执行代码的线程进入等待，将当前线程放入预备执行的队列中。<br>wait对象释放锁，所以wait对象必须在同步块或者方法中进行的执行</p>
 <h1 id="notify"><a href="#notify" class="headerlink" title="notify"></a>notify</h1><p>通知等待执行 wait线程 中某一线程， 让它尝试获取该对象的对象锁（notify释放锁后由wait线程获得），进入可执行状态。notify 必须在同步块或同步方法中</p>
-<h1 id="notifyAll"><a href="#notifyAll" class="headerlink" title="notifyAll"></a>notifyAll</h1><p>通知所有处于等待状态的线程 尝试去获得对象锁，进入可执行状态。</p>
+<h1 id="notifyAll"><a href="#notifyAll" class="headerlink" title="notifyAll"></a>notifyAll</h1><p>通知所有处于等待状态的线程 尝试去获得对象锁，进入可执行状态。<br><a id="more"></a></p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>wait()方法可以使调用该线程的方法释放共享资源的锁，然后从运行状态退出，进入等待队列，直到再次被唤醒。</p>
 <p>notify()方法可以随机唤醒等待队列中等待同一共享资源的一个线程，并使得该线程退出等待状态，进入可运行状态</p>
 <p>notifyAll()方法可以使所有正在等待队列中等待同一共享资源的全部线程从等待状态退出，进入可运行状态</p>

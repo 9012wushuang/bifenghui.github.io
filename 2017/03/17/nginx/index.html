@@ -111,16 +111,22 @@
 
 
 
-<meta name="description" content="nginx">
+<meta name="description" content="nginx简介Nginx是俄罗斯人编写的十分轻量级的HTTP服务器，是一个高性能的HTTP和反向代理服务器，同时也是一个IMAP/POP3/SMTP 代理服务器
+nginx用途正向代理、反向代理正向代理客户端甲需要访问服务器A，甲提交指向A的请求到 代理服务器B，代理服务器B请求A后返回数据给甲。例如 vpn、ss 等甲需要提供 代理服务器的ip、port等
+反向代理客户端甲直接提交请求到服务器A">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nginx">
 <meta property="og:url" content="https://bifenghui.github.io/2017/03/17/nginx/index.html">
 <meta property="og:site_name" content="wind">
-<meta property="og:description" content="nginx">
-<meta property="og:updated_time" content="2017-03-18T03:30:48.000Z">
+<meta property="og:description" content="nginx简介Nginx是俄罗斯人编写的十分轻量级的HTTP服务器，是一个高性能的HTTP和反向代理服务器，同时也是一个IMAP/POP3/SMTP 代理服务器
+nginx用途正向代理、反向代理正向代理客户端甲需要访问服务器A，甲提交指向A的请求到 代理服务器B，代理服务器B请求A后返回数据给甲。例如 vpn、ss 等甲需要提供 代理服务器的ip、port等
+反向代理客户端甲直接提交请求到服务器A">
+<meta property="og:updated_time" content="2017-03-20T14:34:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nginx">
-<meta name="twitter:description" content="nginx">
+<meta name="twitter:description" content="nginx简介Nginx是俄罗斯人编写的十分轻量级的HTTP服务器，是一个高性能的HTTP和反向代理服务器，同时也是一个IMAP/POP3/SMTP 代理服务器
+nginx用途正向代理、反向代理正向代理客户端甲需要访问服务器A，甲提交指向A的请求到 代理服务器B，代理服务器B请求A后返回数据给甲。例如 vpn、ss 等甲需要提供 代理服务器的ip、port等
+反向代理客户端甲直接提交请求到服务器A">
 
 
 
@@ -421,10 +427,6 @@
           
 
           
-              <div class="post-description">
-                  nginx
-              </div>
-          
 
           
           <span>&nbsp; | &nbsp;
@@ -446,7 +448,7 @@
         <h1 id="nginx简介"><a href="#nginx简介" class="headerlink" title="nginx简介"></a>nginx简介</h1><p>Nginx是俄罗斯人编写的十分轻量级的HTTP服务器，是一个高性能的HTTP和反向代理服务器，同时也是一个IMAP/POP3/SMTP 代理服务器</p>
 <h1 id="nginx用途"><a href="#nginx用途" class="headerlink" title="nginx用途"></a>nginx用途</h1><h2 id="正向代理、反向代理"><a href="#正向代理、反向代理" class="headerlink" title="正向代理、反向代理"></a>正向代理、反向代理</h2><h3 id="正向代理"><a href="#正向代理" class="headerlink" title="正向代理"></a>正向代理</h3><p>客户端甲需要访问服务器A，甲提交指向A的请求到 代理服务器B，代理服务器B请求A后返回数据给甲。例如 vpn、ss 等<br>甲需要提供 代理服务器的ip、port等</p>
 <h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><p>客户端甲直接提交请求到服务器A，A据甲的请求判断  发送请求到 具体服务器，请求成功后组织数据返回给甲<br>甲认为 服务器A就是数据提供者,是原始服务器<br><a href="http://baike.baidu.com/item/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86" title="百度百科反向代理" target="_blank" rel="external">百度百科反向代理</a><br>反向代理（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，此时代理服务器对外就表现为一个反向代理服务器。</p>
-<h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><p>多台原始服务器，nginx服务器据分发规则将来自客户端的请求转发的内部不同服务器。</p>
+<h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><p>多台原始服务器，nginx服务器据分发规则将来自客户端的请求转发的内部不同服务器。<br><a id="more"></a></p>
 <h3 id="分发规则"><a href="#分发规则" class="headerlink" title="分发规则"></a>分发规则</h3><h4 id="RR"><a href="#RR" class="headerlink" title="RR"></a>RR</h4><p>默认按照服务器配置顺序依次将来自客户的请求分发给内部服务器，nginx服务器会自动判断内部服务器是否可以请求(之前查看nginx日志会发现很多由nginx产生的get请求)</p>
 <h4 id="权重"><a href="#权重" class="headerlink" title="权重"></a>权重</h4><p>指定每台服务器的weight，weight和访问比率成正比</p>
 <h4 id="ip-hash"><a href="#ip-hash" class="headerlink" title="ip_hash"></a>ip_hash</h4><p>指定ip_bash访问策略，解决状态访问问题，例如session等。据用户的ip的hash分配服务器，使用户固定访问一个服务器。<br>注：解决session问题其他策略，可将session单独提取出来放入缓存或者nosql等数据库，如redis，web服务提供拦截器拦截需要请求绑定session</p>

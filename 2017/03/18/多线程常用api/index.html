@@ -111,16 +111,28 @@
 
 
 
-<meta name="description" content="多线程">
+<meta name="description" content="start调用start方法表示线程可以执行了，等待获得cpu资源执行run方法
+run单独调用线程run方法没有效果，必须先调用start方法修改线程状态
+isAlive判断线程是否处于活动状态，线程不结束，返true
+getId获得当前线程的id，全局long threadSeqNumber通过自增赋值给线程id， 由Thread完成。
+getName获取当前线程的名称，默认为Thread-t">
 <meta property="og:type" content="article">
 <meta property="og:title" content="多线程常用api">
 <meta property="og:url" content="https://bifenghui.github.io/2017/03/18/多线程常用api/index.html">
 <meta property="og:site_name" content="wind">
-<meta property="og:description" content="多线程">
-<meta property="og:updated_time" content="2017-03-18T09:42:34.000Z">
+<meta property="og:description" content="start调用start方法表示线程可以执行了，等待获得cpu资源执行run方法
+run单独调用线程run方法没有效果，必须先调用start方法修改线程状态
+isAlive判断线程是否处于活动状态，线程不结束，返true
+getId获得当前线程的id，全局long threadSeqNumber通过自增赋值给线程id， 由Thread完成。
+getName获取当前线程的名称，默认为Thread-t">
+<meta property="og:updated_time" content="2017-03-20T14:34:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多线程常用api">
-<meta name="twitter:description" content="多线程">
+<meta name="twitter:description" content="start调用start方法表示线程可以执行了，等待获得cpu资源执行run方法
+run单独调用线程run方法没有效果，必须先调用start方法修改线程状态
+isAlive判断线程是否处于活动状态，线程不结束，返true
+getId获得当前线程的id，全局long threadSeqNumber通过自增赋值给线程id， 由Thread完成。
+getName获取当前线程的名称，默认为Thread-t">
 
 
 
@@ -421,10 +433,6 @@
           
 
           
-              <div class="post-description">
-                  多线程
-              </div>
-          
 
           
           <span>&nbsp; | &nbsp;
@@ -447,7 +455,7 @@
 <h1 id="run"><a href="#run" class="headerlink" title="run"></a>run</h1><p>单独调用线程run方法没有效果，必须先调用start方法修改线程状态</p>
 <h1 id="isAlive"><a href="#isAlive" class="headerlink" title="isAlive"></a>isAlive</h1><p>判断线程是否处于活动状态，线程不结束，返true</p>
 <h1 id="getId"><a href="#getId" class="headerlink" title="getId"></a>getId</h1><p>获得当前线程的id，全局long threadSeqNumber通过自增赋值给线程id， 由Thread完成。</p>
-<h1 id="getName"><a href="#getName" class="headerlink" title="getName"></a>getName</h1><p>获取当前线程的名称，默认为Thread-threadInitNum  此threadInitNum 由jvm按照全局int变量进行和自增。可以指定线程的名称 setName()</p>
+<h1 id="getName"><a href="#getName" class="headerlink" title="getName"></a>getName</h1><p>获取当前线程的名称，默认为Thread-threadInitNum  此threadInitNum 由jvm按照全局int变量进行和自增。可以指定线程的名称 setName()<br><a id="more"></a></p>
 <h1 id="getPriority"><a href="#getPriority" class="headerlink" title="getPriority"></a>getPriority</h1><p>获取线程优先级<br>默认优先级为5</p>
 <h1 id="setPriority"><a href="#setPriority" class="headerlink" title="setPriority"></a>setPriority</h1><p>设置线程的优先级，优先级高的线程获取cpu资源的概率更高。<br>优先级有集成传递性</p>
 <h1 id="isDaemon、setDaemon-boolean-on"><a href="#isDaemon、setDaemon-boolean-on" class="headerlink" title="isDaemon、setDaemon(boolean on)"></a>isDaemon、setDaemon(boolean on)</h1><p>守护线程，指定在守护的线程执行的完成后才结束的线程。如gc线程线程一直为守护线程<br>isDaemon 是否守护线程 ，<br>setDaemon(boolean),true设置线程为守护线程 false 线程不是守护线程<br>代码：执行以下代码，发现线程依然可以从while(true)中跳出<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Created with IntelliJ IDEA.</div><div class="line"> * ClassName: priv.bifh.Daemon.TestDaemon</div><div class="line"> * User: bifenghui@</div><div class="line"> * Date: 2017/3/18</div><div class="line"> * Time: 下午3:32</div><div class="line"> * To change this template use File | Settings | File Templates.</div><div class="line"> * Description:</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestDaemon</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line"><span class="comment">//        super.run();</span></div><div class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</div><div class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</div><div class="line">            i++;</div><div class="line">            System.out.println(<span class="string">"******11111***"</span> + i);</div><div class="line">            <span class="keyword">try</span> &#123;</div><div class="line">                Thread.sleep(<span class="number">1000</span>);</div><div class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</div><div class="line">                e.printStackTrace();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
