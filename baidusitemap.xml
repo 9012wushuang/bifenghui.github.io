@@ -150,26 +150,6 @@
 
     
   <url>
-    <loc>https://bifenghui.github.io/2017/03/21/mongo-%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2017-03-20T17:36:13.000Z</lastmod>
-    <data>
-        <display>
-        <title>mongo 安装</title>
-        <pubTime>2017-03-20T16:57:43.000Z</pubTime>
-        
-        <tag>mongo</tag>
-         
-         
-           
-             
-              <breadCrumb title="mongo" url="https://bifenghui.github.io/categories/mongo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://bifenghui.github.io/2017/03/21/maven%E7%B3%BB%E5%88%97%E4%B8%80/</loc>
     <lastmod>2017-03-20T17:36:13.000Z</lastmod>
     <data>
@@ -190,14 +170,14 @@
 
     
   <url>
-    <loc>https://bifenghui.github.io/2017/03/21/mongo-%E5%A4%87%E4%BB%BD%E4%B8%8E%E5%9B%9E%E6%BB%9A/</loc>
+    <loc>https://bifenghui.github.io/2017/03/21/mongo-%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2017-03-20T17:36:13.000Z</lastmod>
     <data>
         <display>
-        <title>mongo 备份与回滚</title>
-        <pubTime>2017-03-20T16:58:45.000Z</pubTime>
+        <title>mongo 安装</title>
+        <pubTime>2017-03-20T16:57:43.000Z</pubTime>
         
-        <tag>-mongo</tag>
+        <tag>mongo</tag>
          
          
            
@@ -230,6 +210,26 @@
 
     
   <url>
+    <loc>https://bifenghui.github.io/2017/03/21/mongo-%E5%A4%87%E4%BB%BD%E4%B8%8E%E5%9B%9E%E6%BB%9A/</loc>
+    <lastmod>2017-03-20T17:36:13.000Z</lastmod>
+    <data>
+        <display>
+        <title>mongo 备份与回滚</title>
+        <pubTime>2017-03-20T16:58:45.000Z</pubTime>
+        
+        <tag>-mongo</tag>
+         
+         
+           
+             
+              <breadCrumb title="mongo" url="https://bifenghui.github.io/categories/mongo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://bifenghui.github.io/2017/03/21/mongo-java-api%E5%BC%95%E5%85%A5/</loc>
     <lastmod>2017-03-20T17:36:13.000Z</lastmod>
     <data>
@@ -243,26 +243,6 @@
            
              
               <breadCrumb title="mongo" url="https://bifenghui.github.io/categories/mongo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://bifenghui.github.io/2017/03/21/memcached/</loc>
-    <lastmod>2017-03-20T17:36:13.000Z</lastmod>
-    <data>
-        <display>
-        <title>memcached</title>
-        <pubTime>2017-03-20T17:05:19.000Z</pubTime>
-        
-        <tag>memcached</tag>
-         
-         
-           
-             
-              <breadCrumb title="memcached" url="https://bifenghui.github.io/categories/memcached/"/>
           
         </display>
     </data>
@@ -303,6 +283,26 @@
            
              
               <breadCrumb title="数据库" url="https://bifenghui.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://bifenghui.github.io/2017/03/21/memcached/</loc>
+    <lastmod>2017-03-20T17:36:13.000Z</lastmod>
+    <data>
+        <display>
+        <title>memcached</title>
+        <pubTime>2017-03-20T17:05:19.000Z</pubTime>
+        
+        <tag>memcached</tag>
+         
+         
+           
+             
+              <breadCrumb title="memcached" url="https://bifenghui.github.io/categories/memcached/"/>
           
         </display>
     </data>
@@ -745,26 +745,6 @@
 
     
   <url>
-    <loc>https://bifenghui.github.io/2017/03/21/git-checkout%E3%80%81reset%E3%80%81revert/</loc>
-    <lastmod>2017-03-20T16:55:46.000Z</lastmod>
-    <data>
-        <display>
-        <title>git checkout、reset、revert</title>
-        <pubTime>2017-03-20T16:55:09.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-         
-           
-             
-              <breadCrumb title="git" url="https://bifenghui.github.io/categories/git/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://bifenghui.github.io/2017/03/21/git-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2017-03-20T16:55:46.000Z</lastmod>
     <data>
@@ -785,19 +765,59 @@
 
     
   <url>
-    <loc>https://bifenghui.github.io/2017/03/17/maven/</loc>
-    <lastmod>2017-03-20T14:34:58.000Z</lastmod>
+    <loc>https://bifenghui.github.io/2017/03/21/git-checkout%E3%80%81reset%E3%80%81revert/</loc>
+    <lastmod>2017-03-20T16:55:46.000Z</lastmod>
     <data>
         <display>
-        <title>maven</title>
-        <pubTime>2017-03-17T03:05:45.000Z</pubTime>
+        <title>git checkout、reset、revert</title>
+        <pubTime>2017-03-20T16:55:09.000Z</pubTime>
         
-        <tag>maven</tag>
+        <tag>git</tag>
          
          
            
              
-              <breadCrumb title="maven" url="https://bifenghui.github.io/categories/maven/"/>
+              <breadCrumb title="git" url="https://bifenghui.github.io/categories/git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://bifenghui.github.io/2017/03/17/nginx/</loc>
+    <lastmod>2017-03-20T14:34:58.000Z</lastmod>
+    <data>
+        <display>
+        <title>nginx</title>
+        <pubTime>2017-03-17T14:16:47.000Z</pubTime>
+        
+        <tag>nginx</tag>
+         
+         
+           
+             
+              <breadCrumb title="nginx" url="https://bifenghui.github.io/categories/nginx/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://bifenghui.github.io/2017/03/17/%E5%9B%9E%E5%BF%86%E4%B8%8E%E6%80%9D%E8%80%83/</loc>
+    <lastmod>2017-03-20T14:34:58.000Z</lastmod>
+    <data>
+        <display>
+        <title>回忆与思考</title>
+        <pubTime>2017-03-16T16:48:08.000Z</pubTime>
+        
+        <tag>生活</tag>
+         
+         
+           
+             
+              <breadCrumb title="想法" url="https://bifenghui.github.io/categories/%E6%83%B3%E6%B3%95/"/>
           
         </display>
     </data>
@@ -865,39 +885,19 @@
 
     
   <url>
-    <loc>https://bifenghui.github.io/2017/03/17/nginx/</loc>
+    <loc>https://bifenghui.github.io/2017/03/17/maven/</loc>
     <lastmod>2017-03-20T14:34:58.000Z</lastmod>
     <data>
         <display>
-        <title>nginx</title>
-        <pubTime>2017-03-17T14:16:47.000Z</pubTime>
+        <title>maven</title>
+        <pubTime>2017-03-17T03:05:45.000Z</pubTime>
         
-        <tag>nginx</tag>
+        <tag>maven</tag>
          
          
            
              
-              <breadCrumb title="nginx" url="https://bifenghui.github.io/categories/nginx/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://bifenghui.github.io/2017/03/17/%E5%9B%9E%E5%BF%86%E4%B8%8E%E6%80%9D%E8%80%83/</loc>
-    <lastmod>2017-03-20T14:34:58.000Z</lastmod>
-    <data>
-        <display>
-        <title>回忆与思考</title>
-        <pubTime>2017-03-16T16:48:08.000Z</pubTime>
-        
-        <tag>生活</tag>
-         
-         
-           
-             
-              <breadCrumb title="想法" url="https://bifenghui.github.io/categories/%E6%83%B3%E6%B3%95/"/>
+              <breadCrumb title="maven" url="https://bifenghui.github.io/categories/maven/"/>
           
         </display>
     </data>
