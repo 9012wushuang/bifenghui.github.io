@@ -4,12 +4,12 @@
   <subtitle>十年前你是谁，一年前你是谁，甚至昨天你是谁，都不重要。重要的是，今天你是谁，以及明天你将成为谁</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://bifenghui.github.io/"/>
+  <link href="https://www.nightqq.cn/"/>
   <updated>2017-03-24T05:00:25.000Z</updated>
-  <id>https://bifenghui.github.io/</id>
+  <id>https://www.nightqq.cn/</id>
   
   <author>
-    <name>风二中</name>
+    <name>wind</name>
     
   </author>
   
@@ -17,8 +17,8 @@
   
   <entry>
     <title>设计模式-桥接模式</title>
-    <link href="https://bifenghui.github.io/2017/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://bifenghui.github.io/2017/03/24/设计模式-桥接模式/</id>
+    <link href="https://www.nightqq.cn/2017/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://www.nightqq.cn/2017/03/24/设计模式-桥接模式/</id>
     <published>2017-03-24T04:37:37.000Z</published>
     <updated>2017-03-24T05:00:25.000Z</updated>
     
@@ -41,17 +41,17 @@
     
     </summary>
     
-      <category term="设计模式" scheme="https://bifenghui.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="https://www.nightqq.cn/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-      <category term="桥接模式" scheme="https://bifenghui.github.io/tags/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/"/>
+      <category term="桥接模式" scheme="https://www.nightqq.cn/tags/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>设计模式-责任链模式</title>
-    <link href="https://bifenghui.github.io/2017/03/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://bifenghui.github.io/2017/03/23/设计模式-责任链模式/</id>
+    <link href="https://www.nightqq.cn/2017/03/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://www.nightqq.cn/2017/03/23/设计模式-责任链模式/</id>
     <published>2017-03-23T04:36:57.000Z</published>
     <updated>2017-03-23T04:36:57.000Z</updated>
     
@@ -64,8 +64,8 @@
   
   <entry>
     <title>设计模式-策略模式</title>
-    <link href="https://bifenghui.github.io/2017/03/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://bifenghui.github.io/2017/03/23/设计模式-策略模式/</id>
+    <link href="https://www.nightqq.cn/2017/03/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://www.nightqq.cn/2017/03/23/设计模式-策略模式/</id>
     <published>2017-03-23T04:36:46.000Z</published>
     <updated>2017-03-23T04:36:46.000Z</updated>
     
@@ -78,8 +78,8 @@
   
   <entry>
     <title>设计模式-工厂模式</title>
-    <link href="https://bifenghui.github.io/2017/03/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://bifenghui.github.io/2017/03/23/设计模式-工厂模式/</id>
+    <link href="https://www.nightqq.cn/2017/03/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://www.nightqq.cn/2017/03/23/设计模式-工厂模式/</id>
     <published>2017-03-23T04:34:22.000Z</published>
     <updated>2017-03-23T04:34:22.000Z</updated>
     
@@ -92,8 +92,8 @@
   
   <entry>
     <title>设计模式-装饰模式</title>
-    <link href="https://bifenghui.github.io/2017/03/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://bifenghui.github.io/2017/03/23/设计模式-装饰模式/</id>
+    <link href="https://www.nightqq.cn/2017/03/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://www.nightqq.cn/2017/03/23/设计模式-装饰模式/</id>
     <published>2017-03-23T04:34:17.000Z</published>
     <updated>2017-03-23T04:34:17.000Z</updated>
     
@@ -106,8 +106,8 @@
   
   <entry>
     <title>设计模式-适配器模式</title>
-    <link href="https://bifenghui.github.io/2017/03/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://bifenghui.github.io/2017/03/23/设计模式-适配器模式/</id>
+    <link href="https://www.nightqq.cn/2017/03/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://www.nightqq.cn/2017/03/23/设计模式-适配器模式/</id>
     <published>2017-03-23T04:34:10.000Z</published>
     <updated>2017-03-23T04:34:10.000Z</updated>
     
@@ -120,8 +120,8 @@
   
   <entry>
     <title>设计模式-命令模式</title>
-    <link href="https://bifenghui.github.io/2017/03/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://bifenghui.github.io/2017/03/23/设计模式-命令模式/</id>
+    <link href="https://www.nightqq.cn/2017/03/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://www.nightqq.cn/2017/03/23/设计模式-命令模式/</id>
     <published>2017-03-23T04:33:34.000Z</published>
     <updated>2017-03-23T04:33:34.000Z</updated>
     
@@ -134,8 +134,8 @@
   
   <entry>
     <title>spring 系列之Spring自定义注解</title>
-    <link href="https://bifenghui.github.io/2017/03/21/spring-%E7%B3%BB%E5%88%97%E4%B9%8BSpring%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3/"/>
-    <id>https://bifenghui.github.io/2017/03/21/spring-系列之Spring自定义注解/</id>
+    <link href="https://www.nightqq.cn/2017/03/21/spring-%E7%B3%BB%E5%88%97%E4%B9%8BSpring%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3/"/>
+    <id>https://www.nightqq.cn/2017/03/21/spring-系列之Spring自定义注解/</id>
     <published>2017-03-20T17:33:03.000Z</published>
     <updated>2017-03-20T17:33:03.000Z</updated>
     
@@ -148,8 +148,8 @@
   
   <entry>
     <title>搬瓦工服务器购买+ss搭建</title>
-    <link href="https://bifenghui.github.io/2017/03/21/%E6%90%AC%E7%93%A6%E5%B7%A5%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B4%AD%E4%B9%B0-ss%E6%90%AD%E5%BB%BA/"/>
-    <id>https://bifenghui.github.io/2017/03/21/搬瓦工服务器购买-ss搭建/</id>
+    <link href="https://www.nightqq.cn/2017/03/21/%E6%90%AC%E7%93%A6%E5%B7%A5%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B4%AD%E4%B9%B0-ss%E6%90%AD%E5%BB%BA/"/>
+    <id>https://www.nightqq.cn/2017/03/21/搬瓦工服务器购买-ss搭建/</id>
     <published>2017-03-20T17:32:20.000Z</published>
     <updated>2017-03-20T17:32:20.000Z</updated>
     
@@ -162,8 +162,8 @@
   
   <entry>
     <title>nexus 私服搭建</title>
-    <link href="https://bifenghui.github.io/2017/03/21/nexus-%E7%A7%81%E6%9C%8D%E6%90%AD%E5%BB%BA/"/>
-    <id>https://bifenghui.github.io/2017/03/21/nexus-私服搭建/</id>
+    <link href="https://www.nightqq.cn/2017/03/21/nexus-%E7%A7%81%E6%9C%8D%E6%90%AD%E5%BB%BA/"/>
+    <id>https://www.nightqq.cn/2017/03/21/nexus-私服搭建/</id>
     <published>2017-03-20T17:30:56.000Z</published>
     <updated>2017-03-20T17:30:56.000Z</updated>
     
@@ -176,8 +176,8 @@
   
   <entry>
     <title>spring 系列之Spring Boot</title>
-    <link href="https://bifenghui.github.io/2017/03/21/spring-%E7%B3%BB%E5%88%97%E4%B9%8BSpring-Boot/"/>
-    <id>https://bifenghui.github.io/2017/03/21/spring-系列之Spring-Boot/</id>
+    <link href="https://www.nightqq.cn/2017/03/21/spring-%E7%B3%BB%E5%88%97%E4%B9%8BSpring-Boot/"/>
+    <id>https://www.nightqq.cn/2017/03/21/spring-系列之Spring-Boot/</id>
     <published>2017-03-20T17:29:14.000Z</published>
     <updated>2017-03-20T17:29:14.000Z</updated>
     
@@ -190,8 +190,8 @@
   
   <entry>
     <title>gerrit 代码审核服务器搭建</title>
-    <link href="https://bifenghui.github.io/2017/03/21/gerrit-%E4%BB%A3%E7%A0%81%E5%AE%A1%E6%A0%B8%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/"/>
-    <id>https://bifenghui.github.io/2017/03/21/gerrit-代码审核服务器搭建/</id>
+    <link href="https://www.nightqq.cn/2017/03/21/gerrit-%E4%BB%A3%E7%A0%81%E5%AE%A1%E6%A0%B8%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/"/>
+    <id>https://www.nightqq.cn/2017/03/21/gerrit-代码审核服务器搭建/</id>
     <published>2017-03-20T17:28:30.000Z</published>
     <updated>2017-03-20T17:28:30.000Z</updated>
     
@@ -204,8 +204,8 @@
   
   <entry>
     <title>分布式系统设计理念</title>
-    <link href="https://bifenghui.github.io/2017/03/21/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E7%90%86%E5%BF%B5/"/>
-    <id>https://bifenghui.github.io/2017/03/21/分布式系统设计理念/</id>
+    <link href="https://www.nightqq.cn/2017/03/21/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E7%90%86%E5%BF%B5/"/>
+    <id>https://www.nightqq.cn/2017/03/21/分布式系统设计理念/</id>
     <published>2017-03-20T17:27:23.000Z</published>
     <updated>2017-03-20T17:27:23.000Z</updated>
     
@@ -218,8 +218,8 @@
   
   <entry>
     <title>spring 系列之Spring Security</title>
-    <link href="https://bifenghui.github.io/2017/03/21/spring-%E7%B3%BB%E5%88%97%E4%B9%8BSpring-Security/"/>
-    <id>https://bifenghui.github.io/2017/03/21/spring-系列之Spring-Security/</id>
+    <link href="https://www.nightqq.cn/2017/03/21/spring-%E7%B3%BB%E5%88%97%E4%B9%8BSpring-Security/"/>
+    <id>https://www.nightqq.cn/2017/03/21/spring-系列之Spring-Security/</id>
     <published>2017-03-20T17:26:30.000Z</published>
     <updated>2017-03-20T17:26:30.000Z</updated>
     
@@ -232,8 +232,8 @@
   
   <entry>
     <title>Apache Shiro</title>
-    <link href="https://bifenghui.github.io/2017/03/21/Apache-Shiro/"/>
-    <id>https://bifenghui.github.io/2017/03/21/Apache-Shiro/</id>
+    <link href="https://www.nightqq.cn/2017/03/21/Apache-Shiro/"/>
+    <id>https://www.nightqq.cn/2017/03/21/Apache-Shiro/</id>
     <published>2017-03-20T17:25:55.000Z</published>
     <updated>2017-03-20T17:25:55.000Z</updated>
     
@@ -246,8 +246,8 @@
   
   <entry>
     <title>java日志框架-logback</title>
-    <link href="https://bifenghui.github.io/2017/03/21/java%E6%97%A5%E5%BF%97%E6%A1%86%E6%9E%B6-logback/"/>
-    <id>https://bifenghui.github.io/2017/03/21/java日志框架-logback/</id>
+    <link href="https://www.nightqq.cn/2017/03/21/java%E6%97%A5%E5%BF%97%E6%A1%86%E6%9E%B6-logback/"/>
+    <id>https://www.nightqq.cn/2017/03/21/java日志框架-logback/</id>
     <published>2017-03-20T17:25:47.000Z</published>
     <updated>2017-03-20T17:25:47.000Z</updated>
     
@@ -260,8 +260,8 @@
   
   <entry>
     <title>csrf攻击</title>
-    <link href="https://bifenghui.github.io/2017/03/21/csrf%E6%94%BB%E5%87%BB/"/>
-    <id>https://bifenghui.github.io/2017/03/21/csrf攻击/</id>
+    <link href="https://www.nightqq.cn/2017/03/21/csrf%E6%94%BB%E5%87%BB/"/>
+    <id>https://www.nightqq.cn/2017/03/21/csrf攻击/</id>
     <published>2017-03-20T17:22:21.000Z</published>
     <updated>2017-03-20T17:22:21.000Z</updated>
     
@@ -274,8 +274,8 @@
   
   <entry>
     <title>微信公众号申请流程和开发接入</title>
-    <link href="https://bifenghui.github.io/2017/03/21/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E7%94%B3%E8%AF%B7%E6%B5%81%E7%A8%8B%E5%92%8C%E5%BC%80%E5%8F%91%E6%8E%A5%E5%85%A5/"/>
-    <id>https://bifenghui.github.io/2017/03/21/微信公众号申请流程和开发接入/</id>
+    <link href="https://www.nightqq.cn/2017/03/21/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E7%94%B3%E8%AF%B7%E6%B5%81%E7%A8%8B%E5%92%8C%E5%BC%80%E5%8F%91%E6%8E%A5%E5%85%A5/"/>
+    <id>https://www.nightqq.cn/2017/03/21/微信公众号申请流程和开发接入/</id>
     <published>2017-03-20T17:15:11.000Z</published>
     <updated>2017-03-20T17:15:11.000Z</updated>
     
@@ -288,8 +288,8 @@
   
   <entry>
     <title>maven系列一</title>
-    <link href="https://bifenghui.github.io/2017/03/21/maven%E7%B3%BB%E5%88%97%E4%B8%80/"/>
-    <id>https://bifenghui.github.io/2017/03/21/maven系列一/</id>
+    <link href="https://www.nightqq.cn/2017/03/21/maven%E7%B3%BB%E5%88%97%E4%B8%80/"/>
+    <id>https://www.nightqq.cn/2017/03/21/maven系列一/</id>
     <published>2017-03-20T17:14:08.000Z</published>
     <updated>2017-03-20T17:36:13.000Z</updated>
     
@@ -297,17 +297,17 @@
     
     </summary>
     
-      <category term="maven" scheme="https://bifenghui.github.io/categories/maven/"/>
+      <category term="maven" scheme="https://www.nightqq.cn/categories/maven/"/>
     
     
-      <category term="maven" scheme="https://bifenghui.github.io/tags/maven/"/>
+      <category term="maven" scheme="https://www.nightqq.cn/tags/maven/"/>
     
   </entry>
   
   <entry>
     <title>重构代码系列一</title>
-    <link href="https://bifenghui.github.io/2017/03/21/%E9%87%8D%E6%9E%84%E4%BB%A3%E7%A0%81%E7%B3%BB%E5%88%97%E4%B8%80/"/>
-    <id>https://bifenghui.github.io/2017/03/21/重构代码系列一/</id>
+    <link href="https://www.nightqq.cn/2017/03/21/%E9%87%8D%E6%9E%84%E4%BB%A3%E7%A0%81%E7%B3%BB%E5%88%97%E4%B8%80/"/>
+    <id>https://www.nightqq.cn/2017/03/21/重构代码系列一/</id>
     <published>2017-03-20T17:12:17.000Z</published>
     <updated>2017-03-20T17:12:17.000Z</updated>
     
