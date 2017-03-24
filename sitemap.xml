@@ -79,7 +79,7 @@
   </url>
   
   <url>
-    <loc>https://bifenghui.github.io/2017/03/21/mongo-%E5%AE%89%E8%A3%85/</loc>
+    <loc>https://bifenghui.github.io/2017/03/21/mongo-java-api%E5%BC%95%E5%85%A5/</loc>
     
     <lastmod>2017-03-20T17:36:13.000Z</lastmod>
     
@@ -93,7 +93,21 @@
   </url>
   
   <url>
+    <loc>https://bifenghui.github.io/2017/03/21/mongo-%E5%AE%89%E8%A3%85/</loc>
+    
+    <lastmod>2017-03-20T17:36:13.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://bifenghui.github.io/2017/03/21/mongo-%E5%A4%87%E4%BB%BD%E4%B8%8E%E5%9B%9E%E6%BB%9A/</loc>
+    
+    <lastmod>2017-03-20T17:36:13.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://bifenghui.github.io/2017/03/21/memcached/</loc>
     
     <lastmod>2017-03-20T17:36:13.000Z</lastmod>
     
@@ -107,20 +121,6 @@
   </url>
   
   <url>
-    <loc>https://bifenghui.github.io/2017/03/21/mongo-java-api%E5%BC%95%E5%85%A5/</loc>
-    
-    <lastmod>2017-03-20T17:36:13.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://bifenghui.github.io/2017/03/21/maven%E7%B3%BB%E5%88%97%E4%B8%80/</loc>
-    
-    <lastmod>2017-03-20T17:36:13.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://bifenghui.github.io/2017/03/21/linux-%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</loc>
     
     <lastmod>2017-03-20T17:36:13.000Z</lastmod>
@@ -128,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://bifenghui.github.io/2017/03/21/memcached/</loc>
+    <loc>https://bifenghui.github.io/2017/03/21/maven%E7%B3%BB%E5%88%97%E4%B8%80/</loc>
     
     <lastmod>2017-03-20T17:36:13.000Z</lastmod>
     
@@ -359,14 +359,14 @@
   </url>
   
   <url>
-    <loc>https://bifenghui.github.io/2017/03/20/Object%E5%AF%B9%E8%B1%A1-wait%E3%80%81notify%E3%80%81notifyAll/</loc>
+    <loc>https://bifenghui.github.io/2017/03/17/nginx/</loc>
     
     <lastmod>2017-03-20T14:34:58.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://bifenghui.github.io/2017/03/17/maven/</loc>
+    <loc>https://bifenghui.github.io/2017/03/20/Object%E5%AF%B9%E8%B1%A1-wait%E3%80%81notify%E3%80%81notifyAll/</loc>
     
     <lastmod>2017-03-20T14:34:58.000Z</lastmod>
     
@@ -380,14 +380,14 @@
   </url>
   
   <url>
-    <loc>https://bifenghui.github.io/2017/03/17/%E5%9B%9E%E5%BF%86%E4%B8%8E%E6%80%9D%E8%80%83/</loc>
+    <loc>https://bifenghui.github.io/2017/03/17/maven/</loc>
     
     <lastmod>2017-03-20T14:34:58.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://bifenghui.github.io/2017/03/17/nginx/</loc>
+    <loc>https://bifenghui.github.io/2017/03/17/%E5%9B%9E%E5%BF%86%E4%B8%8E%E6%80%9D%E8%80%83/</loc>
     
     <lastmod>2017-03-20T14:34:58.000Z</lastmod>
     
