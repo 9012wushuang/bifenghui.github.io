@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bifenghui.github.io/"/>
-  <updated>2017-03-23T04:36:57.000Z</updated>
+  <updated>2017-03-24T04:56:12.000Z</updated>
   <id>https://bifenghui.github.io/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式-桥接模式</title>
+    <link href="https://bifenghui.github.io/2017/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://bifenghui.github.io/2017/03/24/设计模式-桥接模式/</id>
+    <published>2017-03-24T04:37:37.000Z</published>
+    <updated>2017-03-24T04:56:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h2><h3 id="桥接模式"><a href="#桥接模式" class="headerlink" title="桥接模式"></a>桥接模式</h3><h4 id="意图"><a href="#意图" class="headerlink" title="意图"></a>意图</h4><p>将抽象部分与实现部分分离，使它们都可以独立的变化。</p>
+<h4 id="主要解决"><a href="#主要解决" class="headerlink" title="主要解决"></a>主要解决</h4><p>在有多种可能会变化的情况下，用继承会造成类爆炸问题，扩展起来不灵活。</p>
+<h4 id="何时使用"><a href="#何时使用" class="headerlink" title="何时使用"></a>何时使用</h4><p>实现系统可能有多个角度分类，每一种角度都可能变化。</p>
+<h4 id="如何解决"><a href="#如何解决" class="headerlink" title="如何解决"></a>如何解决</h4><p>把这种多角度分类分离出来，让它们独立变化，减少它们之间耦合。</p>
+<h4 id="关键代码"><a href="#关键代码" class="headerlink" title="关键代码"></a>关键代码</h4><p>抽象类依赖实现类。</p>
+<h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><ol>
+<li>抽象和实现的分离</li>
+<li>优秀的扩展能力</li>
+<li>实现细节对客户透明<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4>桥接模式的引入会增加系统的理解与设计难度，由于聚合关联关系建立在抽象层，要求开发者针对抽象进行设计与编程。<br>####使用场景<br>1、如果一个系统需要在构件的抽象化角色和具体化角色之间增加更多的灵活性，避免在两个层次之间建立静态的继承联系，通过桥接模式可以使它们在抽象层建立一个关联关系。<br>2、对于那些不希望使用继承或因为多层次继承导致系统类的个数急剧增加的系统，桥接模式尤为适用。<br>3、一个类存在两个独立变化的维度，且这两个维度都需要进行扩展。<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4>对于两个独立变化的维度，使用桥接模式再适合不过了。<h4 id="code："><a href="#code：" class="headerlink" title="code："></a>code：</h4>1、桥接实现接口<br>2、具体实现桥接接口的实现类<br>3、关联关系的抽象类<br>4、继承了抽象类的实体类<br>5、使用抽象类和桥接实现接口<br>6、验证输出</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;设计模式&quot;&gt;&lt;a href=&quot;#设计模式&quot; class=&quot;headerlink&quot; title=&quot;设计模式&quot;&gt;&lt;/a&gt;设计模式&lt;/h2&gt;&lt;h3 id=&quot;桥接模式&quot;&gt;&lt;a href=&quot;#桥接模式&quot; class=&quot;headerlink&quot; title=&quot;桥接模式&quot;&gt;&lt;/a
+    
+    </summary>
+    
+      <category term="设计模式" scheme="https://bifenghui.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="桥接模式" scheme="https://bifenghui.github.io/tags/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>设计模式-责任链模式</title>
@@ -277,20 +309,6 @@
     <id>https://bifenghui.github.io/2017/03/21/重构代码系列一/</id>
     <published>2017-03-20T17:12:17.000Z</published>
     <updated>2017-03-20T17:12:17.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数据库系列-mysql</title>
-    <link href="https://bifenghui.github.io/2017/03/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E5%88%97-mysql/"/>
-    <id>https://bifenghui.github.io/2017/03/21/数据库系列-mysql/</id>
-    <published>2017-03-20T17:11:28.000Z</published>
-    <updated>2017-03-20T17:11:28.000Z</updated>
     
     <summary type="html">
     
