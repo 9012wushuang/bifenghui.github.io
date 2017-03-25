@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>this is for you</title>
+  <title>一蓑烟雨任平生</title>
   <subtitle>十年前你是谁，一年前你是谁，甚至昨天你是谁，都不重要。重要的是，今天你是谁，以及明天你将成为谁</subtitle>
   <link href="/atom.xml" rel="self"/>
   
@@ -9,7 +9,7 @@
   <id>https://www.nightqq.cn/</id>
   
   <author>
-    <name>wind</name>
+    <name>bifh</name>
     
   </author>
   
