@@ -226,16 +226,16 @@ body {
   margin: 0 auto;
 }
 .content_container {
-  padding-right: 40px;
+  padding-left: 40px;
 }
 /* header */
 #header {
   text-align: left;
   position: relative;
-  height: 260px;
+  height: 180px;
 }
 #header .site-name {
-  padding-top: 100px;
+  padding-top: 20px;
 }
 #header .site-name h1 {
   padding: 0;
@@ -258,8 +258,8 @@ body {
   margin: 20px 0;
   padding: 0;
   position: absolute;
-  right: 0;
-  top: 0;
+  left: 0;
+  bottom: 0;
 }
 #nav-menu a {
   display: inline-block;
@@ -941,7 +941,7 @@ body {
     height: 54px;
     line-height: 56px;
     overflow: hidden;
-    color: #40759b;
+    color: #63a35c;
     text-align: center;
     text-shadow: 0px 2px 2px #40759b;
     opacity: 0;
