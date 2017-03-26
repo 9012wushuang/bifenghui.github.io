@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[elasticsearch 启动报错-aliyun]]></title>
+      <url>%2F2017%2F03%2F26%2Felasticsearch-%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99-aliyun%2F</url>
+      <content type="text"><![CDATA[问题123456789java.net.UnknownHostException: 阿里云ecs hostname: 阿里云ecs hostname: Name or service not known at java.net.InetAddress.getLocalHost(InetAddress.java:1505)...Caused by: java.net.UnknownHostException: 阿里云ecs hostname: Name or service not known at java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method) at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928) at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323) at java.net.InetAddress.getLocalHost(InetAddress.java:1500) ... 29 more 解决修改hosts文件1vim /etc/hosts 1234567127.0.0.1 localhost 阿里云ecs hostname127.0.1.1 ******.local.alipay.net ******# The following lines are desirable for IPv6 capable hosts::1 localhost ip6-localhost ip6-loopbackff02::1 ip6-allnodesff02::2 ip6-allrouters 再次启动123sh elasticsearch#orsh elasticsearch -d]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[设计模式-桥接模式]]></title>
       <url>%2F2017%2F03%2F24%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%2F</url>
       <content type="text"><![CDATA[设计模式桥接模式意图将抽象部分与实现部分分离，使它们都可以独立的变化。 主要解决在有多种可能会变化的情况下，用继承会造成类爆炸问题，扩展起来不灵活。 何时使用实现系统可能有多个角度分类，每一种角度都可能变化。 如何解决把这种多角度分类分离出来，让它们独立变化，减少它们之间耦合。 关键代码抽象类依赖实现类。 优点 抽象和实现的分离 优秀的扩展能力 实现细节对客户透明缺点桥接模式的引入会增加系统的理解与设计难度，由于聚合关联关系建立在抽象层，要求开发者针对抽象进行设计与编程。####使用场景1、如果一个系统需要在构件的抽象化角色和具体化角色之间增加更多的灵活性，避免在两个层次之间建立静态的继承联系，通过桥接模式可以使它们在抽象层建立一个关联关系。2、对于那些不希望使用继承或因为多层次继承导致系统类的个数急剧增加的系统，桥接模式尤为适用。3、一个类存在两个独立变化的维度，且这两个维度都需要进行扩展。注意事项对于两个独立变化的维度，使用桥接模式再适合不过了。code：1、桥接实现接口2、具体实现桥接接口的实现类3、关联关系的抽象类4、继承了抽象类的实体类5、使用抽象类和桥接实现接口6、验证输出]]></content>
