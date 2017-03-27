@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.nightqq.cn/"/>
-  <updated>2017-03-27T16:25:57.000Z</updated>
+  <updated>2017-03-27T17:15:13.000Z</updated>
   <id>https://www.nightqq.cn/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>webStorm ide处理markdown代码空格问题</title>
+    <link href="https://www.nightqq.cn/2017/03/28/webStorm-ide%E5%A4%84%E7%90%86markdown%E4%BB%A3%E7%A0%81%E7%A9%BA%E6%A0%BC%E9%97%AE%E9%A2%98/"/>
+    <id>https://www.nightqq.cn/2017/03/28/webStorm-ide处理markdown代码空格问题/</id>
+    <published>2017-03-27T17:01:43.000Z</published>
+    <updated>2017-03-27T17:15:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>#处理代码空格问题<br>markdown编辑器对代码中的空格 进行后置或者前置处理，导致笔记在html展示时代码块出现很多空格，对此种情况在不修改markdown代码模版的情况下，可以利用ide替换所有空行</p>
+<ol>
+<li>被替换目标：[\n]+</li>
+<li>替换目标：\n</li>
+<li>勾选 Regex 匹配<br>图示：<br><a href="https://github.com/bifenghui/temp-code/blob/master/markdownDelSpace.png" title="markdownDelSpace" target="_blank" rel="external">markdownDelSpace</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#处理代码空格问题&lt;br&gt;markdown编辑器对代码中的空格 进行后置或者前置处理，导致笔记在html展示时代码块出现很多空格，对此种情况在不修改markdown代码模版的情况下，可以利用ide替换所有空行&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;被替换目标：[\n]+&lt;/li&gt;
+&lt;l
+    
+    </summary>
+    
+      <category term="markdown" scheme="https://www.nightqq.cn/categories/markdown/"/>
+    
+    
+      <category term="markdown" scheme="https://www.nightqq.cn/tags/markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>auth token问题</title>
@@ -433,24 +464,6 @@ return;
     
     
       <category term="spring" scheme="https://www.nightqq.cn/tags/spring/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Apache Shiro</title>
-    <link href="https://www.nightqq.cn/2017/03/21/Apache-Shiro/"/>
-    <id>https://www.nightqq.cn/2017/03/21/Apache-Shiro/</id>
-    <published>2017-03-20T17:25:55.000Z</published>
-    <updated>2017-03-27T16:57:34.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="apache-shiro" scheme="https://www.nightqq.cn/categories/apache-shiro/"/>
-    
-    
-      <category term="权限框架" scheme="https://www.nightqq.cn/tags/%E6%9D%83%E9%99%90%E6%A1%86%E6%9E%B6/"/>
     
   </entry>
   

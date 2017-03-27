@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[webStorm ide处理markdown代码空格问题]]></title>
+      <url>%2F2017%2F03%2F28%2FwebStorm-ide%E5%A4%84%E7%90%86markdown%E4%BB%A3%E7%A0%81%E7%A9%BA%E6%A0%BC%E9%97%AE%E9%A2%98%2F</url>
+      <content type="text"><![CDATA[#处理代码空格问题markdown编辑器对代码中的空格 进行后置或者前置处理，导致笔记在html展示时代码块出现很多空格，对此种情况在不修改markdown代码模版的情况下，可以利用ide替换所有空行 被替换目标：[\n]+ 替换目标：\n 勾选 Regex 匹配图示：markdownDelSpace]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[auth token问题]]></title>
       <url>%2F2017%2F03%2F28%2Fauth-token%E9%97%AE%E9%A2%98%2F</url>
       <content type="text"></content>
