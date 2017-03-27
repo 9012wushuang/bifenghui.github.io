@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.nightqq.cn/"/>
-  <updated>2017-03-27T17:15:13.000Z</updated>
+  <updated>2017-03-27T19:26:39.000Z</updated>
   <id>https://www.nightqq.cn/</id>
   
   <author>
@@ -14,6 +14,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mac 画流程图、uml的工具</title>
+    <link href="https://www.nightqq.cn/2017/03/28/mac-%E7%94%BB%E6%B5%81%E7%A8%8B%E5%9B%BE%E3%80%81uml%E7%9A%84%E5%B7%A5%E5%85%B7/"/>
+    <id>https://www.nightqq.cn/2017/03/28/mac-画流程图、uml的工具/</id>
+    <published>2017-03-27T19:24:40.000Z</published>
+    <updated>2017-03-27T19:26:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h1><h2 id="在线工具"><a href="#在线工具" class="headerlink" title="在线工具"></a>在线工具</h2><p>地址：<a href="https://www.processon.com/" target="_blank" rel="external">https://www.processon.com/</a></p>
+<h2 id="知乎"><a href="#知乎" class="headerlink" title="知乎"></a>知乎</h2><p>地址：<a href="https://www.zhihu.com/question/19588698" target="_blank" rel="external">https://www.zhihu.com/question/19588698</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;流程图&quot;&gt;&lt;a href=&quot;#流程图&quot; class=&quot;headerlink&quot; title=&quot;流程图&quot;&gt;&lt;/a&gt;流程图&lt;/h1&gt;&lt;h2 id=&quot;在线工具&quot;&gt;&lt;a href=&quot;#在线工具&quot; class=&quot;headerlink&quot; title=&quot;在线工具&quot;&gt;&lt;/a&gt;在线工
+    
+    </summary>
+    
+      <category term="工具" scheme="https://www.nightqq.cn/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="工具" scheme="https://www.nightqq.cn/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>‘客户端、服务端加解密’</title>
+    <link href="https://www.nightqq.cn/2017/03/28/%E2%80%98%E5%AE%A2%E6%88%B7%E7%AB%AF%E3%80%81%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8A%A0%E8%A7%A3%E5%AF%86%E2%80%99/"/>
+    <id>https://www.nightqq.cn/2017/03/28/‘客户端、服务端加解密’/</id>
+    <published>2017-03-27T18:23:57.000Z</published>
+    <updated>2017-03-27T19:23:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="加解密"><a href="#加解密" class="headerlink" title="加解密"></a>加解密</h1><h2 id="加解密算法"><a href="#加解密算法" class="headerlink" title="加解密算法"></a>加解密算法</h2><p>RSA——非对称加密，会产生公钥和私钥，公钥在客户端，私钥在服务端。公钥用于加密，私钥用于解密。<br>AES——对称加密，直接使用给定的秘钥加密，使用给定的秘钥解密。(加密解密使用相同的秘钥)<br>MD5——一种单向的加密方式，只能加密，不能解密<br>Base64编码——对字节数组转换成字符串的一种编码方式</p>
+<h2 id="明文逻辑"><a href="#明文逻辑" class="headerlink" title="明文逻辑"></a>明文逻辑</h2><p>客户端将要上传的数据以字典的方式打包，Post提交给服务器。<br>服务器接收提交的数据包，通过Key-Value的形式获取客户端提交的值，进行处理。<br>处理结束，将数据以字典的形式打包，返回给客户端处理。</p>
+<h2 id="加解密逻辑"><a href="#加解密逻辑" class="headerlink" title="加解密逻辑"></a>加解密逻辑</h2><p>客户端上传数据加密<br>==&gt; 服务器获取数据解密<br>==&gt; 服务器返回数据加密<br>==&gt; 客户端获取数据解密<br>1 、客户端生成随机字符串 作为AESKey<br>2、 对AESKey 进行RSA公钥加密，生成RSAKey<br> 此处<strong>加签</strong><br>3、 对要发送给服务端数据 用AESKey加密，得到加密后的数据包<br>4、 封装为{key : RSAKey, value : JsonAESEncryptedData}的字典上传服务器，服务器只需要通过key和value，然后解析，获取数据即可<br>服务端获取数据解密：<br>1、服务端获取到{key : RSAKey, value : JsonAESEncryptedData}后，对RSAKey<br>用RSA私钥解密获得AESKey<br>2、使用获得的AESKey对JsonAESEncryptedData进行解密<br>此处<strong>验签</strong><br>服务端返回数据加密：<br>1、服务端对返回的数据（json）用AESKey 加密：value<br>此处<strong>加签</strong><br>2、{data : value}返回<br>客户端获取数据解密：<br>1、客户端获得服务器返回的被加密value<br>2、对value用AESKey进行解密<br>此处<strong>验签</strong></p>
+<h2 id="加验签名"><a href="#加验签名" class="headerlink" title="加验签名"></a>加验签名</h2><p>目的：防止数据被篡改</p>
+<h3 id="加签"><a href="#加签" class="headerlink" title="加签"></a>加签</h3><p>1、取容易被修改的敏感字端拼接成一个字符串（字符串组成规则与服务器约定好），使用md5加密字符串，获得签名数据（signData）<br>2、以key-value形式将签名数据保存到尚未加密的数据包里<br>3、继续执行 <strong>加签</strong> 以后的操作</p>
+<h3 id="验签"><a href="#验签" class="headerlink" title="验签"></a>验签</h3><p>1、服务端解密后获得了客户端的明文数据，拿到签名key的value（signData），同时继续用明文数据约定敏感字端按照约定规则组成字符串进行md5加密。<br>2、对 md5加密的字端和 客户端返回的signData 比较，相同则签名成功，不同则签名失败</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;加解密&quot;&gt;&lt;a href=&quot;#加解密&quot; class=&quot;headerlink&quot; title=&quot;加解密&quot;&gt;&lt;/a&gt;加解密&lt;/h1&gt;&lt;h2 id=&quot;加解密算法&quot;&gt;&lt;a href=&quot;#加解密算法&quot; class=&quot;headerlink&quot; title=&quot;加解密算法&quot;&gt;&lt;/a&gt;
+    
+    </summary>
+    
+      <category term="加解密签名" scheme="https://www.nightqq.cn/categories/%E5%8A%A0%E8%A7%A3%E5%AF%86%E7%AD%BE%E5%90%8D/"/>
+    
+    
+      <category term="加解密签名" scheme="https://www.nightqq.cn/tags/%E5%8A%A0%E8%A7%A3%E5%AF%86%E7%AD%BE%E5%90%8D/"/>
+    
+  </entry>
   
   <entry>
     <title>webStorm ide处理markdown代码空格问题</title>
@@ -47,28 +99,13 @@
   </entry>
   
   <entry>
-    <title>auth token问题</title>
-    <link href="https://www.nightqq.cn/2017/03/28/auth-token%E9%97%AE%E9%A2%98/"/>
-    <id>https://www.nightqq.cn/2017/03/28/auth-token问题/</id>
-    <published>2017-03-27T16:25:57.000Z</published>
-    <updated>2017-03-27T16:25:57.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>ssh服务器免密登陆</title>
     <link href="https://www.nightqq.cn/2017/03/27/ssh%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/"/>
     <id>https://www.nightqq.cn/2017/03/27/ssh服务器免密登陆/</id>
     <published>2017-03-27T15:34:42.000Z</published>
-    <updated>2017-03-27T16:57:34.000Z</updated>
+    <updated>2017-03-27T18:47:58.000Z</updated>
     
-    <content type="html"><![CDATA[<p>#ssh 免密码输入</p>
-<h2 id="ssh流程"><a href="#ssh流程" class="headerlink" title="ssh流程"></a>ssh流程</h2><p>本地服务器或需要连接远程服务器的服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa</div></pre></td></tr></table></figure></p>
+    <content type="html"><![CDATA[<h1 id="ssh-免密码输入"><a href="#ssh-免密码输入" class="headerlink" title="ssh 免密码输入"></a>ssh 免密码输入</h1><h2 id="ssh流程"><a href="#ssh流程" class="headerlink" title="ssh流程"></a>ssh流程</h2><p>本地服务器或需要连接远程服务器的服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa</div></pre></td></tr></table></figure></p>
 <p>连续三次回车,即在本地生成了公钥和私钥,不设置密码<br>执行scp命令<br>scp ~/.ssh/id_rsa.pub 远程服务器登录名@远程服务器地址:.ssh/id_rsa.pub<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp ~/.ssh/id_rsa.pub 远程服务器登录名@远程服务器地址:.ssh/id_rsa.pub</div></pre></td></tr></table></figure></p>
 <p>如果执行报错，可能是权限不够<br>可以执行以下代码先<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh 远程服务器登录名@远程服务器地址 &quot;mkdir .ssh;chmod 0700 .ssh&quot;</div></pre></td></tr></table></figure></p>
 <p>连接到远程服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/ssh/sshd_config</div></pre></td></tr></table></figure></p>
@@ -83,8 +120,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;#ssh 免密码输入&lt;/p&gt;
-&lt;h2 id=&quot;ssh流程&quot;&gt;&lt;a href=&quot;#ssh流程&quot; class=&quot;headerlink&quot; title=&quot;ssh流程&quot;&gt;&lt;/a&gt;ssh流程&lt;/h2&gt;&lt;p&gt;本地服务器或需要连接远程服务器的服务器&lt;br&gt;&lt;figure class=&quot;hi
+      &lt;h1 id=&quot;ssh-免密码输入&quot;&gt;&lt;a href=&quot;#ssh-免密码输入&quot; class=&quot;headerlink&quot; title=&quot;ssh 免密码输入&quot;&gt;&lt;/a&gt;ssh 免密码输入&lt;/h1&gt;&lt;h2 id=&quot;ssh流程&quot;&gt;&lt;a href=&quot;#ssh流程&quot; class=&quot;header
     
     </summary>
     
@@ -131,10 +167,10 @@
     <link href="https://www.nightqq.cn/2017/03/27/%E6%AF%8F%E5%A4%A9%E6%83%B3%E5%AF%B9%E8%87%AA%E5%B7%B1%E8%AF%B4%E7%9A%84%E8%AF%9D/"/>
     <id>https://www.nightqq.cn/2017/03/27/每天想对自己说的话/</id>
     <published>2017-03-27T13:50:00.000Z</published>
-    <updated>2017-03-27T16:57:34.000Z</updated>
+    <updated>2017-03-27T17:17:12.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="相对自己说"><a href="#相对自己说" class="headerlink" title="相对自己说"></a>相对自己说</h3><h4 id="2017-03-27"><a href="#2017-03-27" class="headerlink" title="2017-03-27"></a>2017-03-27</h4><p> 情绪即使一时失落，也不要停下，继续向前走。<br> 不好的情绪不应该留给关心你的身边人，也不要宣泄到其他有所接触的人身上<br> 要学会养神和安静的思考<br> 多读书，给自己加油<br> 学会每天进步</p>
-<h4 id="2017-03-28"><a href="#2017-03-28" class="headerlink" title="2017-03-28"></a>2017-03-28</h4><p> 遇到问题一定要搞明白了</p>
+<h4 id="2017-03-28"><a href="#2017-03-28" class="headerlink" title="2017-03-28"></a>2017-03-28</h4><p> 遇到问题一定要搞明白了<br> auth token问题<br> java 反射机制理解</p>
 ]]></content>
     
     <summary type="html">
@@ -147,6 +183,30 @@
     
     
       <category term="想法" scheme="https://www.nightqq.cn/tags/%E6%83%B3%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>auth token问题</title>
+    <link href="https://www.nightqq.cn/2017/03/27/auth-token%E9%97%AE%E9%A2%98/"/>
+    <id>https://www.nightqq.cn/2017/03/27/auth-token问题/</id>
+    <published>2017-03-26T16:25:57.000Z</published>
+    <updated>2017-03-27T18:34:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html</a></p>
+<p>Token的生成方式有很多种，例如比较热门的有JWT（JSON Web Tokens）、OAuth等</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.ruanyifeng.com/blog/2014/05/oau
+    
+    </summary>
+    
+      <category term="token" scheme="https://www.nightqq.cn/categories/token/"/>
+    
+    
+      <category term="token" scheme="https://www.nightqq.cn/tags/token/"/>
     
   </entry>
   
@@ -428,42 +488,6 @@ return;
     
     
       <category term="gerrit" scheme="https://www.nightqq.cn/tags/gerrit/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>分布式系统设计理念</title>
-    <link href="https://www.nightqq.cn/2017/03/21/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E7%90%86%E5%BF%B5/"/>
-    <id>https://www.nightqq.cn/2017/03/21/分布式系统设计理念/</id>
-    <published>2017-03-20T17:27:23.000Z</published>
-    <updated>2017-03-27T16:57:34.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="分布式" scheme="https://www.nightqq.cn/categories/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
-    
-    
-      <category term="分布式" scheme="https://www.nightqq.cn/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>spring 系列之Spring Security</title>
-    <link href="https://www.nightqq.cn/2017/03/21/spring-%E7%B3%BB%E5%88%97%E4%B9%8BSpring-Security/"/>
-    <id>https://www.nightqq.cn/2017/03/21/spring-系列之Spring-Security/</id>
-    <published>2017-03-20T17:26:30.000Z</published>
-    <updated>2017-03-27T16:57:34.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="spring" scheme="https://www.nightqq.cn/categories/spring/"/>
-    
-    
-      <category term="spring" scheme="https://www.nightqq.cn/tags/spring/"/>
     
   </entry>
   

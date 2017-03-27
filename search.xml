@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[mac 画流程图、uml的工具]]></title>
+      <url>%2F2017%2F03%2F28%2Fmac-%E7%94%BB%E6%B5%81%E7%A8%8B%E5%9B%BE%E3%80%81uml%E7%9A%84%E5%B7%A5%E5%85%B7%2F</url>
+      <content type="text"><![CDATA[流程图在线工具地址：https://www.processon.com/ 知乎地址：https://www.zhihu.com/question/19588698]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[‘客户端、服务端加解密’]]></title>
+      <url>%2F2017%2F03%2F28%2F%E2%80%98%E5%AE%A2%E6%88%B7%E7%AB%AF%E3%80%81%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8A%A0%E8%A7%A3%E5%AF%86%E2%80%99%2F</url>
+      <content type="text"><![CDATA[加解密加解密算法RSA——非对称加密，会产生公钥和私钥，公钥在客户端，私钥在服务端。公钥用于加密，私钥用于解密。AES——对称加密，直接使用给定的秘钥加密，使用给定的秘钥解密。(加密解密使用相同的秘钥)MD5——一种单向的加密方式，只能加密，不能解密Base64编码——对字节数组转换成字符串的一种编码方式 明文逻辑客户端将要上传的数据以字典的方式打包，Post提交给服务器。服务器接收提交的数据包，通过Key-Value的形式获取客户端提交的值，进行处理。处理结束，将数据以字典的形式打包，返回给客户端处理。 加解密逻辑客户端上传数据加密==&gt; 服务器获取数据解密==&gt; 服务器返回数据加密==&gt; 客户端获取数据解密1 、客户端生成随机字符串 作为AESKey2、 对AESKey 进行RSA公钥加密，生成RSAKey 此处加签3、 对要发送给服务端数据 用AESKey加密，得到加密后的数据包4、 封装为{key : RSAKey, value : JsonAESEncryptedData}的字典上传服务器，服务器只需要通过key和value，然后解析，获取数据即可服务端获取数据解密：1、服务端获取到{key : RSAKey, value : JsonAESEncryptedData}后，对RSAKey用RSA私钥解密获得AESKey2、使用获得的AESKey对JsonAESEncryptedData进行解密此处验签服务端返回数据加密：1、服务端对返回的数据（json）用AESKey 加密：value此处加签2、{data : value}返回客户端获取数据解密：1、客户端获得服务器返回的被加密value2、对value用AESKey进行解密此处验签 加验签名目的：防止数据被篡改 加签1、取容易被修改的敏感字端拼接成一个字符串（字符串组成规则与服务器约定好），使用md5加密字符串，获得签名数据（signData）2、以key-value形式将签名数据保存到尚未加密的数据包里3、继续执行 加签 以后的操作 验签1、服务端解密后获得了客户端的明文数据，拿到签名key的value（signData），同时继续用明文数据约定敏感字端按照约定规则组成字符串进行md5加密。2、对 md5加密的字端和 客户端返回的signData 比较，相同则签名成功，不同则签名失败]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[webStorm ide处理markdown代码空格问题]]></title>
       <url>%2F2017%2F03%2F28%2FwebStorm-ide%E5%A4%84%E7%90%86markdown%E4%BB%A3%E7%A0%81%E7%A9%BA%E6%A0%BC%E9%97%AE%E9%A2%98%2F</url>
       <content type="text"><![CDATA[#处理代码空格问题markdown编辑器对代码中的空格 进行后置或者前置处理，导致笔记在html展示时代码块出现很多空格，对此种情况在不修改markdown代码模版的情况下，可以利用ide替换所有空行 被替换目标：[\n]+ 替换目标：\n 勾选 Regex 匹配图示：markdownDelSpace]]></content>
@@ -10,16 +24,9 @@
 
     
     <entry>
-      <title><![CDATA[auth token问题]]></title>
-      <url>%2F2017%2F03%2F28%2Fauth-token%E9%97%AE%E9%A2%98%2F</url>
-      <content type="text"></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[ssh服务器免密登陆]]></title>
       <url>%2F2017%2F03%2F27%2Fssh%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86%2F</url>
-      <content type="text"><![CDATA[#ssh 免密码输入 ssh流程本地服务器或需要连接远程服务器的服务器1ssh-keygen -t rsa 连续三次回车,即在本地生成了公钥和私钥,不设置密码执行scp命令scp ~/.ssh/id_rsa.pub 远程服务器登录名@远程服务器地址:.ssh/id_rsa.pub1scp ~/.ssh/id_rsa.pub 远程服务器登录名@远程服务器地址:.ssh/id_rsa.pub 如果执行报错，可能是权限不够可以执行以下代码先1ssh 远程服务器登录名@远程服务器地址 &quot;mkdir .ssh;chmod 0700 .ssh&quot; 连接到远程服务器1cat /etc/ssh/sshd_config 查看 AuthorizedKeysFile 的值 ，默认为%h/.ssh/authorized_keys查看 authorized_keys是否存在不存在：1touch /root/.ssh/authorized_keys 存在继续执行12chmod 600 ~/.ssh/authorized_keyscat /root/.ssh/id_rsa.pub &gt;&gt; /root/.ssh/authorized_keys 上面两条命令的作用分别的是：1 修改文件权限 （文件权限码）2 追加上面scp过来的文件内容到authorized_keys 内容末尾 文件权限码文件权限码 指定私钥文件登陆生成密钥对生成不同文件名或者控制多台机器（多台机器不使用同一套密钥对）的情况，需要在登陆的时候指定具体的私钥文件，格式类似scp … -i 私钥文件1ssh 远程服务器登录名@远程服务器地址 -i 私钥文件地址 如果不想指定，可以修改ssh客户端全局/etc/ssh/sshd_config文件或者本地 ~/.ssh/config 文件增加1234IdentityFile 私钥文件地址orHost 服务器地址 IdentityFile 私钥文件地址 注：如果登陆报使用密钥登陆失败，请执行1ssh-add ~/.ssh/私钥文件地址]]></content>
+      <content type="text"><![CDATA[ssh 免密码输入ssh流程本地服务器或需要连接远程服务器的服务器1ssh-keygen -t rsa 连续三次回车,即在本地生成了公钥和私钥,不设置密码执行scp命令scp ~/.ssh/id_rsa.pub 远程服务器登录名@远程服务器地址:.ssh/id_rsa.pub1scp ~/.ssh/id_rsa.pub 远程服务器登录名@远程服务器地址:.ssh/id_rsa.pub 如果执行报错，可能是权限不够可以执行以下代码先1ssh 远程服务器登录名@远程服务器地址 &quot;mkdir .ssh;chmod 0700 .ssh&quot; 连接到远程服务器1cat /etc/ssh/sshd_config 查看 AuthorizedKeysFile 的值 ，默认为%h/.ssh/authorized_keys查看 authorized_keys是否存在不存在：1touch /root/.ssh/authorized_keys 存在继续执行12chmod 600 ~/.ssh/authorized_keyscat /root/.ssh/id_rsa.pub &gt;&gt; /root/.ssh/authorized_keys 上面两条命令的作用分别的是：1 修改文件权限 （文件权限码）2 追加上面scp过来的文件内容到authorized_keys 内容末尾 文件权限码文件权限码 指定私钥文件登陆生成密钥对生成不同文件名或者控制多台机器（多台机器不使用同一套密钥对）的情况，需要在登陆的时候指定具体的私钥文件，格式类似scp … -i 私钥文件1ssh 远程服务器登录名@远程服务器地址 -i 私钥文件地址 如果不想指定，可以修改ssh客户端全局/etc/ssh/sshd_config文件或者本地 ~/.ssh/config 文件增加1234IdentityFile 私钥文件地址orHost 服务器地址 IdentityFile 私钥文件地址 注：如果登陆报使用密钥登陆失败，请执行1ssh-add ~/.ssh/私钥文件地址]]></content>
     </entry>
 
     
@@ -33,7 +40,14 @@
     <entry>
       <title><![CDATA[每天想对自己说的话]]></title>
       <url>%2F2017%2F03%2F27%2F%E6%AF%8F%E5%A4%A9%E6%83%B3%E5%AF%B9%E8%87%AA%E5%B7%B1%E8%AF%B4%E7%9A%84%E8%AF%9D%2F</url>
-      <content type="text"><![CDATA[相对自己说2017-03-27 情绪即使一时失落，也不要停下，继续向前走。 不好的情绪不应该留给关心你的身边人，也不要宣泄到其他有所接触的人身上 要学会养神和安静的思考 多读书，给自己加油 学会每天进步 2017-03-28 遇到问题一定要搞明白了]]></content>
+      <content type="text"><![CDATA[相对自己说2017-03-27 情绪即使一时失落，也不要停下，继续向前走。 不好的情绪不应该留给关心你的身边人，也不要宣泄到其他有所接触的人身上 要学会养神和安静的思考 多读书，给自己加油 学会每天进步 2017-03-28 遇到问题一定要搞明白了 auth token问题 java 反射机制理解]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[auth token问题]]></title>
+      <url>%2F2017%2F03%2F27%2Fauth-token%E9%97%AE%E9%A2%98%2F</url>
+      <content type="text"><![CDATA[http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html Token的生成方式有很多种，例如比较热门的有JWT（JSON Web Tokens）、OAuth等]]></content>
     </entry>
 
     
@@ -159,7 +173,7 @@
     <entry>
       <title><![CDATA[csrf攻击]]></title>
       <url>%2F2017%2F03%2F21%2Fcsrf%E6%94%BB%E5%87%BB%2F</url>
-      <content type="text"></content>
+      <content type="text"><![CDATA[#CSRF 介绍CSRF（Cross Site Request Forgery, 跨站域请求伪造）是一种网络的攻击方式，该攻击可以在受害者毫不知情的情况下以受害者名义伪造请求发送给受攻击站点，从而在并未授权的情况下执行在权限保护之下的操作，有很大的危害性。然而，该攻击方式并不为大家所熟知，很多网站都有 CSRF 的安全漏洞 ##当前防御 CSRF 的几种策略在业界目前防御 CSRF 攻击主要有三种策略：验证 HTTP Referer 字段；在请求地址中添加 token 并验证；在 HTTP 头中自定义属性并验证。下面就分别对这三种策略进行详细介绍]]></content>
     </entry>
 
     
