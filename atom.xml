@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.nightqq.cn/"/>
-  <updated>2017-03-27T16:21:54.000Z</updated>
+  <updated>2017-03-27T16:25:57.000Z</updated>
   <id>https://www.nightqq.cn/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>auth token问题</title>
+    <link href="https://www.nightqq.cn/2017/03/28/auth-token%E9%97%AE%E9%A2%98/"/>
+    <id>https://www.nightqq.cn/2017/03/28/auth-token问题/</id>
+    <published>2017-03-27T16:25:57.000Z</published>
+    <updated>2017-03-27T16:25:57.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>ssh服务器免密登陆</title>
@@ -136,7 +150,7 @@
     <link href="https://www.nightqq.cn/2017/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/"/>
     <id>https://www.nightqq.cn/2017/03/24/设计模式-桥接模式/</id>
     <published>2017-03-24T04:37:37.000Z</published>
-    <updated>2017-03-24T05:00:25.000Z</updated>
+    <updated>2017-03-27T16:29:09.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h2><h3 id="桥接模式"><a href="#桥接模式" class="headerlink" title="桥接模式"></a>桥接模式</h3><h4 id="意图"><a href="#意图" class="headerlink" title="意图"></a>意图</h4><p>将抽象部分与实现部分分离，使它们都可以独立的变化。</p>
 <h4 id="主要解决"><a href="#主要解决" class="headerlink" title="主要解决"></a>主要解决</h4><p>在有多种可能会变化的情况下，用继承会造成类爆炸问题，扩展起来不灵活。<br><a id="more"></a></p>
@@ -160,7 +174,7 @@
       <category term="设计模式" scheme="https://www.nightqq.cn/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-      <category term="桥接模式" scheme="https://www.nightqq.cn/tags/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="https://www.nightqq.cn/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
@@ -169,7 +183,7 @@
     <link href="https://www.nightqq.cn/2017/03/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F/"/>
     <id>https://www.nightqq.cn/2017/03/23/设计模式-责任链模式/</id>
     <published>2017-03-23T04:36:57.000Z</published>
-    <updated>2017-03-27T16:21:54.000Z</updated>
+    <updated>2017-03-27T16:29:09.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><h2 id="责任链模式"><a href="#责任链模式" class="headerlink" title="责任链模式"></a>责任链模式</h2><p>责任链模式（Chain of Responsibility Pattern）为请求创建了一个接收者对象的链。这种模式给予请求的类型，对请求的发送者和接收者进行解耦。这种类型的设计模式属于行为型模式。<br>在这种模式中，通常每个接收者都包含对另一个接收者的引用。如果一个对象不能处理该请求，那么它会把相同的请求传给下一个接收者，依此类推。</p>
 <h3 id="意图"><a href="#意图" class="headerlink" title="意图"></a>意图</h3><p>避免请求发送者与接收者耦合在一起，让多个对象都有可能接收请求，将这些对象连接成一条链，并且沿着这条链传递请求，直到有对象处理它为止。</p>
@@ -209,7 +223,7 @@ return;
       <category term="设计模式" scheme="https://www.nightqq.cn/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-      <category term="责任链模式" scheme="https://www.nightqq.cn/tags/%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="https://www.nightqq.cn/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
@@ -218,12 +232,16 @@ return;
     <link href="https://www.nightqq.cn/2017/03/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
     <id>https://www.nightqq.cn/2017/03/23/设计模式-策略模式/</id>
     <published>2017-03-23T04:36:46.000Z</published>
-    <updated>2017-03-23T04:36:46.000Z</updated>
+    <updated>2017-03-27T16:29:09.000Z</updated>
     
     <summary type="html">
     
     </summary>
     
+      <category term="设计模式" scheme="https://www.nightqq.cn/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="https://www.nightqq.cn/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
@@ -232,12 +250,16 @@ return;
     <link href="https://www.nightqq.cn/2017/03/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
     <id>https://www.nightqq.cn/2017/03/23/设计模式-工厂模式/</id>
     <published>2017-03-23T04:34:22.000Z</published>
-    <updated>2017-03-23T04:34:22.000Z</updated>
+    <updated>2017-03-27T16:29:09.000Z</updated>
     
     <summary type="html">
     
     </summary>
     
+      <category term="设计模式" scheme="https://www.nightqq.cn/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="https://www.nightqq.cn/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
@@ -246,12 +268,16 @@ return;
     <link href="https://www.nightqq.cn/2017/03/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F/"/>
     <id>https://www.nightqq.cn/2017/03/23/设计模式-装饰模式/</id>
     <published>2017-03-23T04:34:17.000Z</published>
-    <updated>2017-03-23T04:34:17.000Z</updated>
+    <updated>2017-03-27T16:29:09.000Z</updated>
     
     <summary type="html">
     
     </summary>
     
+      <category term="设计模式" scheme="https://www.nightqq.cn/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="https://www.nightqq.cn/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
@@ -260,12 +286,16 @@ return;
     <link href="https://www.nightqq.cn/2017/03/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/"/>
     <id>https://www.nightqq.cn/2017/03/23/设计模式-适配器模式/</id>
     <published>2017-03-23T04:34:10.000Z</published>
-    <updated>2017-03-23T04:34:10.000Z</updated>
+    <updated>2017-03-27T16:29:09.000Z</updated>
     
     <summary type="html">
     
     </summary>
     
+      <category term="设计模式" scheme="https://www.nightqq.cn/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="https://www.nightqq.cn/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
@@ -274,12 +304,16 @@ return;
     <link href="https://www.nightqq.cn/2017/03/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/"/>
     <id>https://www.nightqq.cn/2017/03/23/设计模式-命令模式/</id>
     <published>2017-03-23T04:33:34.000Z</published>
-    <updated>2017-03-23T04:33:34.000Z</updated>
+    <updated>2017-03-27T16:29:09.000Z</updated>
     
     <summary type="html">
     
     </summary>
     
+      <category term="设计模式" scheme="https://www.nightqq.cn/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="https://www.nightqq.cn/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
@@ -391,20 +425,6 @@ return;
     <id>https://www.nightqq.cn/2017/03/21/Apache-Shiro/</id>
     <published>2017-03-20T17:25:55.000Z</published>
     <updated>2017-03-20T17:25:55.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>java日志框架-logback</title>
-    <link href="https://www.nightqq.cn/2017/03/21/java%E6%97%A5%E5%BF%97%E6%A1%86%E6%9E%B6-logback/"/>
-    <id>https://www.nightqq.cn/2017/03/21/java日志框架-logback/</id>
-    <published>2017-03-20T17:25:47.000Z</published>
-    <updated>2017-03-20T17:25:47.000Z</updated>
     
     <summary type="html">
     

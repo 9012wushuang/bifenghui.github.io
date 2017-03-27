@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[auth token问题]]></title>
+      <url>%2F2017%2F03%2F28%2Fauth-token%E9%97%AE%E9%A2%98%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[ssh服务器免密登陆]]></title>
       <url>%2F2017%2F03%2F27%2Fssh%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86%2F</url>
       <content type="text"><![CDATA[#ssh 免密码输入 ssh流程本地服务器或需要连接远程服务器的服务器1ssh-keygen -t rsa 连续三次回车,即在本地生成了公钥和私钥,不设置密码执行scp命令scp ~/.ssh/id_rsa.pub 远程服务器登录名@远程服务器地址:.ssh/id_rsa.pub 1scp ~/.ssh/id_rsa.pub 远程服务器登录名@远程服务器地址:.ssh/id_rsa.pub 如果执行报错，可能是权限不够可以执行以下代码先1ssh 远程服务器登录名@远程服务器地址 &quot;mkdir .ssh;chmod 0700 .ssh&quot; 连接到远程服务器1cat /etc/ssh/sshd_config 查看 AuthorizedKeysFile 的值 ，默认为%h/.ssh/authorized_keys查看 authorized_keys是否存在不存在：1touch /root/.ssh/authorized_keys 存在继续执行12chmod 600 ~/.ssh/authorized_keyscat /root/.ssh/id_rsa.pub &gt;&gt; /root/.ssh/authorized_keys 上面两条命令的作用分别的是：1 修改文件权限 （文件权限码）2 追加上面scp过来的文件内容到authorized_keys 内容末尾 文件权限码文件权限码 指定私钥文件登陆生成密钥对生成不同文件名或者控制多台机器（多台机器不使用同一套密钥对）的情况，需要在登陆的时候指定具体的私钥文件，格式类似scp … -i 私钥文件1ssh 远程服务器登录名@远程服务器地址 -i 私钥文件地址 如果不想指定，可以修改ssh客户端全局/etc/ssh/sshd_config文件或者本地 ~/.ssh/config 文件增加1234IdentityFile 私钥文件地址orHost 服务器地址 IdentityFile 私钥文件地址 注：如果登陆报使用密钥登陆失败，请执行1ssh-add ~/.ssh/私钥文件地址]]></content>
