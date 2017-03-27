@@ -3,16 +3,16 @@
   
     
     <entry>
-      <title><![CDATA[mac 画流程图、uml的工具]]></title>
-      <url>%2F2017%2F03%2F28%2Fmac-%E7%94%BB%E6%B5%81%E7%A8%8B%E5%9B%BE%E3%80%81uml%E7%9A%84%E5%B7%A5%E5%85%B7%2F</url>
-      <content type="text"><![CDATA[流程图在线工具地址：https://www.processon.com/ 知乎地址：https://www.zhihu.com/question/19588698]]></content>
+      <title><![CDATA[客户端、服务端加解密]]></title>
+      <url>%2F2017%2F03%2F28%2F%E5%AE%A2%E6%88%B7%E7%AB%AF%E3%80%81%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8A%A0%E8%A7%A3%E5%AF%86%2F</url>
+      <content type="text"><![CDATA[加解密加解密算法RSA——非对称加密，会产生公钥和私钥，公钥在客户端，私钥在服务端。公钥用于加密，私钥用于解密。AES——对称加密，直接使用给定的秘钥加密，使用给定的秘钥解密。(加密解密使用相同的秘钥)MD5——一种单向的加密方式，只能加密，不能解密Base64编码——对字节数组转换成字符串的一种编码方式 明文逻辑客户端将要上传的数据以字典的方式打包，Post提交给服务器。服务器接收提交的数据包，通过Key-Value的形式获取客户端提交的值，进行处理。处理结束，将数据以字典的形式打包，返回给客户端处理。 加解密逻辑客户端上传数据加密==&gt; 服务器获取数据解密==&gt; 服务器返回数据加密==&gt; 客户端获取数据解密1 、客户端生成随机字符串 作为AESKey2、 对AESKey 进行RSA公钥加密，生成RSAKey 此处加签3、 对要发送给服务端数据 用AESKey加密，得到加密后的数据包4、 封装为{key : RSAKey, value : JsonAESEncryptedData}的字典上传服务器，服务器只需要通过key和value，然后解析，获取数据即可服务端获取数据解密：1、服务端获取到{key : RSAKey, value : JsonAESEncryptedData}后，对RSAKey用RSA私钥解密获得AESKey2、使用获得的AESKey对JsonAESEncryptedData进行解密此处验签服务端返回数据加密：1、服务端对返回的数据（json）用AESKey 加密：value此处加签2、{data : value}返回客户端获取数据解密：1、客户端获得服务器返回的被加密value2、对value用AESKey进行解密此处验签 加验签名目的：防止数据被篡改 加签1、取容易被修改的敏感字端拼接成一个字符串（字符串组成规则与服务器约定好），使用md5加密字符串，获得签名数据（signData）2、以key-value形式将签名数据保存到尚未加密的数据包里3、继续执行 加签 以后的操作 验签1、服务端解密后获得了客户端的明文数据，拿到签名key的value（signData），同时继续用明文数据约定敏感字端按照约定规则组成字符串进行md5加密。2、对 md5加密的字端和 客户端返回的signData 比较，相同则签名成功，不同则签名失败]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[‘客户端、服务端加解密’]]></title>
-      <url>%2F2017%2F03%2F28%2F%E2%80%98%E5%AE%A2%E6%88%B7%E7%AB%AF%E3%80%81%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8A%A0%E8%A7%A3%E5%AF%86%E2%80%99%2F</url>
-      <content type="text"><![CDATA[加解密加解密算法RSA——非对称加密，会产生公钥和私钥，公钥在客户端，私钥在服务端。公钥用于加密，私钥用于解密。AES——对称加密，直接使用给定的秘钥加密，使用给定的秘钥解密。(加密解密使用相同的秘钥)MD5——一种单向的加密方式，只能加密，不能解密Base64编码——对字节数组转换成字符串的一种编码方式 明文逻辑客户端将要上传的数据以字典的方式打包，Post提交给服务器。服务器接收提交的数据包，通过Key-Value的形式获取客户端提交的值，进行处理。处理结束，将数据以字典的形式打包，返回给客户端处理。 加解密逻辑客户端上传数据加密==&gt; 服务器获取数据解密==&gt; 服务器返回数据加密==&gt; 客户端获取数据解密1 、客户端生成随机字符串 作为AESKey2、 对AESKey 进行RSA公钥加密，生成RSAKey 此处加签3、 对要发送给服务端数据 用AESKey加密，得到加密后的数据包4、 封装为{key : RSAKey, value : JsonAESEncryptedData}的字典上传服务器，服务器只需要通过key和value，然后解析，获取数据即可服务端获取数据解密：1、服务端获取到{key : RSAKey, value : JsonAESEncryptedData}后，对RSAKey用RSA私钥解密获得AESKey2、使用获得的AESKey对JsonAESEncryptedData进行解密此处验签服务端返回数据加密：1、服务端对返回的数据（json）用AESKey 加密：value此处加签2、{data : value}返回客户端获取数据解密：1、客户端获得服务器返回的被加密value2、对value用AESKey进行解密此处验签 加验签名目的：防止数据被篡改 加签1、取容易被修改的敏感字端拼接成一个字符串（字符串组成规则与服务器约定好），使用md5加密字符串，获得签名数据（signData）2、以key-value形式将签名数据保存到尚未加密的数据包里3、继续执行 加签 以后的操作 验签1、服务端解密后获得了客户端的明文数据，拿到签名key的value（signData），同时继续用明文数据约定敏感字端按照约定规则组成字符串进行md5加密。2、对 md5加密的字端和 客户端返回的signData 比较，相同则签名成功，不同则签名失败]]></content>
+      <title><![CDATA[mac 画流程图、uml的工具]]></title>
+      <url>%2F2017%2F03%2F28%2Fmac-%E7%94%BB%E6%B5%81%E7%A8%8B%E5%9B%BE%E3%80%81uml%E7%9A%84%E5%B7%A5%E5%85%B7%2F</url>
+      <content type="text"><![CDATA[流程图在线工具地址：https://www.processon.com/ 知乎地址：https://www.zhihu.com/question/19588698]]></content>
     </entry>
 
     
@@ -173,7 +173,7 @@
     <entry>
       <title><![CDATA[csrf攻击]]></title>
       <url>%2F2017%2F03%2F21%2Fcsrf%E6%94%BB%E5%87%BB%2F</url>
-      <content type="text"><![CDATA[#CSRF 介绍CSRF（Cross Site Request Forgery, 跨站域请求伪造）是一种网络的攻击方式，该攻击可以在受害者毫不知情的情况下以受害者名义伪造请求发送给受攻击站点，从而在并未授权的情况下执行在权限保护之下的操作，有很大的危害性。然而，该攻击方式并不为大家所熟知，很多网站都有 CSRF 的安全漏洞 ##当前防御 CSRF 的几种策略在业界目前防御 CSRF 攻击主要有三种策略：验证 HTTP Referer 字段；在请求地址中添加 token 并验证；在 HTTP 头中自定义属性并验证。下面就分别对这三种策略进行详细介绍]]></content>
+      <content type="text"><![CDATA[#CSRF 介绍CSRF（Cross Site Request Forgery, 跨站域请求伪造）是一种网络的攻击方式，该攻击可以在受害者毫不知情的情况下以受害者名义伪造请求发送给受攻击站点，从而在并未授权的情况下执行在权限保护之下的操作，有很大的危害性。然而，该攻击方式并不为大家所熟知，很多网站都有 CSRF 的安全漏洞 ##当前防御 CSRF 的几种策略在业界目前防御 CSRF 攻击主要有三种策略：验证 HTTP Referer 字段；在请求地址中添加 token 并验证；在 HTTP 头中自定义属性并验证。]]></content>
     </entry>
 
     
