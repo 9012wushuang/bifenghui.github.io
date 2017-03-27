@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.nightqq.cn/"/>
-  <updated>2017-03-27T15:32:34.000Z</updated>
+  <updated>2017-03-27T16:21:54.000Z</updated>
   <id>https://www.nightqq.cn/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ssh服务器免密登陆</title>
+    <link href="https://www.nightqq.cn/2017/03/27/ssh%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/"/>
+    <id>https://www.nightqq.cn/2017/03/27/ssh服务器免密登陆/</id>
+    <published>2017-03-27T15:34:42.000Z</published>
+    <updated>2017-03-27T16:21:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>#ssh 免密码输入</p>
+<h2 id="ssh流程"><a href="#ssh流程" class="headerlink" title="ssh流程"></a>ssh流程</h2><p>本地服务器或需要连接远程服务器的服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa</div></pre></td></tr></table></figure></p>
+<p>连续三次回车,即在本地生成了公钥和私钥,不设置密码<br>执行scp命令<br>scp ~/.ssh/id_rsa.pub 远程服务器登录名@远程服务器地址:.ssh/id_rsa.pub</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp ~/.ssh/id_rsa.pub 远程服务器登录名@远程服务器地址:.ssh/id_rsa.pub</div></pre></td></tr></table></figure>
+<p>如果执行报错，可能是权限不够<br>可以执行以下代码先<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh 远程服务器登录名@远程服务器地址 &quot;mkdir .ssh;chmod 0700 .ssh&quot;</div></pre></td></tr></table></figure></p>
+<p>连接到远程服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/ssh/sshd_config</div></pre></td></tr></table></figure></p>
+<p>查看 AuthorizedKeysFile 的值 ，默认为%h/.ssh/authorized_keys<br>查看 authorized_keys是否存在<br>不存在：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">touch /root/.ssh/authorized_keys</div></pre></td></tr></table></figure></p>
+<p>存在继续执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">chmod 600 ~/.ssh/authorized_keys</div><div class="line">cat /root/.ssh/id_rsa.pub  &gt;&gt; /root/.ssh/authorized_keys</div></pre></td></tr></table></figure></p>
+<p>上面两条命令的作用分别的是：<br>1 修改文件权限 （文件权限码）<br>2 追加上面scp过来的文件内容到authorized_keys 内容末尾</p>
+<h2 id="文件权限码"><a href="#文件权限码" class="headerlink" title="文件权限码"></a>文件权限码</h2><p><a href="https://github.com/bifenghui/temp-code/blob/master/chmodCode.txt" title="文件权限码" target="_blank" rel="external">文件权限码</a></p>
+<h2 id="指定私钥文件登陆"><a href="#指定私钥文件登陆" class="headerlink" title="指定私钥文件登陆"></a>指定私钥文件登陆</h2><p>生成密钥对生成不同文件名或者控制多台机器（多台机器不使用同一套密钥对）的情况，需要在登陆的时候指定具体的私钥文件，格式类似<br>scp … -i 私钥文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh 远程服务器登录名@远程服务器地址 -i 私钥文件地址</div></pre></td></tr></table></figure></p>
+<p>如果不想指定，可以修改ssh客户端全局/etc/ssh/sshd_config文件或者本地 ~/.ssh/config 文件<br>增加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">IdentityFile 私钥文件地址</div><div class="line">or</div><div class="line">Host 服务器地址</div><div class="line">        IdentityFile 私钥文件地址</div></pre></td></tr></table></figure></p>
+<p>注：如果登陆报使用密钥登陆失败，请执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-add   ~/.ssh/私钥文件地址</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#ssh 免密码输入&lt;/p&gt;
+&lt;h2 id=&quot;ssh流程&quot;&gt;&lt;a href=&quot;#ssh流程&quot; class=&quot;headerlink&quot; title=&quot;ssh流程&quot;&gt;&lt;/a&gt;ssh流程&lt;/h2&gt;&lt;p&gt;本地服务器或需要连接远程服务器的服务器&lt;br&gt;&lt;figure class=&quot;hi
+    
+    </summary>
+    
+      <category term="ssh" scheme="https://www.nightqq.cn/categories/ssh/"/>
+    
+    
+      <category term="ssh" scheme="https://www.nightqq.cn/tags/ssh/"/>
+    
+  </entry>
   
   <entry>
     <title>spring 集中式处理异常</title>
@@ -51,9 +87,10 @@
     <link href="https://www.nightqq.cn/2017/03/27/%E6%AF%8F%E5%A4%A9%E6%83%B3%E5%AF%B9%E8%87%AA%E5%B7%B1%E8%AF%B4%E7%9A%84%E8%AF%9D/"/>
     <id>https://www.nightqq.cn/2017/03/27/每天想对自己说的话/</id>
     <published>2017-03-27T13:50:00.000Z</published>
-    <updated>2017-03-27T13:55:34.000Z</updated>
+    <updated>2017-03-27T16:22:50.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="相对自己说"><a href="#相对自己说" class="headerlink" title="相对自己说"></a>相对自己说</h3><h4 id="2017-03-27"><a href="#2017-03-27" class="headerlink" title="2017-03-27"></a>2017-03-27</h4><p> 情绪即使一时失落，也不要停下，继续向前走。<br> 不好的情绪不应该留给关心你的身边人，也不要宣泄到其他有所接触的人身上<br> 要学会养神和安静的思考<br> 多读书，给自己加油<br> 学会每天进步</p>
+<h4 id="2017-03-28"><a href="#2017-03-28" class="headerlink" title="2017-03-28"></a>2017-03-28</h4><p> 遇到问题一定要搞明白了</p>
 ]]></content>
     
     <summary type="html">
@@ -74,13 +111,12 @@
     <link href="https://www.nightqq.cn/2017/03/26/elasticsearch-%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99-aliyun/"/>
     <id>https://www.nightqq.cn/2017/03/26/elasticsearch-启动报错-aliyun/</id>
     <published>2017-03-26T09:19:30.000Z</published>
-    <updated>2017-03-27T13:54:31.000Z</updated>
+    <updated>2017-03-27T16:21:54.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">java.net.UnknownHostException: 阿里云ecs hostname:  阿里云ecs hostname: Name or service not known</div><div class="line">	at java.net.InetAddress.getLocalHost(InetAddress.java:1505)</div><div class="line">...</div><div class="line">Caused by: java.net.UnknownHostException:  阿里云ecs hostname: Name or service not known</div><div class="line">	at java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)</div><div class="line">	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)</div><div class="line">	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)</div><div class="line">	at java.net.InetAddress.getLocalHost(InetAddress.java:1500)</div><div class="line">	... 29 more</div></pre></td></tr></table></figure>
 <h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><h3 id="修改hosts文件"><a href="#修改hosts文件" class="headerlink" title="修改hosts文件"></a>修改hosts文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/hosts</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">127.0.0.1       localhost       阿里云ecs hostname</div><div class="line">127.0.1.1       ******.local.alipay.net      ******</div><div class="line"></div><div class="line"># The following lines are desirable for IPv6 capable hosts</div><div class="line">::1     localhost ip6-localhost ip6-loopback</div><div class="line">ff02::1 ip6-allnodes</div><div class="line">ff02::2 ip6-allrouters</div></pre></td></tr></table></figure>
-<h2 id="再次启动"><a href="#再次启动" class="headerlink" title="再次启动"></a>再次启动</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sh elasticsearch</div><div class="line">#or</div><div class="line">sh elasticsearch -d</div></pre></td></tr></table></figure>
-]]></content>
+<h2 id="再次启动"><a href="#再次启动" class="headerlink" title="再次启动"></a>再次启动</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sh elasticsearch</div><div class="line">#or</div><div class="line">sh elasticsearch -d</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -133,7 +169,7 @@
     <link href="https://www.nightqq.cn/2017/03/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F/"/>
     <id>https://www.nightqq.cn/2017/03/23/设计模式-责任链模式/</id>
     <published>2017-03-23T04:36:57.000Z</published>
-    <updated>2017-03-25T11:08:35.000Z</updated>
+    <updated>2017-03-27T16:21:54.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><h2 id="责任链模式"><a href="#责任链模式" class="headerlink" title="责任链模式"></a>责任链模式</h2><p>责任链模式（Chain of Responsibility Pattern）为请求创建了一个接收者对象的链。这种模式给予请求的类型，对请求的发送者和接收者进行解耦。这种类型的设计模式属于行为型模式。<br>在这种模式中，通常每个接收者都包含对另一个接收者的引用。如果一个对象不能处理该请求，那么它会把相同的请求传给下一个接收者，依此类推。</p>
 <h3 id="意图"><a href="#意图" class="headerlink" title="意图"></a>意图</h3><p>避免请求发送者与接收者耦合在一起，让多个对象都有可能接收请求，将这些对象连接成一条链，并且沿着这条链传递请求，直到有对象处理它为止。</p>
@@ -160,8 +196,7 @@ return;
 <p> @Override<br> public void setNextChain(Chain chain) {</p>
 <pre><code>this.chain=chain;
 </code></pre><p> }<br>}</p>
-<h3 id="application"><a href="#application" class="headerlink" title="application"></a>application</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created with IntelliJ IDEA.</div><div class="line"> * ClassName: priv.bifh.design.patterns.chain.Application</div><div class="line"> * User: bifenghui</div><div class="line"> * Date: 2017/3/25</div><div class="line"> * Time: 下午6:40</div><div class="line"> * To change this template use File | Settings | File Templates.</div><div class="line"> * Description:</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Application</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> Chain getInt,getLong;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">createChain</span><span class="params">()</span></span>&#123;</div><div class="line"></div><div class="line">        getInt = <span class="keyword">new</span> GetInt();</div><div class="line">        getLong = <span class="keyword">new</span> GetLong();</div><div class="line">        getInt.setNextChain(getLong);</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">goOut</span><span class="params">()</span></span>&#123;</div><div class="line">        getInt.excute(<span class="number">100</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        Application application = <span class="keyword">new</span> Application();</div><div class="line">        application.createChain();</div><div class="line">        application.goOut();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
+<h3 id="application"><a href="#application" class="headerlink" title="application"></a>application</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created with IntelliJ IDEA.</div><div class="line"> * ClassName: priv.bifh.design.patterns.chain.Application</div><div class="line"> * User: bifenghui</div><div class="line"> * Date: 2017/3/25</div><div class="line"> * Time: 下午6:40</div><div class="line"> * To change this template use File | Settings | File Templates.</div><div class="line"> * Description:</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Application</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> Chain getInt,getLong;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">createChain</span><span class="params">()</span></span>&#123;</div><div class="line"></div><div class="line">        getInt = <span class="keyword">new</span> GetInt();</div><div class="line">        getLong = <span class="keyword">new</span> GetLong();</div><div class="line">        getInt.setNextChain(getLong);</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">goOut</span><span class="params">()</span></span>&#123;</div><div class="line">        getInt.excute(<span class="number">100</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        Application application = <span class="keyword">new</span> Application();</div><div class="line">        application.createChain();</div><div class="line">        application.goOut();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
     
@@ -309,12 +344,16 @@ return;
     <link href="https://www.nightqq.cn/2017/03/21/gerrit-%E4%BB%A3%E7%A0%81%E5%AE%A1%E6%A0%B8%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/"/>
     <id>https://www.nightqq.cn/2017/03/21/gerrit-代码审核服务器搭建/</id>
     <published>2017-03-20T17:28:30.000Z</published>
-    <updated>2017-03-20T17:28:30.000Z</updated>
+    <updated>2017-03-27T16:21:54.000Z</updated>
     
     <summary type="html">
     
     </summary>
     
+      <category term="gerrit" scheme="https://www.nightqq.cn/categories/gerrit/"/>
+    
+    
+      <category term="gerrit" scheme="https://www.nightqq.cn/tags/gerrit/"/>
     
   </entry>
   
@@ -366,20 +405,6 @@ return;
     <id>https://www.nightqq.cn/2017/03/21/java日志框架-logback/</id>
     <published>2017-03-20T17:25:47.000Z</published>
     <updated>2017-03-20T17:25:47.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>csrf攻击</title>
-    <link href="https://www.nightqq.cn/2017/03/21/csrf%E6%94%BB%E5%87%BB/"/>
-    <id>https://www.nightqq.cn/2017/03/21/csrf攻击/</id>
-    <published>2017-03-20T17:22:21.000Z</published>
-    <updated>2017-03-20T17:22:21.000Z</updated>
     
     <summary type="html">
     
