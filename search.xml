@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[lambda表达实践]]></title>
+      <url>%2F2017%2F03%2F30%2Flambda%E8%A1%A8%E8%BE%BE%E5%AE%9E%E8%B7%B5%2F</url>
+      <content type="text"><![CDATA[lambda 表达式简介和示例 希腊字母第11个，兰木达 计算机语言中的 匿名函数 lambda表达式引入主要为了 提高在大数据高并发的情况下的java性能问题，从语言编写上引入lambda。易于编写 并行处理大数据的类库。 lambda表达式的性能大于等于不用lambda表达式写的代码 lambda表达式出错的堆栈信息比较长 总结阅读了下面这段后，感觉表现的意思是，如果你有思想，知道要做什么的想法，那么可以用抽象行为的lambda高性能的表现出来，而不用设计怎么去做。在Java世界里面，面向对象还是主流思想，对于习惯了面向对象编程的开发者来说，抽象的概念并不陌生。面向对象编程是对数据进行抽象，而函数式编程是对行为进行抽象。现实世界中，数据和行为并存，程序也是如此，因此这两种编程方式我们都得学。这种新的抽象方式还有其他好处。很多人不总是在编写性能优先的代码，对于这些人来说，函数式编程带来的好处尤为明显。程序员能编写出更容易阅读的代码——这种代码更多地表达了业务逻辑，而不是从机制上如何实现。易读的代码也易于维护、更可靠、更不容易出错。在写回调函数和事件处理器时，程序员不必再纠缠于匿名内部类的冗繁和可读性，函数式编程让事件处理系统变得更加简单。能将函数方便地传递也让编写惰性代码变得容易，只有在真正需要的时候，才初始化变量的值。总而言之，Java更趋于完美了。使用() -&gt; {} 替代匿名类123456789//Before Java 8:new Thread(new Runnable() &#123; @Override public void run() &#123; System.out.println("Before Java8 "); &#125;&#125;).start();//Java 8 way:new Thread(() -&gt; System.out.println("In Java8!")); 使用内循环替代外循环1234567891011121314//Prior Java 8 : 告诉怎么做List features = Arrays.asList("Lambdas", "Default Method","Stream API", "Date and Time API");for (String feature : features) &#123; System.out.println(feature);&#125;//In Java 8: 告诉要做什么List features = Arrays.asList("Lambdas", "Default Method", "Stream API", "Date and Time API");features.forEach(n -&gt; System.out.println(n));// Even better use Method reference feature of Java 8// method reference is denoted by :: (double colon) operator// looks similar to score resolution operator of C++features.forEach(System.out::println); 支持函数编程java.util.functionjava.util.function.Predicate 接口支持lambda函数式编程123456789101112131415161718public static void main(args[])&#123; List languages = Arrays.asList("Java", "Scala", "C++", "Haskell", "Lisp"); System.out.println("Languages which starts with J :"); filter(languages, (str)-&gt;str.startsWith("J")); System.out.println("Languages which ends with a "); filter(languages, (str)-&gt;str.endsWith("a")); System.out.println("Print all languages :"); filter(languages, (str)-&gt;true); System.out.println("Print no language : "); filter(languages, (str)-&gt;false); System.out.println("Print language whose length greater than 4:"); filter(languages, (str)-&gt;str.length() &gt; 4);&#125; public static void filter(List names, Predicate condition) &#123; names.stream().filter((name) -&gt; (condition.test(name))) .forEach((name) -&gt; &#123;System.out.println(name + " "); &#125;); &#125; 处理数据？用管道的方式更加简洁Java 8里面新增的Stream API ，让集合中的数据处理起来更加方便，性能更高，可读性更好假设一个业务场景：对于20元以上的商品，进行9折处理，最后得到这些商品的折后价格。如果使用jdk7的话会由多层循环but jdk8 管道流12345final BigDecimal totalOfDiscountedPrices = prices.stream().filter(price -&gt; price.compareTo(BigDecimal.valueOf(20)) &gt; 0).map(price -&gt; price.multiply(BigDecimal.valueOf(0.9))).reduce(BigDecimal.ZERO,BigDecimal::add);System.out.println("Total of discounted prices: " + totalOfDiscountedPrices);]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jdk8-lambda表达式示例]]></title>
+      <url>%2F2017%2F03%2F30%2Fjdk8-lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%A4%BA%E4%BE%8B%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[关于fork join框架]]></title>
       <url>%2F2017%2F03%2F29%2F%E5%85%B3%E4%BA%8Efork-join%E6%A1%86%E6%9E%B6%2F</url>
       <content type="text"></content>
