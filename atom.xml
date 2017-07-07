@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.nightqq.cn/"/>
-  <updated>2017-07-07T14:51:03.000Z</updated>
+  <updated>2017-07-07T14:55:01.000Z</updated>
   <id>https://www.nightqq.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://www.nightqq.cn/2017/07/07/filter%E3%80%81listener%E3%80%81Interceptor/"/>
     <id>https://www.nightqq.cn/2017/07/07/filter、listener、Interceptor/</id>
     <published>2017-07-07T14:42:13.000Z</published>
-    <updated>2017-07-07T14:51:03.000Z</updated>
+    <updated>2017-07-07T14:55:01.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="filter-listener-Interceptor区别"><a href="#filter-listener-Interceptor区别" class="headerlink" title="filter|listener|Interceptor区别"></a>filter|listener|Interceptor区别</h2><h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h3><p>Servlet中的过滤器Filter是实现了javax.servlet.Filter接口的服务器端程序，主要的用途是过滤字符编码、做一些业务逻辑判断等。其工作原理是，只要你在web.xml文件配置好要拦截的客户端请求，它都会帮你拦截到请求，此时你就可以对请求或响应(Request、Response)统一设置编码，简化操作；同时还可进行逻辑判断，如用户是否已经登陆、有没有权限访问该页面等等工作。它是随你的web应用启动而启动的，只初始化一次，以后就可以拦截相关请求，只有当你的web应用停止或重新部署的时候才销毁</p>
 <h3 id="listener"><a href="#listener" class="headerlink" title="listener"></a>listener</h3><p>现在来说说Servlet的监听器Listener，它是实现了javax.servlet.ServletContextListener 接口的服务器端程序，它也是随web应用的启动而启动，只初始化一次，随web应用的停止而销毁。主要作用是： 做一些初始化的内容添加工作、设置一些基本的内容、比如一些参数或者是一些固定的对象等等</p>
@@ -44,7 +44,11 @@
       <category term="java" scheme="https://www.nightqq.cn/categories/java/"/>
     
     
-      <category term="filter-listener-Interceptor" scheme="https://www.nightqq.cn/tags/filter-listener-Interceptor/"/>
+      <category term="filter" scheme="https://www.nightqq.cn/tags/filter/"/>
+    
+      <category term="listener" scheme="https://www.nightqq.cn/tags/listener/"/>
+    
+      <category term="Interceptor" scheme="https://www.nightqq.cn/tags/Interceptor/"/>
     
   </entry>
   
