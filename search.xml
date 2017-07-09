@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[mysql启动]]></title>
+      <url>%2F2017%2F07%2F09%2Fmysql%E5%90%AF%E5%8A%A8%2F</url>
+      <content type="text"><![CDATA[mac os 启动：mysql.server start 停止：mysql.server stop 重启：mysql.server restart linux 启动：service mysqld start 停止：service mysqld stop 重启：service mysqld restart 查看状态：service mysqld status 查看状态：systemctl status mysqld.service windows 启动 ：net start mysql 停止：net stop mysql]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Express 入门]]></title>
       <url>%2F2017%2F07%2F08%2FExpress-%E5%85%A5%E9%97%A8%2F</url>
       <content type="text"><![CDATA[安装12yum -y install nodejsnode -v 创建一个基础项目mkdir -p /data/release/hellocd /data/release/hello create1npm init 一路回撤，主程序文件可以修改为 app.js install express1npm install express --save create app.js1vim app.js 文件内容 12345678910var express = require('express');var app = express();app.get('/', function (req, res) &#123; res.send('Hello World!');&#125;);var server = app.listen(3000, function () &#123; console.log('Example app listening on port 3000!');&#125;); 生成应用框架12npm install express-generator -gexpress -h 生成一个express骨架app1234cd /data/releaseexpress myappcd myappnpm install 启动应用1DEBUG=myapp npm start 路由解析1app.METHOD(PATH, HANDLER) 路由解析app 是一个 express 实例；METHOD 是某个 HTTP 请求方式 中的一个PATH 是服务器端的路径；HANDLER 是当路由匹配到时需要执行的函数。]]></content>
