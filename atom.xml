@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.nightqq.cn/"/>
-  <updated>2019-02-20T07:24:58.000Z</updated>
+  <updated>2019-02-20T07:37:14.000Z</updated>
   <id>https://www.nightqq.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://www.nightqq.cn/2019/02/20/php%E5%AE%89%E8%A3%85/"/>
     <id>https://www.nightqq.cn/2019/02/20/php安装/</id>
     <published>2019-02-20T07:03:48.000Z</published>
-    <updated>2019-02-20T07:24:58.000Z</updated>
+    <updated>2019-02-20T07:37:14.000Z</updated>
     
     <content type="html"><![CDATA[<p><strong>centos7安装php7</strong><br><strong><a href="http://www.cnblogs.com/lostk/p/6225055.html" title="原文地址" target="_blank" rel="external">原文链接</a></strong></p>
 <p>Centos7.2 编译安装PHP7<br>PHP7，编译安装：<br>环境：centos7.2    （注意：因为我用的nginx, 此配置参数没有考虑到apache，所以不合适需要用apache的朋友照搬过去运行，但是可以参考。）</p>
@@ -43,11 +43,7 @@
 <p>安装完成后，我们要把源码包中的配置文件复制到PHP安装目录下，源码包中有两个配置  php.ini-development  php.ini-production  ，看名字就知道，一个是开发环境，一个是生产环境，我们这里就复制开发环境的<br>cp php.ini-development /usr/local/php/lib/php.ini</p>
 <p>另外还需要设置环境变量 ：<br>修改/etc/profile文件使其永久性生效，并对所有系统用户生效，在文件末尾加上如下两行代码<br>PATH=$PATH:/usr/local/php/bin<br>export PATH<br>然后执行 命令 source /etc/profile</p>
 <p>php -v 就可以看到PHP版本信息了。</p>
-<p>此时还需要配置PHP-fpm:<br>cp /usr/local/php/etc/php-fpm.conf.default /usr/local/php/etc/php-fpm.conf</p>
-<p>cp /usr/local/php/etc/php-fpm.d/www.conf.default /usr/local/php/etc/php-fpm.d/www.conf</p>
-<p>cp /usr/src/php-7.0.2/sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm</p>
-<p>chmod +x /etc/init.d/php-fpm</p>
-<p>启动php-fpm:<br>/etc/init.d/php-fpm start</p>
+<p>此时还需要配置PHP-fpm:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">cp /usr/local/php/etc/php-fpm.conf.default /usr/local/php/etc/php-fpm.conf</div><div class="line">cp /usr/local/php/etc/php-fpm.d/www.conf.default /usr/local/php/etc/php-fpm.d/www.conf</div><div class="line">cp /usr/src/php-7.0.2/sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm</div><div class="line">chmod +x /etc/init.d/php-fpm</div><div class="line"></div><div class="line">启动php-fpm:</div><div class="line">/etc/init.d/php-fpm start</div></pre></td></tr></table></figure></p>
 <p>如果出现错误：ERROR: [pool www] cannot get uid for user ‘www-data’<br>则新建www-data 用户组：<br>groupadd www-data<br>useradd -g www-data www-data<br>然后再启动php-fpm</p>
 <p>然后安装nginx<br>yum install nginx</p>
 ]]></content>
