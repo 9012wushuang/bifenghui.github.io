@@ -231,9 +231,6 @@ body {
   position: relative;
   height: 180px;
 }
-#header .site-name {
-  padding-top: 20px;
-}
 #header .site-name h1 {
   padding: 0;
   margin: 0;
@@ -242,6 +239,11 @@ body {
 }
 #header .site-name .description {
   margin: 0.6em 0 0;
+  color: #fff;
+  text-shadow: 1px 2px 3px #113f6e;
+}
+#header .site-name .subtitle {
+  margin: 10px 0 0;
   color: #fff;
   text-shadow: 1px 2px 3px #113f6e;
 }
@@ -285,21 +287,21 @@ body {
   -webkit-box-shadow: 1px 2px 3px #adc2d7;
   box-shadow: 1px 2px 3px #adc2d7;
   border: 1px solid #adc2d7;
-  background: #fff;
+  background: #17181c;
 }
 #sidebar .widget a {
-  color: #333;
+  color: #fff;
 }
 #sidebar .widget a:hover {
-  color: #40759b;
+  color: #fff;
   text-decoration: underline;
 }
 #sidebar .widget .widget-title,
 #sidebar .widget .comments-title {
-  color: #40759b;
+  color: #fff;
   line-height: 2.7;
   margin-top: 0;
-  font-size: 16px;
+  font-size: 20px;
   border-bottom: 1px solid #d8e2eb;
   display: block;
   font-weight: normal;
@@ -310,10 +312,12 @@ body {
 #sidebar .widget .tagcloud a {
   line-height: 1.5;
   padding: 5px;
+  color: #fff;
 }
 #sidebar .widget ul {
   list-style: none;
   padding: 0;
+  color: #fff;
 }
 #sidebar .widget ul li {
   list-style: none;
@@ -322,10 +326,11 @@ body {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  color: #fff;
 }
 #sidebar .widget .category-list-count {
   padding-left: 5px;
-  color: #40759b;
+  color: #fff;
 }
 #sidebar .widget .category-list-count:before {
   content: "(";
@@ -365,7 +370,7 @@ body {
   left: -50px;
   box-sizing: content-box;
   padding: 20px;
-  background: #fff;
+  background: #f6f6f6;
   border-radius: 4px;
   -webkit-box-shadow: 1px 2px 3px #adc2d7;
   box-shadow: 1px 2px 3px #adc2d7;
@@ -455,6 +460,7 @@ body {
 .post {
   padding: 25px;
   background: #17181c;
+  color: #fff;
   margin-top: 40px;
   border-radius: 4px;
   -webkit-box-shadow: 1px 2px 3px #adc2d7;
@@ -463,7 +469,7 @@ body {
 }
 .post .post-title {
   margin: 0;
-  color: #40759b;
+  color: #fff;
   text-align: left;
   border-bottom: 1px solid #d8e2eb;
   padding-bottom: 10px;
@@ -472,7 +478,7 @@ body {
   line-height: 1.1;
 }
 .post .post-title a {
-  color: #40759b;
+  color: #fff;
 }
 .post .post-title a:hover {
   text-decoration: underline;
@@ -480,7 +486,7 @@ body {
 .post .post-meta {
   padding: 0;
   margin: 10px 0 0;
-  color: #40759b;
+  color: #fff;
   float: left;
   display: inline;
   text-indent: 0.15em;
@@ -503,7 +509,7 @@ body {
 .post .ds-thread-count {
   padding: 0;
   margin: 10px 0 0;
-  color: #40759b;
+  color: #fff;
   float: right;
   display: inline;
   text-indent: 0.15em;
@@ -519,7 +525,7 @@ body {
 .post .disqus-comment-count {
   padding: 0;
   margin: 10px 0 0;
-  color: #40759b;
+  color: #fff;
   float: right;
   display: inline;
   text-indent: 0.15em;
@@ -530,13 +536,13 @@ body {
   padding-right: 0.3em;
 }
 .post .disqus-comment-count:hover {
-  color: #40759b;
+  color: #fff;
 }
 .post .post-content {
   clear: left;
   font-size: 15px;
   line-height: 1.77;
-  color: #333;
+  color: #fff;
   padding-top: 15px;
   text-align: justify;
   text-justify: distribute;
@@ -564,12 +570,12 @@ body {
   margin: 0 5px;
   padding: 0 5px;
   font-family: Source Code Pro, Monaco, Menlo, Consolas, monospace;
-  color: #4d4d4c;
+  color: #fff;
   background: #eee;
   font-size: 0.95em;
 }
 .post .post-content p a {
-  color: #40759b;
+  color: #fff;
   padding-bottom: 2px;
   word-break: break-all;
 }
@@ -577,7 +583,7 @@ body {
   text-decoration: underline;
 }
 .post .post-content p .caption {
-  color: #40759b;
+  color: #fff;
   display: block;
   font-size: 0.9em;
   margin-top: 0.1em;
@@ -610,13 +616,13 @@ body {
   margin: 0 5px;
   padding: 0 5px;
   font-family: Source Code Pro, Monaco, Menlo, Consolas, monospace;
-  color: #4d4d4c;
+  color: #fff;
   background: #eee;
   font-size: 0.95em;
 }
 .post .post-content ul a,
 .post .post-content ol a {
-  color: #40759b;
+  color: #fff;
   padding-bottom: 2px;
   word-break: break-all;
 }
@@ -745,6 +751,7 @@ body {
   border: 1px solid #5483b1;
 }
 .archive-wrap .tite {
+  color: #fff;
   position: relative;
   bottom: -4px;
   display: inline-block;
@@ -765,6 +772,7 @@ body {
   background: #d8e2eb;
 }
 .archive-wrap .date {
+  color: #fff;
   position: absolute;
   left: -112px;
   width: 100px;
@@ -1035,7 +1043,7 @@ body {
 /* read more*/
 .readmore a {
   font-size: 14px;
-  color: #40759b;
+  color: #fff;
   margin: -20px 0 0;
   padding: 5px 10px;
   float: right;
@@ -1061,7 +1069,7 @@ body {
   display: inline-block;
   line-height: 25px;
   font-size: 15px;
-  color: #555;
+  color: #fff;
   border-bottom: none;
   float: left;
 }
