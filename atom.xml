@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.nightqq.cn/"/>
-  <updated>2019-02-23T12:14:18.000Z</updated>
+  <updated>2019-02-23T13:56:28.000Z</updated>
   <id>https://www.nightqq.cn/</id>
   
   <author>
@@ -21,15 +21,16 @@
     <link href="https://www.nightqq.cn/2019/02/23/yii/"/>
     <id>https://www.nightqq.cn/2019/02/23/yii/</id>
     <published>2019-02-23T12:09:36.000Z</published>
-    <updated>2019-02-23T12:14:18.000Z</updated>
+    <updated>2019-02-23T13:56:28.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://admin.nightqq.cn/fileapi/img/ab354a6727004d145c380a6a781bd81f.jpg" title="yii" target="_blank" rel="noopener"><img src="https://admin.nightqq.cn/fileapi/img/ab354a6727004d145c380a6a781bd81f.jpg" alt="yii" title="yii"></a></p>]]></content>
+    <content type="html"><![CDATA[<p>每一次 Yii 应用开始处理 HTTP 请求时，它都会进行一个近似的流程。</p><p>1、用户提交指向 入口脚本 web/index.php 的请求。<br>2、入口脚本会加载 配置数组 并创建一个 应用 实例用于处理该请求。<br>3、应用会通过 request（请求） 应用组件 解析被请求的 路由。<br>4、应用创建一个 controller（控制器） 实例具体处理请求。<br>5、控制器会创建一个 action（动作） 实例并为该动作执行相关的 Filters（访问过滤器）。<br>6、如果任何一个过滤器验证失败，该动作会被取消。<br>7、如果全部的过滤器都通过，该动作就会被执行。<br>8、动作会加载一个数据模型，一般是从数据库中加载。<br>9、动作会渲染一个 View（视图），并为其提供所需的数据模型。<br>10、渲染得到的结果会返回给 response（响应） 应用组件。<br>11、响应组件会把渲染结果发回给用户的浏览器。</p><p><a href="https://admin.nightqq.cn/fileapi/img/ab354a6727004d145c380a6a781bd81f.jpg" title="yii" target="_blank" rel="noopener"><img src="https://admin.nightqq.cn/fileapi/img/ab354a6727004d145c380a6a781bd81f.jpg" alt="yii" title="yii"></a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://admin.nightqq.cn/fileapi/img/ab354a6727004d145c380a6a781bd81f.jpg&quot; title=&quot;yii&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;
+        &lt;p&gt;每一次 Yii 应用开始处理 HTTP 请求时，它都会进行一个近似的流程。&lt;/p&gt;
+&lt;p&gt;1、用户提交指向 入口脚本 web/index.php 的请求。&lt;br&gt;2、入口脚本会加载 配置数组 并创建一个 应用 实例用于处理该请求。&lt;br&gt;3、应用会通过 request（请求
       
     
     </summary>
