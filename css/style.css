@@ -459,8 +459,8 @@ body {
 /* post */
 .post {
   padding: 25px;
-  background: #17181c;
-  color: #fff;
+  background: #fff;
+  color: #17181c;
   margin-top: 40px;
   border-radius: 4px;
   -webkit-box-shadow: 1px 2px 3px #adc2d7;
@@ -469,7 +469,7 @@ body {
 }
 .post .post-title {
   margin: 0;
-  color: #fff;
+  color: #17181c;
   text-align: left;
   border-bottom: 1px solid #d8e2eb;
   padding-bottom: 10px;
@@ -478,7 +478,7 @@ body {
   line-height: 1.1;
 }
 .post .post-title a {
-  color: #fff;
+  color: #17181c;
 }
 .post .post-title a:hover {
   text-decoration: underline;
@@ -486,7 +486,7 @@ body {
 .post .post-meta {
   padding: 0;
   margin: 10px 0 0;
-  color: #fff;
+  color: #17181c;
   float: left;
   display: inline;
   text-indent: 0.15em;
@@ -542,7 +542,7 @@ body {
   clear: left;
   font-size: 15px;
   line-height: 1.77;
-  color: #fff;
+  color: #17181c;
   padding-top: 15px;
   text-align: justify;
   text-justify: distribute;
@@ -751,7 +751,7 @@ body {
   border: 1px solid #5483b1;
 }
 .archive-wrap .tite {
-  color: #fff;
+  color: #17181c;
   position: relative;
   bottom: -4px;
   display: inline-block;
@@ -772,7 +772,7 @@ body {
   background: #d8e2eb;
 }
 .archive-wrap .date {
-  color: #fff;
+  color: #17181c;
   position: absolute;
   left: -112px;
   width: 100px;
