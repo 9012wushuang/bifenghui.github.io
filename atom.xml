@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>竹杖芒鞋轻胜马，谁怕？ 一蓑烟雨任平生</title>
+  
+  <subtitle>十年前你是谁，一年前你是谁，甚至昨天你是谁，都不重要。重要的是，今天你是谁，以及明天你将成为谁</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://www.nightqq.cn/"/>
+  <updated>2019-02-23T09:28:08.000Z</updated>
+  <id>https://www.nightqq.cn/</id>
+  
+  <author>
+    <name>wind</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>软件</title>
+    <link href="https://www.nightqq.cn/2019/02/22/java%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://www.nightqq.cn/2019/02/22/java学习/</id>
+    <published>2019-02-22T02:10:08.000Z</published>
+    <updated>2019-02-23T09:28:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://admin.nightqq.cn/fileapi/img/7ffb118eb159bceb23cf5358544fb415.jpeg" title="软件" target="_blank" rel="noopener"><img src="https://admin.nightqq.cn/fileapi/img/7ffb118eb159bceb23cf5358544fb415.jpeg" alt="软件" title="软件"></a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://admin.nightqq.cn/fileapi/img/7ffb118eb159bceb23cf5358544fb415.jpeg&quot; title=&quot;软件&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>php7安装</title>
+    <link href="https://www.nightqq.cn/2019/02/20/php%E5%AE%89%E8%A3%85/"/>
+    <id>https://www.nightqq.cn/2019/02/20/php安装/</id>
+    <published>2019-02-20T07:03:48.000Z</published>
+    <updated>2019-02-20T07:37:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>centos7安装php7</strong><br><strong><a href="http://www.cnblogs.com/lostk/p/6225055.html" title="原文地址" target="_blank" rel="noopener">原文链接</a></strong></p><p>Centos7.2 编译安装PHP7<br>PHP7，编译安装：<br>环境：centos7.2    （注意：因为我用的nginx, 此配置参数没有考虑到apache，所以不合适需要用apache的朋友照搬过去运行，但是可以参考。）</p><p>直接下载PHP7.0.2的安装包解压，编译，安装:<br>下载php7,并解压<br>$ cd /usr/src/<br>$ wget <a href="http://cn2.php.net/distributions/php-7.0.2.tar.gz" target="_blank" rel="noopener">http://cn2.php.net/distributions/php-7.0.2.tar.gz</a></p><p>#解压<br>$ tar -xzxvf php-7.0.2.tar.gz<br>$ cd php-7.0.2</p><p>解压完后先不要编译，请检查是否安装了gcc ,没有的话执行yum install gcc<br>检查是否安装了libxml2 ,没有的话执行yum install libxml2<br>检查是否安装了libxml2-devel,没有的话执行yum install libxml2-devel<br>注：因为改为用nginx了，所以编译参数中的–with-apxs2=/usr/bin/apxs去掉了，如果要配置apache用，安装PHP前，请先安装apache。</p><p>编译参数配置<br>‘./configure’ ‘–prefix=/usr/local/php’ ‘–with-pdo-pgsql’ ‘–with-zlib-dir’ ‘–with-freetype-dir’ ‘–enable-mbstring’ ‘–with-libxml-dir=/usr’ ‘–enable-soap’ ‘–enable-calendar’ ‘–with-curl’ ‘–with-mcrypt’ ‘–with-gd’ ‘–with-pgsql’ ‘–disable-rpath’ ‘–enable-inline-optimization’ ‘–with-bz2’ ‘–with-zlib’ ‘–enable-sockets’ ‘–enable-sysvsem’ ‘–enable-sysvshm’ ‘–enable-pcntl’ ‘–enable-mbregex’ ‘–enable-exif’ ‘–enable-bcmath’ ‘–with-mhash’ ‘–enable-zip’ ‘–with-pcre-regex’ ‘–with-pdo-mysql’ ‘–with-mysqli’ ‘–with-jpeg-dir=/usr’ ‘–with-png-dir=/usr’ ‘–enable-gd-native-ttf’ ‘–with-openssl’ ‘–with-fpm-user=www-data’ ‘–with-fpm-group=www-data’ ‘–with-libdir=/lib/x86_64-linux-gnu/‘ ‘–enable-ftp’ ‘–with-gettext’ ‘–with-xmlrpc’ ‘–with-xsl’ ‘–enable-opcache’ ‘–enable-fpm’ ‘–with-iconv’ ‘–with-xpm-dir=/usr’</p><p>出现报错 Cannot find OpenSSL’s &lt;evp.h&gt;<br>则执行 yum install openssl openssl-devel</p><p>出现报错 Please reinstall the libcurl distribution<br>则执行 yum -y install curl-devel</p><p>出现报错 jpeglib.h not found<br>则执行 yum install libjpeg.x86_64 libpng.x86_64 freetype.x86_64 libjpeg-devel.x86_64 libpng-devel.x86_64 freetype-devel.x86_64 -y<br>和执行yum install libjpeg-devel</p><p>checking for BZip2 in default path… not found<br>configure: error: Please reinstall the BZip2 distribution<br>这是bzip2软件包没有安装<br>解决办法<br>yum install bzip2-devel.x86_64 -y</p><p>configure: error: xpm.h not found.<br>yum install libXpm-devel</p><p>error: Unable to locate gmp.h<br>Fix: yum install gmp-devel</p><p>现象：Unable to detect ICU prefix or /usr//bin/icu-config failed. Please verify ICU install<br> prefix and make sure icu-config works<br>解决办法：yum install -y icu libicu libicu-devel</p><p>错误：mcrypt.h not found. Please reinstall libmcrypt.<br>解决办法：yum  install  php-mcrypt  libmcrypt  libmcrypt-devel</p><p>错误： configure: error: Cannot find libpq-fe.h. Please specify correct PostgreSQL installation path<br>解决办法：yum install  postgresql-devel</p><p>错误 ： configure: error: xslt-config not found. Please reinstall the libxslt &gt;= 1.1.0 distribution<br>解决： yum install libxslt-devel</p><p>配置的checking 结束后，执行：</p><p>make clean &amp;&amp; make &amp;&amp; make install</p><p>安装完成后，我们要把源码包中的配置文件复制到PHP安装目录下，源码包中有两个配置  php.ini-development  php.ini-production  ，看名字就知道，一个是开发环境，一个是生产环境，我们这里就复制开发环境的<br>cp php.ini-development /usr/local/php/lib/php.ini</p><p>另外还需要设置环境变量 ：<br>修改/etc/profile文件使其永久性生效，并对所有系统用户生效，在文件末尾加上如下两行代码<br>PATH=$PATH:/usr/local/php/bin<br>export PATH<br>然后执行 命令 source /etc/profile</p><p>php -v 就可以看到PHP版本信息了。</p><p>此时还需要配置PHP-fpm:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cp /usr/local/php/etc/php-fpm.conf.default /usr/local/php/etc/php-fpm.conf</span><br><span class="line">cp /usr/local/php/etc/php-fpm.d/www.conf.default /usr/local/php/etc/php-fpm.d/www.conf</span><br><span class="line">cp /usr/src/php-7.0.2/sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm</span><br><span class="line">chmod +x /etc/init.d/php-fpm</span><br><span class="line"></span><br><span class="line">启动php-fpm:</span><br><span class="line">/etc/init.d/php-fpm start</span><br></pre></td></tr></table></figure></p><p>如果出现错误：ERROR: [pool www] cannot get uid for user ‘www-data’<br>则新建www-data 用户组：<br>groupadd www-data<br>useradd -g www-data www-data<br>然后再启动php-fpm</p><p>然后安装nginx<br>yum install nginx</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;centos7安装php7&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;&lt;a href=&quot;http://www.cnblogs.com/lostk/p/6225055.html&quot; title=&quot;原文地址&quot; target=&quot;_blank&quot; rel=&quot;noopene
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title> mysql启动</title>
+    <link href="https://www.nightqq.cn/2017/07/09/mysql%E5%90%AF%E5%8A%A8/"/>
+    <id>https://www.nightqq.cn/2017/07/09/mysql启动/</id>
+    <published>2017-07-09T03:08:41.000Z</published>
+    <updated>2017-07-09T03:13:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="mac-os"><a href="#mac-os" class="headerlink" title="mac os"></a>mac os</h3><ol><li>启动：mysql.server start</li><li>停止：mysql.server stop</li><li>重启：mysql.server restart</li></ol><h3 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h3><ol><li>启动：service mysqld start</li><li>停止：service mysqld stop</li><li>重启：service mysqld restart</li><li>查看状态：service mysqld status</li><li>查看状态：systemctl status mysqld.service</li></ol><h3 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h3><ol><li>启动 ：net start mysql</li><li>停止：net stop mysql</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;mac-os&quot;&gt;&lt;a href=&quot;#mac-os&quot; class=&quot;headerlink&quot; title=&quot;mac os&quot;&gt;&lt;/a&gt;mac os&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;启动：mysql.server start&lt;/li&gt;
+&lt;li&gt;停止：mysql.server s
+      
+    
+    </summary>
+    
+      <category term="数据库" scheme="https://www.nightqq.cn/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="mysql" scheme="https://www.nightqq.cn/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Express 入门</title>
+    <link href="https://www.nightqq.cn/2017/07/08/Express-%E5%85%A5%E9%97%A8/"/>
+    <id>https://www.nightqq.cn/2017/07/08/Express-入门/</id>
+    <published>2017-07-08T02:37:02.000Z</published>
+    <updated>2017-07-08T03:02:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install nodejs</span><br><span class="line">node -v</span><br></pre></td></tr></table></figure><h3 id="创建一个基础项目"><a href="#创建一个基础项目" class="headerlink" title="创建一个基础项目"></a>创建一个基础项目</h3><p>mkdir -p /data/release/hello<br>cd /data/release/hello</p><h4 id="create"><a href="#create" class="headerlink" title="create"></a>create</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure><p>一路回撤，主程序文件可以修改为 app.js</p><h4 id="install-express"><a href="#install-express" class="headerlink" title="install express"></a>install express</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express --save</span><br></pre></td></tr></table></figure><h4 id="create-app-js"><a href="#create-app-js" class="headerlink" title="create app.js"></a>create app.js</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim app.js</span><br></pre></td></tr></table></figure><p><strong>文件内容</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">'Hello World!'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> server = app.listen(<span class="number">3000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Example app listening on port 3000!'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p><h3 id="生成应用框架"><a href="#生成应用框架" class="headerlink" title="生成应用框架"></a>生成应用框架</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install express-generator -g</span><br><span class="line">express -h</span><br></pre></td></tr></table></figure><h4 id="生成一个express骨架app"><a href="#生成一个express骨架app" class="headerlink" title="生成一个express骨架app"></a>生成一个express骨架app</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /data/release</span><br><span class="line">express myapp</span><br><span class="line">cd myapp</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure><h4 id="启动应用"><a href="#启动应用" class="headerlink" title="启动应用"></a>启动应用</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DEBUG=myapp npm start</span><br></pre></td></tr></table></figure><h4 id="路由解析"><a href="#路由解析" class="headerlink" title="路由解析"></a>路由解析</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.METHOD(PATH, HANDLER)</span><br></pre></td></tr></table></figure><h5 id="路由解析-1"><a href="#路由解析-1" class="headerlink" title="路由解析"></a>路由解析</h5><p>app 是一个 express 实例；<br>METHOD 是某个 HTTP 请求方式 中的一个<br>PATH 是服务器端的路径；<br>HANDLER 是当路由匹配到时需要执行的函数。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="nodejs" scheme="https://www.nightqq.cn/categories/nodejs/"/>
+    
+    
+      <category term="express" scheme="https://www.nightqq.cn/tags/express/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git命令-图</title>
+    <link href="https://www.nightqq.cn/2017/07/07/git%E5%91%BD%E4%BB%A4-%E5%9B%BE/"/>
+    <id>https://www.nightqq.cn/2017/07/07/git命令-图/</id>
+    <published>2017-07-07T15:19:29.000Z</published>
+    <updated>2019-02-21T15:00:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://admin.nightqq.cn/fileapi/img/git.png" title="git" target="_blank" rel="noopener"><img src="https://admin.nightqq.cn/fileapi/img/git.png" alt="git" title="git"></a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://admin.nightqq.cn/fileapi/img/git.png&quot; title=&quot;git&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://admin.nightqq.cn/file
+      
+    
+    </summary>
+    
+      <category term="git" scheme="https://www.nightqq.cn/categories/git/"/>
+    
+    
+      <category term="git命令" scheme="https://www.nightqq.cn/tags/git%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>filter、listener、Interceptor</title>
+    <link href="https://www.nightqq.cn/2017/07/07/filter%E3%80%81listener%E3%80%81Interceptor/"/>
+    <id>https://www.nightqq.cn/2017/07/07/filter、listener、Interceptor/</id>
+    <published>2017-07-07T14:42:13.000Z</published>
+    <updated>2017-07-07T14:55:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="filter-listener-Interceptor区别"><a href="#filter-listener-Interceptor区别" class="headerlink" title="filter|listener|Interceptor区别"></a>filter|listener|Interceptor区别</h2><h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h3><p>Servlet中的过滤器Filter是实现了javax.servlet.Filter接口的服务器端程序，主要的用途是过滤字符编码、做一些业务逻辑判断等。其工作原理是，只要你在web.xml文件配置好要拦截的客户端请求，它都会帮你拦截到请求，此时你就可以对请求或响应(Request、Response)统一设置编码，简化操作；同时还可进行逻辑判断，如用户是否已经登陆、有没有权限访问该页面等等工作。它是随你的web应用启动而启动的，只初始化一次，以后就可以拦截相关请求，只有当你的web应用停止或重新部署的时候才销毁</p><h3 id="listener"><a href="#listener" class="headerlink" title="listener"></a>listener</h3><p>现在来说说Servlet的监听器Listener，它是实现了javax.servlet.ServletContextListener 接口的服务器端程序，它也是随web应用的启动而启动，只初始化一次，随web应用的停止而销毁。主要作用是： 做一些初始化的内容添加工作、设置一些基本的内容、比如一些参数或者是一些固定的对象等等</p><h3 id="Interceptor"><a href="#Interceptor" class="headerlink" title="Interceptor"></a>Interceptor</h3><p>拦截器是在面向切面编程中应用的，就是在你的service或者一个方法前调用一个方法，或者在方法后调用一个方法。是基于JAVA的反射机制</p><h3 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h3><ol><li><p>过滤器：所谓过滤器顾名思义是用来过滤的，在Java web中，你传入的request,response提前过滤掉一些信息，或者提前设置一些参数，然后再传入servlet或者struts的action进行业务逻辑，比如过滤掉非法url（不是login.do的地址请求，如果用户没有登陆都过滤掉）,或者在传入servlet或者struts的action前统一设置字符集，或者去除掉一些非法字符（聊天室经常用到的，一些骂人的话）。filter 流程是线性的， url传来之后，检查之后，可保持原来的流程继续向下执行，被下一个filter, servlet接收等.</p></li><li><p>监听器：这个东西在c/s模式里面经常用到，他会对特定的事件产生产生一个处理。监听在很多模式下用到。比如说观察者模式，就是一个监听来的。又比如struts可以用监听来启动。Servlet监听器用于监听一些重要事件的发生，监听器对象可以在事情发生前、发生后可以做一些必要的处理。</p></li><li><p>java的拦截器 主要是用在插件上，扩展件上比如 hivernate spring struts2等 有点类似面向切片的技术</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;filter-listener-Interceptor区别&quot;&gt;&lt;a href=&quot;#filter-listener-Interceptor区别&quot; class=&quot;headerlink&quot; title=&quot;filter|listener|Interceptor区别&quot;&gt;&lt;/a
+      
+    
+    </summary>
+    
+      <category term="java" scheme="https://www.nightqq.cn/categories/java/"/>
+    
+    
+      <category term="filter" scheme="https://www.nightqq.cn/tags/filter/"/>
+    
+      <category term="listener" scheme="https://www.nightqq.cn/tags/listener/"/>
+    
+      <category term="Interceptor" scheme="https://www.nightqq.cn/tags/Interceptor/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>lambda表达实践</title>
+    <link href="https://www.nightqq.cn/2017/03/30/lambda%E8%A1%A8%E8%BE%BE%E5%AE%9E%E8%B7%B5/"/>
+    <id>https://www.nightqq.cn/2017/03/30/lambda表达实践/</id>
+    <published>2017-03-30T07:18:49.000Z</published>
+    <updated>2017-03-30T07:33:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="lambda-表达式"><a href="#lambda-表达式" class="headerlink" title="lambda 表达式"></a>lambda 表达式</h1><h2 id="简介和示例"><a href="#简介和示例" class="headerlink" title="简介和示例"></a>简介和示例</h2><ol><li>希腊字母第11个，兰木达</li><li>计算机语言中的 匿名函数</li><li>lambda表达式引入主要为了 提高在大数据高并发的情况下的java性能问题，从语言编写上引入lambda。易于编写 并行处理大数据的类库。</li><li><strong>lambda表达式的性能大于等于不用lambda表达式写的代码</strong></li><li><strong>lambda表达式出错的堆栈信息比较长</strong><a id="more"></a><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><strong>阅读了下面这段后，感觉表现的意思是，如果你有思想，知道要做什么的想法，那么可以用抽象行为的lambda高性能的表现出来，而不用设计怎么去做。</strong><br>在Java世界里面，面向对象还是主流思想，对于习惯了面向对象编程的开发者来说，抽象的概念并不陌生。面向对象编程是对数据进行抽象，而函数式编程是对行为进行抽象。现实世界中，数据和行为并存，程序也是如此，因此这两种编程方式我们都得学。<br>这种新的抽象方式还有其他好处。很多人不总是在编写性能优先的代码，对于这些人来说，函数式编程带来的好处尤为明显。程序员能编写出更容易阅读的代码——这种代码更多地表达了业务逻辑，而不是从机制上如何实现。易读的代码也易于维护、更可靠、更不容易出错。<br>在写回调函数和事件处理器时，程序员不必再纠缠于匿名内部类的冗繁和可读性，函数式编程让事件处理系统变得更加简单。能将函数方便地传递也让编写惰性代码变得容易，只有在真正需要的时候，才初始化变量的值。<br>总而言之，Java更趋于完美了。<h3 id="使用-gt-替代匿名类"><a href="#使用-gt-替代匿名类" class="headerlink" title="使用() -&gt; {} 替代匿名类"></a>使用() -&gt; {} 替代匿名类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Before Java 8:</span></span><br><span class="line"><span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Before Java8 "</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;).start();</span><br><span class="line"><span class="comment">//Java 8 way:</span></span><br><span class="line"><span class="keyword">new</span> Thread(() -&gt; System.out.println(<span class="string">"In Java8!"</span>));</span><br></pre></td></tr></table></figure></li></ol><h3 id="使用内循环替代外循环"><a href="#使用内循环替代外循环" class="headerlink" title="使用内循环替代外循环"></a>使用内循环替代外循环</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Prior Java 8 : 告诉怎么做</span></span><br><span class="line">List features = Arrays.asList(<span class="string">"Lambdas"</span>, <span class="string">"Default Method"</span>,</span><br><span class="line"><span class="string">"Stream API"</span>, <span class="string">"Date and Time API"</span>);</span><br><span class="line"><span class="keyword">for</span> (String feature : features) &#123;</span><br><span class="line">   System.out.println(feature);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//In Java 8: 告诉要做什么</span></span><br><span class="line">List features = Arrays.asList(<span class="string">"Lambdas"</span>, <span class="string">"Default Method"</span>, <span class="string">"Stream API"</span>,</span><br><span class="line"> <span class="string">"Date and Time API"</span>);</span><br><span class="line">features.forEach(n -&gt; System.out.println(n));</span><br><span class="line"><span class="comment">// Even better use Method reference feature of Java 8</span></span><br><span class="line"><span class="comment">// method reference is denoted by :: (double colon) operator</span></span><br><span class="line"><span class="comment">// looks similar to score resolution operator of C++</span></span><br><span class="line">features.forEach(System.out::println);</span><br></pre></td></tr></table></figure><h3 id="支持函数编程"><a href="#支持函数编程" class="headerlink" title="支持函数编程"></a>支持函数编程</h3><p>java.util.function<br>java.util.function.Predicate  接口支持lambda函数式编程<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(args[])</span></span>&#123;</span><br><span class="line">  List languages = Arrays.asList(<span class="string">"Java"</span>, <span class="string">"Scala"</span>, <span class="string">"C++"</span>, <span class="string">"Haskell"</span>, <span class="string">"Lisp"</span>);</span><br><span class="line">  System.out.println(<span class="string">"Languages which starts with J :"</span>);</span><br><span class="line">  filter(languages, (str)-&gt;str.startsWith(<span class="string">"J"</span>));</span><br><span class="line">  System.out.println(<span class="string">"Languages which ends with a "</span>);</span><br><span class="line">  filter(languages, (str)-&gt;str.endsWith(<span class="string">"a"</span>));</span><br><span class="line">  System.out.println(<span class="string">"Print all languages :"</span>);</span><br><span class="line">  filter(languages, (str)-&gt;<span class="keyword">true</span>);</span><br><span class="line">   System.out.println(<span class="string">"Print no language : "</span>);</span><br><span class="line">   filter(languages, (str)-&gt;<span class="keyword">false</span>);</span><br><span class="line">   System.out.println(<span class="string">"Print language whose length greater than 4:"</span>);</span><br><span class="line">   filter(languages, (str)-&gt;str.length() &gt; <span class="number">4</span>);</span><br><span class="line">&#125;</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">filter</span><span class="params">(List names, Predicate condition)</span> </span>&#123;</span><br><span class="line">    names.stream().filter((name) -&gt; (condition.test(name)))</span><br><span class="line">        .forEach((name) -&gt; &#123;System.out.println(name + <span class="string">" "</span>);</span><br><span class="line">    &#125;);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p><h3 id="处理数据？用管道的方式更加简洁"><a href="#处理数据？用管道的方式更加简洁" class="headerlink" title="处理数据？用管道的方式更加简洁"></a>处理数据？用管道的方式更加简洁</h3><p>Java 8里面新增的Stream API ，让集合中的数据处理起来更加方便，性能更高，可读性更好<br>假设一个业务场景：对于20元以上的商品，进行9折处理，最后得到这些商品的折后价格。<br>如果使用jdk7的话会由多层循环<br>but jdk8 管道流<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> BigDecimal totalOfDiscountedPrices = prices.stream()</span><br><span class="line">.filter(price -&gt; price.compareTo(BigDecimal.valueOf(<span class="number">20</span>)) &gt; <span class="number">0</span>)</span><br><span class="line">.map(price -&gt; price.multiply(BigDecimal.valueOf(<span class="number">0.9</span>)))</span><br><span class="line">.reduce(BigDecimal.ZERO,BigDecimal::add);</span><br><span class="line">System.out.println(<span class="string">"Total of discounted prices: "</span> + totalOfDiscountedPrices);</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;lambda-表达式&quot;&gt;&lt;a href=&quot;#lambda-表达式&quot; class=&quot;headerlink&quot; title=&quot;lambda 表达式&quot;&gt;&lt;/a&gt;lambda 表达式&lt;/h1&gt;&lt;h2 id=&quot;简介和示例&quot;&gt;&lt;a href=&quot;#简介和示例&quot; class=&quot;headerlink&quot; title=&quot;简介和示例&quot;&gt;&lt;/a&gt;简介和示例&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;希腊字母第11个，兰木达&lt;/li&gt;
+&lt;li&gt;计算机语言中的 匿名函数&lt;/li&gt;
+&lt;li&gt;lambda表达式引入主要为了 提高在大数据高并发的情况下的java性能问题，从语言编写上引入lambda。易于编写 并行处理大数据的类库。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;lambda表达式的性能大于等于不用lambda表达式写的代码&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;lambda表达式出错的堆栈信息比较长&lt;/strong&gt;
+    
+    </summary>
+    
+      <category term="java" scheme="https://www.nightqq.cn/categories/java/"/>
+    
+    
+      <category term="lambda" scheme="https://www.nightqq.cn/tags/lambda/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jdk8-lambda表达式示例</title>
+    <link href="https://www.nightqq.cn/2017/03/30/jdk8-lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%A4%BA%E4%BE%8B/"/>
+    <id>https://www.nightqq.cn/2017/03/30/jdk8-lambda表达式示例/</id>
+    <published>2017-03-30T05:25:04.000Z</published>
+    <updated>2017-03-30T05:25:46.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="java" scheme="https://www.nightqq.cn/categories/java/"/>
+    
+    
+      <category term="lambda" scheme="https://www.nightqq.cn/tags/lambda/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于fork join框架</title>
+    <link href="https://www.nightqq.cn/2017/03/29/%E5%85%B3%E4%BA%8Efork-join%E6%A1%86%E6%9E%B6/"/>
+    <id>https://www.nightqq.cn/2017/03/29/关于fork-join框架/</id>
+    <published>2017-03-29T11:39:58.000Z</published>
+    <updated>2017-03-29T11:39:58.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>jdk7引入的新特性</title>
+    <link href="https://www.nightqq.cn/2017/03/29/jdk7%E5%BC%95%E5%85%A5%E7%9A%84%E6%96%B0%E7%89%B9%E6%80%A7/"/>
+    <id>https://www.nightqq.cn/2017/03/29/jdk7引入的新特性/</id>
+    <published>2017-03-29T11:27:42.000Z</published>
+    <updated>2017-03-29T11:41:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="jdk7引入的新特性"><a href="#jdk7引入的新特性" class="headerlink" title="jdk7引入的新特性"></a>jdk7引入的新特性</h1><p>要研究jdk8，先来了解下jdk7</p><h2 id="重抛异常的改进"><a href="#重抛异常的改进" class="headerlink" title="重抛异常的改进"></a>重抛异常的改进</h2><p>jdk7之前只能throws Exception<br>jdk7可以精确的抛出异常<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testThrowsException</span><span class="params">()</span> <span class="keyword">throws</span> FileNotFoundException,ParseException</span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">new</span> FileInputStream(<span class="string">""</span>);</span><br><span class="line">        <span class="keyword">new</span> SimpleDateFormat(<span class="string">""</span>).parse(<span class="string">""</span>);</span><br><span class="line">    &#125;<span class="keyword">catch</span> (Exception e)&#123;</span><br><span class="line">        System.out.println(e.getMessage());</span><br><span class="line">        <span class="keyword">throw</span> e;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><a id="more"></a><h2 id="G1垃圾回收器"><a href="#G1垃圾回收器" class="headerlink" title="G1垃圾回收器"></a>G1垃圾回收器</h2><p>JDK7中引入了一个新的垃圾回收器，G1，它是Garbage First的缩写。G1回收器优先回收垃圾最多的区域。为了实现这个策略它把堆分成了多个区域，就好比Java 7之前分成三个区域那样（新生代，老生代和持久代）。G1回收器是一个可预测的回收器，同时对那些内存密集型的程序它还能保证较高的吞吐量</p><h2 id="java-nio-file-的引入"><a href="#java-nio-file-的引入" class="headerlink" title="java.nio.file 的引入"></a>java.nio.file 的引入</h2><p><strong>注释：这个不太了解，需要研究下。之前看过文章,nio非阻塞-(dubbo有用到)！</strong><br>Java SE 7中引入了java.nio.file包，以及相关的java.nio.file.attibute包，全面支持了文件IO以及对默认文件系统的访问。它同时还引入了Path 类，你可以用它来代表操作系统中的任意一个路径。新的文件系统API兼容老的版本，并且提供了几个 非常实用的方法，可以用来检查，删除，拷贝和移动文件。比如，你可以在Java中判断一个文件是否是隐藏文件。你还可以在Java中创建软链接和硬链接。JDK 7的新的文件API还能够使用通配符来进行文件的搜索。你还可以用它来监测某个目录 是否有变动。我推荐你看下它的官方文档来了解更多的一些有意思的特性</p><h2 id="使用”ob”前缀的二进制字面量"><a href="#使用”ob”前缀的二进制字面量" class="headerlink" title="使用”ob”前缀的二进制字面量"></a>使用”ob”前缀的二进制字面量</h2><p>JDK7中，对于整型类型（byte, short, int 和long)来说，你可以用’0b’前缀来表明这是一个二进制的字面量，就像C/C++中那样。在这之前，你只能使用8进制（前缀’0’）或者16进制（前缀是’0x’或者‘0X’）的字面量。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> binary = <span class="number">0B0101_0000_1010_0010_1101_0000_1010_0010</span>;</span><br></pre></td></tr></table></figure></p><h2 id="单个catch块可以处理多个异常类型"><a href="#单个catch块可以处理多个异常类型" class="headerlink" title="单个catch块可以处理多个异常类型"></a>单个catch块可以处理多个异常类型</h2><p>系统文件不存在，抛出FileNotFoundException<br>系统文件存在，抛出 SQLException<br>也可以尝试在 抛出 throw  new SQLException(“sql ex”)之前抛出下标越界异常。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testCatchException</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">        File file = <span class="keyword">new</span> File(<span class="string">"当前系统文件路径l"</span>);</span><br><span class="line">        FileInputStream fileInputStream = <span class="keyword">new</span> FileInputStream(file);</span><br><span class="line">        <span class="comment">// use db</span></span><br><span class="line">        <span class="keyword">throw</span>  <span class="keyword">new</span> SQLException(<span class="string">"sql ex"</span>);</span><br><span class="line">    &#125;<span class="keyword">catch</span> (SQLException|FileNotFoundException|IndexOutOfBoundsException ex)&#123;</span><br><span class="line">        ex.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h2 id="数值字面量中使用下划线"><a href="#数值字面量中使用下划线" class="headerlink" title="数值字面量中使用下划线"></a>数值字面量中使用下划线</h2><p>好处不言而喻，代码如下。大数字的展示变的很友好<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testNum</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">long</span> l = <span class="number">1000_2586_3421L</span>;</span><br><span class="line">        System.out.println(l);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//输出结果为：100025863421</span></span><br></pre></td></tr></table></figure></p><h2 id="try-catch-finally"><a href="#try-catch-finally" class="headerlink" title="try-catch-finally"></a>try-catch-finally</h2><p>jdk7之前你必须在file、socket、db、stream等资源类使用中在最后进行finally的资源释放，但jdk7引入 try-catch-resource，确保资源语句在结束后自动释放资源、即close()（所有资源类都实现了AutoClosable接口的close）<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">tryCatch</span><span class="params">()</span></span>&#123;</span><br><span class="line">    BufferedReader bufferedReader = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">        File file = <span class="keyword">new</span> File(<span class="string">"/data/blog/_config.yml"</span>);</span><br><span class="line">        FileReader fileReader = <span class="keyword">new</span> FileReader(file);</span><br><span class="line">        bufferedReader = <span class="keyword">new</span> BufferedReader(fileReader);</span><br><span class="line">        <span class="keyword">while</span> (bufferedReader.ready())&#123;</span><br><span class="line">            String str =  bufferedReader.readLine();</span><br><span class="line">            System.out.println(str);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">catch</span> (Exception e)&#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h2 id="钻石符-lt-gt"><a href="#钻石符-lt-gt" class="headerlink" title="钻石符 &lt;&gt;"></a>钻石符 &lt;&gt;</h2><p>jdk7之前创建对象左右两边必须都要指定类型<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testDemond</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ArrayList&lt;String&gt; arrayList_beforeJdk7 = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">    ArrayList&lt;String&gt; arrayList_Jdk7 = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h2 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h2><p>jdk7可以使用string,在这之前只可以使用整型<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testSwitch</span><span class="params">()</span></span>&#123;</span><br><span class="line">    String str = <span class="string">"b"</span>;</span><br><span class="line">    <span class="keyword">switch</span> (str)&#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">"a"</span>:</span><br><span class="line">            System.out.println(<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">"b"</span>:</span><br><span class="line">            System.out.println(<span class="number">2</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">"c"</span>:</span><br><span class="line">            System.out.println(<span class="number">3</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            System.out.println(<span class="string">"end"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h2 id="Fork-Join框架"><a href="#Fork-Join框架" class="headerlink" title="Fork Join框架"></a>Fork Join框架</h2><p><strong> 需要单独研究下fork join</strong><br>Fork/join框架是ExecutorService接口的实现，它使得你可以充分利用现代服务器多处理器带来的好处。这个框架是为了那些能递归地拆分成更小任务的工作而设计的。它的目标是去压榨处理器的能力以提升程序的性能。就像别的ExecutorService的实现一样，fork/join框架也是把任务分发给线程池中的多个线程。它的不同之处在于它使用的是一种工作窃取算法（work-stealing algorithm），这和生产者消费者的算法有很大的不同。已经处理完任务的工作线程可以从别的繁忙的线程那里窃取一些任务来执行。fork/join框架的核心是ForkJoinPool类，它继承自AbstractExecutorService。ForkJoinPool类实现了核心的工作窃取算法，可以执行ForkJoinTask进程。你可以把代码封装在一个ForkJoinTask的子类里，比如RecursiveTask或者RecursiveAction。<br><strong>Java 8中的lambda表达式，Java中的代码整洁之道则又上了一个新的里程碑</strong><br>参考链接：[Java 8?还记得那年大明湖畔的Java 7吗?][1]<br>[1]: <a href="http://it.deepinmind.com/java/2014/04/21/10-jdk-7-features-to-revisit-before-you-welcome-java-8.html" target="_blank" rel="noopener">http://it.deepinmind.com/java/2014/04/21/10-jdk-7-features-to-revisit-before-you-welcome-java-8.html</a> “Java 8?还记得那年大明湖畔的Java 7吗?”</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;jdk7引入的新特性&quot;&gt;&lt;a href=&quot;#jdk7引入的新特性&quot; class=&quot;headerlink&quot; title=&quot;jdk7引入的新特性&quot;&gt;&lt;/a&gt;jdk7引入的新特性&lt;/h1&gt;&lt;p&gt;要研究jdk8，先来了解下jdk7&lt;/p&gt;
+&lt;h2 id=&quot;重抛异常的改进&quot;&gt;&lt;a href=&quot;#重抛异常的改进&quot; class=&quot;headerlink&quot; title=&quot;重抛异常的改进&quot;&gt;&lt;/a&gt;重抛异常的改进&lt;/h2&gt;&lt;p&gt;jdk7之前只能throws Exception&lt;br&gt;jdk7可以精确的抛出异常&lt;br&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@Test&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;testThrowsException&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;throws&lt;/span&gt; FileNotFoundException,ParseException&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;try&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; FileInputStream(&lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; SimpleDateFormat(&lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;).parse(&lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;span class=&quot;keyword&quot;&gt;catch&lt;/span&gt; (Exception e)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        System.out.println(e.getMessage());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;throw&lt;/span&gt; e;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="java" scheme="https://www.nightqq.cn/categories/java/"/>
+    
+    
+      <category term="jdk" scheme="https://www.nightqq.cn/tags/jdk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jdk7与jdk8</title>
+    <link href="https://www.nightqq.cn/2017/03/29/jdk7%E4%B8%8Ejdk8/"/>
+    <id>https://www.nightqq.cn/2017/03/29/jdk7与jdk8/</id>
+    <published>2017-03-29T09:31:19.000Z</published>
+    <updated>2017-03-29T11:31:42.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="java" scheme="https://www.nightqq.cn/categories/java/"/>
+    
+    
+      <category term="jdk" scheme="https://www.nightqq.cn/tags/jdk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于二进制等</title>
+    <link href="https://www.nightqq.cn/2017/03/29/%E5%85%B3%E4%BA%8E%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%AD%89/"/>
+    <id>https://www.nightqq.cn/2017/03/29/关于二进制等/</id>
+    <published>2017-03-29T07:31:54.000Z</published>
+    <updated>2017-03-29T11:31:42.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="不同进制" scheme="https://www.nightqq.cn/categories/%E4%B8%8D%E5%90%8C%E8%BF%9B%E5%88%B6/"/>
+    
+    
+      <category term="二进制" scheme="https://www.nightqq.cn/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>客户端、服务端加解密</title>
+    <link href="https://www.nightqq.cn/2017/03/28/%E5%AE%A2%E6%88%B7%E7%AB%AF%E3%80%81%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8A%A0%E8%A7%A3%E5%AF%86%E7%AD%BE%E5%90%8D/"/>
+    <id>https://www.nightqq.cn/2017/03/28/客户端、服务端加解密签名/</id>
+    <published>2017-03-27T18:23:57.000Z</published>
+    <updated>2017-03-29T09:27:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="加解密"><a href="#加解密" class="headerlink" title="加解密"></a>加解密</h1><h2 id="加解密算法"><a href="#加解密算法" class="headerlink" title="加解密算法"></a>加解密算法</h2><p>RSA——非对称加密，会产生公钥和私钥，公钥在客户端，私钥在服务端。公钥用于加密，私钥用于解密。<br>AES——对称加密，直接使用给定的秘钥加密，使用给定的秘钥解密。(加密解密使用相同的秘钥)<br>MD5——一种单向的加密方式，只能加密，不能解密d<br>Base64编码——对字节数组转换成字符串的一种编码方式</p><h2 id="明文逻辑"><a href="#明文逻辑" class="headerlink" title="明文逻辑"></a>明文逻辑</h2><p>客户端将要上传的数据以字典的方式打包，Post提交给服务器。<br>服务器接收提交的数据包，通过Key-Value的形式获取客户端提交的值，进行处理。<br>处理结束，将数据以字典的形式打包，返回给客户端处理。</p><h2 id="加解密逻辑"><a href="#加解密逻辑" class="headerlink" title="加解密逻辑"></a>加解密逻辑</h2><p>客户端上传数据加密<br>==&gt; 服务器获取数据解密<br>==&gt; 服务器返回数据加密<br>==&gt; 客户端获取数据解密<br>1 、客户端生成随机字符串 作为AESKey<br>2、 对AESKey 进行RSA公钥加密，生成RSAKey<br> 此处<strong>加签</strong><br>3、 对要发送给服务端数据 用AESKey加密，得到加密后的数据包<br>4、 封装为{key : RSAKey, value : JsonAESEncryptedData}的字典上传服务器，服务器只需要通过key和value，然后解析，获取数据即可<br>服务端获取数据解密：<br>1、服务端获取到{key : RSAKey, value : JsonAESEncryptedData}后，对RSAKey<br>用RSA私钥解密获得AESKey<br>2、使用获得的AESKey对JsonAESEncryptedData进行解密<br>此处<strong>验签</strong><br>服务端返回数据加密：<br>1、服务端对返回的数据（json）用AESKey 加密：value<br>此处<strong>加签</strong><br>2、{data : value}返回<br>客户端获取数据解密：<br>1、客户端获得服务器返回的被加密value<br>2、对value用AESKey进行解密<br>此处<strong>验签</strong></p><h2 id="加验签名"><a href="#加验签名" class="headerlink" title="加验签名"></a>加验签名</h2><p>目的：防止数据被篡改</p><h3 id="加签"><a href="#加签" class="headerlink" title="加签"></a>加签</h3><p>1、取容易被修改的敏感字端拼接成一个字符串（字符串组成规则与服务器约定好），使用md5加密字符串，获得签名数据（signData）<br>2、以key-value形式将签名数据保存到尚未加密的数据包里<br>3、继续执行 <strong>加签</strong> 以后的操作</p><h3 id="验签"><a href="#验签" class="headerlink" title="验签"></a>验签</h3><p>1、服务端解密后获得了客户端的明文数据，拿到签名key的value（signData），同时继续用明文数据约定敏感字端按照约定规则组成字符串进行md5加密。<br>2、对 md5加密的字端和 客户端返回的signData 比较，相同则签名成功，不同则签名失败</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;加解密&quot;&gt;&lt;a href=&quot;#加解密&quot; class=&quot;headerlink&quot; title=&quot;加解密&quot;&gt;&lt;/a&gt;加解密&lt;/h1&gt;&lt;h2 id=&quot;加解密算法&quot;&gt;&lt;a href=&quot;#加解密算法&quot; class=&quot;headerlink&quot; title=&quot;加解密算法&quot;&gt;&lt;/a&gt;
+      
+    
+    </summary>
+    
+      <category term="加解密签名" scheme="https://www.nightqq.cn/categories/%E5%8A%A0%E8%A7%A3%E5%AF%86%E7%AD%BE%E5%90%8D/"/>
+    
+    
+      <category term="加解密签名" scheme="https://www.nightqq.cn/tags/%E5%8A%A0%E8%A7%A3%E5%AF%86%E7%AD%BE%E5%90%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mac 画流程图、uml的工具</title>
+    <link href="https://www.nightqq.cn/2017/03/28/mac-%E7%94%BB%E6%B5%81%E7%A8%8B%E5%9B%BE%E3%80%81uml%E7%9A%84%E5%B7%A5%E5%85%B7/"/>
+    <id>https://www.nightqq.cn/2017/03/28/mac-画流程图、uml的工具/</id>
+    <published>2017-03-27T16:24:40.000Z</published>
+    <updated>2017-03-27T19:30:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h1><h2 id="在线工具"><a href="#在线工具" class="headerlink" title="在线工具"></a>在线工具</h2><p>地址：<a href="https://www.processon.com/" target="_blank" rel="noopener">https://www.processon.com/</a></p><h2 id="知乎"><a href="#知乎" class="headerlink" title="知乎"></a>知乎</h2><p>地址：<a href="https://www.zhihu.com/question/19588698" target="_blank" rel="noopener">https://www.zhihu.com/question/19588698</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;流程图&quot;&gt;&lt;a href=&quot;#流程图&quot; class=&quot;headerlink&quot; title=&quot;流程图&quot;&gt;&lt;/a&gt;流程图&lt;/h1&gt;&lt;h2 id=&quot;在线工具&quot;&gt;&lt;a href=&quot;#在线工具&quot; class=&quot;headerlink&quot; title=&quot;在线工具&quot;&gt;&lt;/a&gt;在线工
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://www.nightqq.cn/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="工具" scheme="https://www.nightqq.cn/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>webStorm ide处理markdown代码空格问题</title>
+    <link href="https://www.nightqq.cn/2017/03/28/webStorm-ide%E5%A4%84%E7%90%86markdown%E4%BB%A3%E7%A0%81%E7%A9%BA%E6%A0%BC%E9%97%AE%E9%A2%98/"/>
+    <id>https://www.nightqq.cn/2017/03/28/webStorm-ide处理markdown代码空格问题/</id>
+    <published>2017-03-27T16:01:43.000Z</published>
+    <updated>2017-03-27T19:30:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>#处理代码空格问题<br>markdown编辑器对代码中的空格 进行后置或者前置处理，导致笔记在html展示时代码块出现很多空格，对此种情况在不修改markdown代码模版的情况下，可以利用ide替换所有空行</p><ol><li>被替换目标：[\n]+</li><li>替换目标：\n</li><li>勾选 Regex 匹配<br>图示：<br><a href="https://github.com/bifenghui/temp-code/blob/master/markdownDelSpace.png" title="markdownDelSpace" target="_blank" rel="noopener">markdownDelSpace</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;#处理代码空格问题&lt;br&gt;markdown编辑器对代码中的空格 进行后置或者前置处理，导致笔记在html展示时代码块出现很多空格，对此种情况在不修改markdown代码模版的情况下，可以利用ide替换所有空行&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;被替换目标：[\n]+&lt;/li&gt;
+&lt;l
+      
+    
+    </summary>
+    
+      <category term="markdown" scheme="https://www.nightqq.cn/categories/markdown/"/>
+    
+    
+      <category term="markdown" scheme="https://www.nightqq.cn/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ssh服务器免密登陆</title>
+    <link href="https://www.nightqq.cn/2017/03/27/ssh%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/"/>
+    <id>https://www.nightqq.cn/2017/03/27/ssh服务器免密登陆/</id>
+    <published>2017-03-27T15:34:42.000Z</published>
+    <updated>2017-03-27T18:47:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ssh-免密码输入"><a href="#ssh-免密码输入" class="headerlink" title="ssh 免密码输入"></a>ssh 免密码输入</h1><h2 id="ssh流程"><a href="#ssh流程" class="headerlink" title="ssh流程"></a>ssh流程</h2><p>本地服务器或需要连接远程服务器的服务器<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure></p><p>连续三次回车,即在本地生成了公钥和私钥,不设置密码<br>执行scp命令<br>scp ~/.ssh/id_rsa.pub 远程服务器登录名@远程服务器地址:.ssh/id_rsa.pub<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp ~/.ssh/id_rsa.pub 远程服务器登录名@远程服务器地址:.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></p><p>如果执行报错，可能是权限不够<br>可以执行以下代码先<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh 远程服务器登录名@远程服务器地址 "mkdir .ssh;chmod 0700 .ssh"</span><br></pre></td></tr></table></figure></p><p>连接到远程服务器<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure></p><p>查看 AuthorizedKeysFile 的值 ，默认为%h/.ssh/authorized_keys<br>查看 authorized_keys是否存在<br>不存在：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch /root/.ssh/authorized_keys</span><br></pre></td></tr></table></figure></p><p>存在继续执行<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod 600 ~/.ssh/authorized_keys</span><br><span class="line">cat /root/.ssh/id_rsa.pub  &gt;&gt; /root/.ssh/authorized_keys</span><br></pre></td></tr></table></figure></p><p>上面两条命令的作用分别的是：<br>1 修改文件权限 （文件权限码）<br>2 追加上面scp过来的文件内容到authorized_keys 内容末尾</p><h2 id="文件权限码"><a href="#文件权限码" class="headerlink" title="文件权限码"></a>文件权限码</h2><p><a href="https://github.com/bifenghui/temp-code/blob/master/chmodCode.txt" title="文件权限码" target="_blank" rel="noopener">文件权限码</a></p><h2 id="指定私钥文件登陆"><a href="#指定私钥文件登陆" class="headerlink" title="指定私钥文件登陆"></a>指定私钥文件登陆</h2><p>生成密钥对生成不同文件名或者控制多台机器（多台机器不使用同一套密钥对）的情况，需要在登陆的时候指定具体的私钥文件，格式类似<br>scp … -i 私钥文件<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh 远程服务器登录名@远程服务器地址 -i 私钥文件地址</span><br></pre></td></tr></table></figure></p><p>如果不想指定，可以修改ssh客户端全局/etc/ssh/sshd_config文件或者本地 ~/.ssh/config 文件<br>增加<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">IdentityFile 私钥文件地址</span><br><span class="line">or</span><br><span class="line">Host 服务器地址</span><br><span class="line">        IdentityFile 私钥文件地址</span><br></pre></td></tr></table></figure></p><p>注：如果登陆报使用密钥登陆失败，请执行<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add   ~/.ssh/私钥文件地址</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;ssh-免密码输入&quot;&gt;&lt;a href=&quot;#ssh-免密码输入&quot; class=&quot;headerlink&quot; title=&quot;ssh 免密码输入&quot;&gt;&lt;/a&gt;ssh 免密码输入&lt;/h1&gt;&lt;h2 id=&quot;ssh流程&quot;&gt;&lt;a href=&quot;#ssh流程&quot; class=&quot;header
+      
+    
+    </summary>
+    
+      <category term="ssh" scheme="https://www.nightqq.cn/categories/ssh/"/>
+    
+    
+      <category term="ssh" scheme="https://www.nightqq.cn/tags/ssh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>spring 集中式处理异常</title>
+    <link href="https://www.nightqq.cn/2017/03/27/spring-%E9%9B%86%E4%B8%AD%E5%BC%8F%E5%A4%84%E7%90%86%E5%BC%82%E5%B8%B8/"/>
+    <id>https://www.nightqq.cn/2017/03/27/spring-集中式处理异常/</id>
+    <published>2017-03-27T13:50:17.000Z</published>
+    <updated>2017-03-27T16:57:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="spring-集中处理异常"><a href="#spring-集中处理异常" class="headerlink" title="spring 集中处理异常"></a>spring 集中处理异常</h1><h2 id="传统处理"><a href="#传统处理" class="headerlink" title="传统处理"></a>传统处理</h2><p>传统处理异常多通过try-catch进行捕捉，如此的话会出现code不清晰、异常处理很乱的情况，返回给 移动端、web端接口异常不清晰、不友好等问题</p><h2 id="spring集中式"><a href="#spring集中式" class="headerlink" title="spring集中式"></a>spring集中式</h2><h3 id="aop"><a href="#aop" class="headerlink" title="aop"></a>aop</h3><p>利用aop对所有控制层即controller层 进行代理，形成类似try-catch式异常捕捉处理</p><h3 id="spring提供的异常处理机制"><a href="#spring提供的异常处理机制" class="headerlink" title="spring提供的异常处理机制"></a>spring提供的异常处理机制</h3><p>spring3.2后提供的注解 @ControllerAdvice  @ExceptionHandler注解，实现全局处理异常<br>代码：</p><h4 id="自定义异常类DiyException"><a href="#自定义异常类DiyException" class="headerlink" title="自定义异常类DiyException"></a>自定义异常类DiyException</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created with IntelliJ IDEA.</span></span><br><span class="line"><span class="comment"> * ClassName: com.edianzu.cloud.assets.web.exceptionHandler.DiyException</span></span><br><span class="line"><span class="comment"> * User: bifenghui</span></span><br><span class="line"><span class="comment"> * Date: 2017/3/27</span></span><br><span class="line"><span class="comment"> * Time: 下午10:22</span></span><br><span class="line"><span class="comment"> * To change this template use File | Settings | File Templates.</span></span><br><span class="line"><span class="comment"> * Description:</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DiyException</span> <span class="keyword">extends</span> <span class="title">Exception</span> <span class="keyword">implements</span> <span class="title">Serializable</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Integer exceptionCode ;</span><br><span class="line">    <span class="keyword">private</span> String exceptionMsg;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DiyException</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DiyException</span><span class="params">(Integer exceptionCode, String exceptionMsg)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.exceptionCode = exceptionCode;</span><br><span class="line">        <span class="keyword">this</span>.exceptionMsg = exceptionMsg;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DiyException</span><span class="params">(DiyExceptionCode diyExceptionCode)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.exceptionCode = diyExceptionCode.getCode();</span><br><span class="line">        <span class="keyword">this</span>.exceptionMsg = diyExceptionCode.getMsg();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getExceptionCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> exceptionCode;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setExceptionCode</span><span class="params">(Integer exceptionCode)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.exceptionCode = exceptionCode;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getExceptionMsg</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> exceptionMsg;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setExceptionMsg</span><span class="params">(String exceptionMsg)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.exceptionMsg = exceptionMsg;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="自定义异常枚举返回码"><a href="#自定义异常枚举返回码" class="headerlink" title="自定义异常枚举返回码"></a>自定义异常枚举返回码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created with IntelliJ IDEA.</span></span><br><span class="line"><span class="comment"> * EnumName: com.edianzu.cloud.assets.web.exceptionHandler.DiyExceptionCode</span></span><br><span class="line"><span class="comment"> * User: bifenghui@edianzu.cn</span></span><br><span class="line"><span class="comment"> * Date: 2017/3/27</span></span><br><span class="line"><span class="comment"> * Time: 下午10:32</span></span><br><span class="line"><span class="comment"> * To change this template use File | Settings | File Templates.</span></span><br><span class="line"><span class="comment"> * Description:</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> DiyExceptionCode &#123;</span><br><span class="line">    NOT_KONW_ERROR(<span class="number">9999</span>,<span class="string">"未知错误"</span>);</span><br><span class="line">    <span class="comment">// <span class="doctag">TODO:</span> 2017/3/27  继续定义多种异常枚举code</span></span><br><span class="line">    <span class="keyword">private</span> Integer code;</span><br><span class="line">    <span class="keyword">private</span> String msg;</span><br><span class="line">    DiyExceptionCode(Integer i, String msg) &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> code;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setCode</span><span class="params">(Integer code)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.code = code;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getMsg</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> msg;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMsg</span><span class="params">(String msg)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.msg = msg;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="自定义返回简单格式的返回体"><a href="#自定义返回简单格式的返回体" class="headerlink" title="自定义返回简单格式的返回体"></a>自定义返回简单格式的返回体</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created with IntelliJ IDEA.</span></span><br><span class="line"><span class="comment"> * ClassName: com.edianzu.cloud.assets.web.exceptionHandler.DiyResponse</span></span><br><span class="line"><span class="comment"> * User: bifenghui</span></span><br><span class="line"><span class="comment"> * Date: 2017/3/27</span></span><br><span class="line"><span class="comment"> * Time: 下午10:23</span></span><br><span class="line"><span class="comment"> * To change this template use File | Settings | File Templates.</span></span><br><span class="line"><span class="comment"> * Description:</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DiyResponse</span>&lt;<span class="title">T</span>&gt; <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Integer code;</span><br><span class="line">    <span class="keyword">private</span> T data;</span><br><span class="line">    <span class="keyword">private</span> String errorMsg;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DiyResponse</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DiyResponse</span><span class="params">(Integer code, T data, String errorMsg)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.code = code;</span><br><span class="line">        <span class="keyword">this</span>.data = data;</span><br><span class="line">        <span class="keyword">this</span>.errorMsg = errorMsg;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DiyResponse</span><span class="params">(DiyExceptionCode diyExceptionCode)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.code = diyExceptionCode.getCode();</span><br><span class="line">        <span class="keyword">this</span>.errorMsg = diyExceptionCode.getMsg();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> code;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setCode</span><span class="params">(Integer code)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.code = code;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">getData</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> data;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setData</span><span class="params">(T data)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.data = data;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getErrorMsg</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> errorMsg;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setErrorMsg</span><span class="params">(String errorMsg)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.errorMsg = errorMsg;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="处理全局异常的类"><a href="#处理全局异常的类" class="headerlink" title="处理全局异常的类"></a>处理全局异常的类</h4><p>ControllerAdvice 注解类，ExceptionHandler注解异常方法。<br><strong>想法：原理也基于aop代理，后置通知实现，此处需要查看源码或spring工具书进行求证</strong><br><strong>注：此处可以让全局异常类继承 ResponseEntityExceptionHandler 类，查看<br>ResponseEntityExceptionHandler源码可以看到此类中也使@ExceptionHandler注解，且处理了多种异常，最终封装异常信息到ResponseEntity（可以查看ResponseEntity源码追朔到HttpEntity到HttpHeaders）,得到发现返回一个封装的非常的明确的遵循restful接口规范的返回（笔记末尾添上HttpHeaders源码）</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created with IntelliJ IDEA.</span></span><br><span class="line"><span class="comment"> * ClassName: com.edianzu.cloud.assets.web.exceptionHandler.ExceptionTest</span></span><br><span class="line"><span class="comment"> * User: bifenghui</span></span><br><span class="line"><span class="comment"> * Date: 2017/3/27</span></span><br><span class="line"><span class="comment"> * Time: 下午10:14</span></span><br><span class="line"><span class="comment"> * To change this template use File | Settings | File Templates.</span></span><br><span class="line"><span class="comment"> * Description:</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@ControllerAdvice</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ExceptionTest</span> <span class="keyword">extends</span> <span class="title">ResponseEntityExceptionHandler</span> </span>&#123;</span><br><span class="line">    <span class="comment">// <span class="doctag">TODO:</span> 2017/3/27 定义全局的异常捕获</span></span><br><span class="line">    <span class="meta">@ResponseBody</span></span><br><span class="line">    <span class="meta">@ExceptionHandler</span>(Throwable.class)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> DiyResponse&lt;String&gt; <span class="title">excuteException</span><span class="params">(Throwable throwable)</span></span>&#123;</span><br><span class="line">        DiyResponse&lt;String&gt; diyResponse = <span class="keyword">new</span> DiyResponse&lt;&gt;();</span><br><span class="line">        <span class="comment">// <span class="doctag">TODO:</span> 2017/3/27 假如异常是以及被捕获需要抛出异常</span></span><br><span class="line">        <span class="keyword">if</span> (throwable <span class="keyword">instanceof</span> DiyException) &#123;</span><br><span class="line">            DiyException diyException = (DiyException) throwable;</span><br><span class="line">            diyResponse.setCode(diyException.getExceptionCode());</span><br><span class="line">            diyResponse.setErrorMsg(diyException.getExceptionMsg());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// <span class="doctag">TODO:</span> 2017/3/27 此处定义出现未明确标记的异常时需要返回的信息</span></span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            diyResponse = <span class="keyword">new</span> DiyResponse&lt;&gt;(DiyExceptionCode.NOT_KONW_ERROR);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> diyResponse;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h3 id="实现实现-HandlerExceptionResolver-接口"><a href="#实现实现-HandlerExceptionResolver-接口" class="headerlink" title="实现实现 HandlerExceptionResolver 接口"></a>实现实现 HandlerExceptionResolver 接口</h3><p>可以定义spring bean 实现HandlerExceptionResolver 来处理全局异常</p><p>##HttpHeaders<br><a href="https://github.com/bifenghui/temp-code/blob/master/HttpHeaders.java" title="HttpHeaders.java" target="_blank" rel="noopener">HttpHeaders.java</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;spring-集中处理异常&quot;&gt;&lt;a href=&quot;#spring-集中处理异常&quot; class=&quot;headerlink&quot; title=&quot;spring 集中处理异常&quot;&gt;&lt;/a&gt;spring 集中处理异常&lt;/h1&gt;&lt;h2 id=&quot;传统处理&quot;&gt;&lt;a href=&quot;#传统处理&quot;
+      
+    
+    </summary>
+    
+      <category term="spring" scheme="https://www.nightqq.cn/categories/spring/"/>
+    
+    
+      <category term="spring" scheme="https://www.nightqq.cn/tags/spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>每天想对自己说的话</title>
+    <link href="https://www.nightqq.cn/2017/03/27/%E6%AF%8F%E5%A4%A9%E6%83%B3%E5%AF%B9%E8%87%AA%E5%B7%B1%E8%AF%B4%E7%9A%84%E8%AF%9D/"/>
+    <id>https://www.nightqq.cn/2017/03/27/每天想对自己说的话/</id>
+    <published>2017-03-27T13:50:00.000Z</published>
+    <updated>2017-03-27T17:17:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="相对自己说"><a href="#相对自己说" class="headerlink" title="相对自己说"></a>相对自己说</h3><h4 id="2017-03-27"><a href="#2017-03-27" class="headerlink" title="2017-03-27"></a>2017-03-27</h4><p> 情绪即使一时失落，也不要停下，继续向前走。<br> 不好的情绪不应该留给关心你的身边人，也不要宣泄到其他有所接触的人身上<br> 要学会养神和安静的思考<br> 多读书，给自己加油<br> 学会每天进步</p><h4 id="2017-03-28"><a href="#2017-03-28" class="headerlink" title="2017-03-28"></a>2017-03-28</h4><p> 遇到问题一定要搞明白了<br> auth token问题<br> java 反射机制理解</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;相对自己说&quot;&gt;&lt;a href=&quot;#相对自己说&quot; class=&quot;headerlink&quot; title=&quot;相对自己说&quot;&gt;&lt;/a&gt;相对自己说&lt;/h3&gt;&lt;h4 id=&quot;2017-03-27&quot;&gt;&lt;a href=&quot;#2017-03-27&quot; class=&quot;headerlink&quot; 
+      
+    
+    </summary>
+    
+      <category term="想法" scheme="https://www.nightqq.cn/categories/%E6%83%B3%E6%B3%95/"/>
+    
+    
+      <category term="想法" scheme="https://www.nightqq.cn/tags/%E6%83%B3%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>auth token问题</title>
+    <link href="https://www.nightqq.cn/2017/03/27/auth-token%E9%97%AE%E9%A2%98/"/>
+    <id>https://www.nightqq.cn/2017/03/27/auth-token问题/</id>
+    <published>2017-03-26T16:25:57.000Z</published>
+    <updated>2017-03-27T18:34:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html</a></p><p>Token的生成方式有很多种，例如比较热门的有JWT（JSON Web Tokens）、OAuth等</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://www.ruanyifeng.com/blog/2014/05/oau
+      
+    
+    </summary>
+    
+      <category term="token" scheme="https://www.nightqq.cn/categories/token/"/>
+    
+    
+      <category term="token" scheme="https://www.nightqq.cn/tags/token/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>elasticsearch 启动报错-aliyun</title>
+    <link href="https://www.nightqq.cn/2017/03/26/elasticsearch-%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99-aliyun/"/>
+    <id>https://www.nightqq.cn/2017/03/26/elasticsearch-启动报错-aliyun/</id>
+    <published>2017-03-26T09:19:30.000Z</published>
+    <updated>2017-03-27T16:57:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">java.net.UnknownHostException: 阿里云ecs hostname:  阿里云ecs hostname: Name or service not known</span><br><span class="line">at java.net.InetAddress.getLocalHost(InetAddress.java:1505)</span><br><span class="line">...</span><br><span class="line">Caused by: java.net.UnknownHostException:  阿里云ecs hostname: Name or service not known</span><br><span class="line">at java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)</span><br><span class="line">at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)</span><br><span class="line">at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)</span><br><span class="line">at java.net.InetAddress.getLocalHost(InetAddress.java:1500)</span><br><span class="line">... 29 more</span><br></pre></td></tr></table></figure><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><h3 id="修改hosts文件"><a href="#修改hosts文件" class="headerlink" title="修改hosts文件"></a>修改hosts文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/hosts</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1       localhost       阿里云ecs hostname</span><br><span class="line">127.0.1.1       ******.local.alipay.net      ******</span><br><span class="line"><span class="meta">#</span> The following lines are desirable for IPv6 capable hosts</span><br><span class="line">::1     localhost ip6-localhost ip6-loopback</span><br><span class="line">ff02::1 ip6-allnodes</span><br><span class="line">ff02::2 ip6-allrouters</span><br></pre></td></tr></table></figure><h2 id="再次启动"><a href="#再次启动" class="headerlink" title="再次启动"></a>再次启动</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sh elasticsearch</span><br><span class="line"><span class="meta">#</span>or</span><br><span class="line">sh elasticsearch -d</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span 
+      
+    
+    </summary>
+    
+      <category term="elasticSearch" scheme="https://www.nightqq.cn/categories/elasticSearch/"/>
+    
+    
+      <category term="elasticSearch" scheme="https://www.nightqq.cn/tags/elasticSearch/"/>
+    
+  </entry>
+  
+</feed>
