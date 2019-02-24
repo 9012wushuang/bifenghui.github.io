@@ -201,6 +201,7 @@ body {
   -ms-flex-flow: row wrap;
   -ms-align-content: flex-start;
   -webkit-align-content: flex-start;
+  position: relative;
 }
 .layout-l,
 .layout-r {
@@ -213,23 +214,32 @@ body {
   text-rendering: auto;
 }
 .layout-l {
-  width: 75%;
-  *width: 74.969%;
+  width: 73.699%;
+  position: absolute;
+  right: 1%;
+  margin-top: 100px;
 }
 .layout-r {
-  width: 25%;
-  *width: 24.969%;
+  width: 22.699%;
+  position: absolute;
+  left: 1%;
+  top: 0;
+  margin-top: 100px;
 }
 .body_container {
-  padding: 0 50px;
-  max-width: 1200px;
+  padding: 0 auto;
   margin: 0 auto;
 }
 /* header */
 #header {
-  text-align: left;
-  position: relative;
-  height: 180px;
+  text-align: center;
+  position: fixed;
+  z-index: 3;
+  height: 100px;
+  width: 100%;
+  margin-left: 2%;
+  margin-right: 2%;
+  background: #0d3b6c url("../img/bg2.jpg") no-repeat fixed top center;
 }
 #header .site-name h1 {
   padding: 0;
@@ -254,9 +264,8 @@ body {
   text-shadow: 1px 3px 6px #113f6e;
 }
 #nav-menu {
-  margin: 20px 0;
+  margin: 10px 0;
   padding: 0;
-  position: absolute;
   left: 0;
   bottom: 0;
 }
@@ -277,7 +286,7 @@ body {
 /* sidebar */
 #sidebar {
   margin-top: 40px;
-  margin-right: 20px;
+  margin-left: 20px;
   word-wrap: break-word;
 }
 #sidebar .widget {
@@ -287,18 +296,18 @@ body {
   -webkit-box-shadow: 1px 2px 3px #adc2d7;
   box-shadow: 1px 2px 3px #adc2d7;
   border: 1px solid #adc2d7;
-  background: #17181c;
+  background: #fff;
 }
 #sidebar .widget a {
-  color: #fff;
+  color: #17181c;
 }
 #sidebar .widget a:hover {
-  color: #fff;
+  color: #17181c;
   text-decoration: underline;
 }
 #sidebar .widget .widget-title,
 #sidebar .widget .comments-title {
-  color: #fff;
+  color: #17181c;
   line-height: 2.7;
   margin-top: 0;
   font-size: 20px;
@@ -312,12 +321,12 @@ body {
 #sidebar .widget .tagcloud a {
   line-height: 1.5;
   padding: 5px;
-  color: #fff;
+  color: #17181c;
 }
 #sidebar .widget ul {
   list-style: none;
   padding: 0;
-  color: #fff;
+  color: #17181c;
 }
 #sidebar .widget ul li {
   list-style: none;
@@ -326,11 +335,11 @@ body {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  color: #fff;
+  color: #17181c;
 }
 #sidebar .widget .category-list-count {
   padding-left: 5px;
-  color: #fff;
+  color: #17181c;
 }
 #sidebar .widget .category-list-count:before {
   content: "(";
@@ -860,7 +869,7 @@ body {
     padding-right: 15px;
   }
   .body_container {
-    padding: 0 30px;
+    padding: 0 20px;
   }
   .post .post-title {
     font-size: 20px;
